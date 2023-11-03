@@ -1,0 +1,108 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="HelpStyle.css">
+</head>
+<body id="ScrollablePanel">
+    <h2>
+        5
+        设置
+    </h2>
+
+    <p class="MsoBlockText">
+        在“设置”(Settings) 窗口中，有三种不同的选项卡可用：
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span><span lang="DE">
+            <a href="ohGeneralSettings.html">
+                <span lang="EN-US">
+                    常规设置
+                </span>
+            </a>
+        </span>
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span><span lang="DE"><a href="ohNetworkAdapterSelection.html"><span lang="EN-US">网络适配器</span></a></span></p>
+
+    <p class="BulletText1">
+        <span class="class31"></span><span lang="DE">
+            <a href="ohGSDMLManager.html">
+                <span lang="EN-US">
+                    GSDML 管理器
+                </span>
+            </a>
+        </span>
+    </p>
+
+    <p class="MsoBlockText">
+        这些模式用于调整 PRONETA Basic 的操作细节。
+    </p>
+    <h3 class="class12">
+        5.1
+        常规设置
+    </h3>
+
+    <p class="MsoBlockText">
+        可在此设置与网络扫描和可视化相关的各种参数。
+    </p>
+    <p class="BildBeschriftungtextBreite"><img border="0" width="491" height="408" id="Grafik 398" src="html_files/image087.png"></p>
+
+    <div>
+        <ul>
+            <li> “在线拓扑”(Online Topology)</li>
+            <ul>
+                <li>“自动分配临时 IP 地址”(Automatically assign temporary IP addresses)，</li>
+                <li>
+                    “自动分配临时设备名称”(Automatically assign temporary device names)：<br>
+                    对于在网络扫描期间发现的所有设备，检查任一条目将确保向其自动分配有效的 IP 地址和/或设备名称。设备将从“子网网络 IP 地址”(Subnet network IP address) 定义的子网中获取 IP 地址，并接收相应字段的子网掩码。<br>
+                    关闭相应设备时，IP 地址和设备名称将丢失。
+
+                </li>
+            </ul>
+            <li>“网络扫描装置”(Network Scanner)</li>
+            <ul>
+                <li>
+                    “自动扫描网络（扫描装置连续运行）”(Scan network automatically (scanner continually runs))：<br>
+                    如果勾选此条目，则扫描装置将永久激活，除非专门停止。这会使物理网络持续更新表示，但也会造成更高的通信负载，并可能导致网络上时间关键型通信出现问题。<br>
+                    要停止扫描装置，请使用 <span lang="DE"><a href="ohOnlineMode.html#olScannerStatusIndicator"><span lang="EN-US">扫描装置状态指示器</span></a></span>的快捷菜单。
+
+                </li>
+                <li>
+                    “读取控制器的 I&M 数据（不推荐用于 S7-1200 固件版本 2.2）”(Read I&M data of controllers (not recommended for S7-1200 Firmware Version 2.2))：
+                    PLC 可提供额外的“识别和维护数据”(Identification and maintenance data)，如订货号或固件版本。
+                </li>
+                <li>
+                    “包括不支持 PROFINET 的设备”(Include devices which do not support PROFINET)：<br>
+                    PRONETA Basic 还可以在网络中轮询不支持完全 PROFINET 标准的设备。“扫描 IP 地址，从...到”(Scan IP addresses from … to) 给出了 PRONETA Basic 对这些设备进行轮询的网络地址的范围。<br>
+                    使用此选项并给出较大的地址范围可能会延长 PRONETA Basic 的响应时间并增加网络负载。
+                </li>
+                <li>
+                    “扫描程序产生的最大流量”：<br>
+                    使用此滑块，可以设置 PRONETA Basic 的网络扫描所用带宽的上限。较大流量值将对常规通信产生不利影响，但也将缩短更新周期。
+                    如果由于 PRONETA Basic 的扫描而遇到一般网络通信问题，请降低该值。
+                </li>
+            </ul>
+            <li>“语言选择”(Language Selection)：</li>
+            <ul class="WithoutBulletPoint">
+                <li>
+                    可通过该下拉菜单选择“英语”(English)、“德语”(German) 和“简体中文”(Simplified Chinese) 作为 PRONETA Basic 的用户界面语言。
+                </li>
+            </ul>
+        </ul>
+    </div>
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class6">
+                <p class="CWDGraphic" align="center"><b><span lang="DE">注意</span></b></p>
+            </td>
+            <td width="493" valign="top" class="class8">
+                <p class="Hinweis">
+                    在此进行的更改会立即生效。无需对参数更改进行确认。
+                </p>
+            </td>
+        </tr>
+    </table>
+<br>
+</body>
+</html>

@@ -1,0 +1,834 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="HelpStyle.css">
+</head>
+<body id="ScrollablePanel">
+    <h2 class="class44">
+        3
+        Network Analysis Task
+    </h2>
+
+    <p class="MsoBlockText">
+        PRONETA Basic’s Network Analysis gives you a quick overview about which devices are installed in your PROFINET network, and how they are connected with each other. The Network Analysis also lets you view and change various network parameters of the devices, like IP addresses, device names etc.
+    </p>
+
+    <p class="MsoBlockText">
+        Different networks can be compared with each other, and the devices can be configured automatically or manually.
+    </p>
+    <h3>
+        3.1
+        Online Mode
+    </h3>
+
+    <p class="MsoBlockText">
+        In Online mode, PRONETA Basic will scan the PROFINET network for present devices, in either a single sweep or continuously. The main screen is divided in three sections:
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>A <span lang="DE">
+            <a href="#ohTopologyView">
+                <span lang="EN-US">
+                    Graphical
+                    View
+                </span>
+            </a>
+        </span>&nbsp;(1)
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>A <span lang="DE">
+            <a href="#olDevicesList">
+                <span lang="EN-US">
+                    Device
+                    Table
+                </span>
+            </a>
+        </span>&nbsp;(2) of accessible devices
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>The <span lang="DE">
+            <a href="#olDeviceDetails">
+                <span lang="EN-US">
+                    Device Details
+                </span>
+            </a>
+        </span>&nbsp;(3) showing the parameters of a particular device
+    </p>
+
+    <p class="MsoBlockText">Display of the Device Table and Device Details can be toggled by clicking on the respective triangle icons on the separator bands in the PRONETA Basic window.</p>
+
+    <p class="MsoBlockText"><img border="0" width="491" height="381" src="html_files/image014.png"></p>
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class6">
+                <p class="CWDGraphic" align="center"><b><span lang="DE">NOTE</span></b></p>
+            </td>
+            <td width="493" valign="top" class="class8">
+                <p class="Hinweis">
+                    If the network size exceeds 500 devices, not all devices may be reliably detected during a scan. Crashes of PRONETA Basic may occur in this case.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="FormatvorlageBlocktitel">Function Bar</p>
+
+    <p class="MsoBlockText">
+        The following functions are available in the function
+        bar:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td valign="top" class="class17">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Icon</span></p>
+                </td>
+                <td width="102" valign="top" class="class23">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="338" valign="top" class="class24">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Function</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td class="class25">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 1" src="html_files/image015.png"></p>
+            </td>
+            <td width="102" class="class27">
+                <p class="TabelleTextlinks">Refresh</p>
+            </td>
+            <td width="338" class="class28">
+                <p class="TabelleTextlinks">Performs an immediate update of the network scan.</p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class25">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 7" src="html_files/image016.png"></p>
+            </td>
+            <td width="102" class="class27">
+                <p class="BildBeschriftungSeitenbreite">
+                    Export
+                    Topology
+                </p>
+            </td>
+            <td width="338" class="class28">
+                <p class="TabelleTextlinks">Performs a <a href="#olTopologyExport">Topology Export</a> to disk.</p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="Blocktitel"><a id="olTopologyExport">Topology Export</a></p>
+
+    <p class="MsoBlockText">
+        A topology export can be performed in a number of different formats:
+    </p>
+
+
+    <ul>
+        <li>
+            As an XML file, for later use as a reference <span lang="DE"><a href="#olTopologyFile"><span lang="EN-US">Topology File</span></a></span> when
+            working in <a href="ohOfflineMode.html">Offline Mode</a>, <a href="ohComparisonMode.html">Comparison Mode</a> or <a href="ohConfigurationMode.html">Configuration Mode</a>, for example to quickly and
+            conveniently duplicate a configuration.
+        </li>
+        <li>
+            For documentation purposes to create reference files documenting the state of the network:
+        </li>
+
+        <ul>
+            <li>
+                As a graphic of the network configuration (PNG (preferred format), BMP, or XPS).
+            </li>
+            <li>
+                As a CSV file with information from the Device Table for further processing with a spreadsheet application, like Microsoft Excel.
+            </li>
+            <li>
+                As a PDF with a combination of topology graphic and Device Table, for documentation and archiving of the configuration.
+            </li>
+        </ul>
+    </ul>
+
+    <p class="MsoBlockText">This is useful to:</p>
+
+    <ul>
+        <li>
+            Quickly establish the required hardware when a network configuration is to be duplicated, and to
+        </li>
+        <li>
+            Document and easily reference information about all plugged devices and modules, including detailed information like order number, Firmware Version and serial number, employed in a certain installation.
+        </li>
+    </ul>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="286" height="335" id="Grafik 25" src="html_files/image017.png"></p>
+
+    <p class="MsoBlockText">
+        The option “Include device details” will add information about port configurations and modules to the resulting file.
+    </p>
+
+    <p class="MsoBlockText">
+        The data fields contained in an exported configuration are the same as the fields currently visible in the corresponding <span lang="DE"><a href="#olDevicesList"><span lang="EN-US">Device Table</span></a></span>.
+    </p>
+    <p class="BildBeschriftungtextBreite"><img border="0" width="453" height="396" id="Grafik 158" src="html_files/image018.jpg"></p>
+
+    <p class="MsoBlockText">
+        When including the Graphical View, the network topology representation will be distributed over several pages in the PDF, if the network is sufficiently large.
+    </p>
+
+    <p class="BildBeschriftungSeitenbreite"><img border="0" width="453" height="363" id="Grafik 172" src="html_files/image019.jpg"></p>
+
+    <p class="MsoBlockText">
+        Depending on the current mode, only some of the export options will be available:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <td width="245" valign="top" class="class56">
+                    <p class="TabelleKopfzentriert"><span lang="DE">&nbsp;</span></p>
+                </td>
+                <td width="74" valign="top" class="class57">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Online</span></p>
+                </td>
+                <td width="75" valign="top" class="class58">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Offline</span></p>
+                </td>
+                <td width="74" valign="top" class="class57">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Comparison</span></p>
+                </td>
+                <td width="75" valign="top" class="class58">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Configuration</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr>
+            <td width="245" class="class59">
+                <p class="TabelleTextlinks"><span lang="DE">XML</span></p>
+            </td>
+            <td width="74" class="class61">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="75" class="class63">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">x</span></p>
+            </td>
+            <td width="74" class="class61">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">x</span></p>
+            </td>
+            <td width="75" class="class63">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">x</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="245" class="class59">
+                <p class="TabelleTextlinks"><span lang="DE">Graphical View</span></p>
+            </td>
+            <td width="74" class="class61">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="75" class="class63">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="74" class="class61">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="75" class="class63">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">x</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="245" class="class59">
+                <p class="TabelleTextlinks"><span lang="DE">Device Table (CSV)</span></p>
+            </td>
+            <td width="74" class="class61">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="75" class="class63">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="74" class="class61">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="75" class="class63">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">x</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="245" class="class59">
+                <p class="TabelleTextlinks">Graph.View + Device Table (PDF)</p>
+            </td>
+            <td width="74" class="class61">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="75" class="class63">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="74" class="class61">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">x</span></p>
+            </td>
+            <td width="75" class="class63">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">x</span></p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="Blocktitel"><a id="olDeviceSearch">Device Search</a></p>
+
+    <p class="MsoBlockText">
+        To the right of the function bar, there is an input box (1) which allows you to search for particular devices. The search term you enter will be matched against all information fields (e.g. device names, types, network parameters, …)..
+    </p>
+
+    <p class="MsoBlockText">
+        Search is case-insensitive and does not allow for
+        wildcards or regular expressions.
+    </p>
+
+    <p class="MsoBlockText"><img border="0" width="328" height="133" src="html_files/image020.png"></p>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">
+        Matches of your search are highlighted in the <span lang="DE"><a href="#ohTopologyView"><span lang="EN-US">Graphical View</span></a></span>
+        and the <a href="#olDevicesList"><span lang="EN-US">Device Table</span></a> through orange
+        shading.
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="491" height="395" id="Grafik 52" src="html_files/image021.png"></p>
+
+    <p class="FormatvorlageBlocktitel">
+        <a id="olScannerStatusIndicator">
+            Scanner
+            Status Indicator
+        </a>
+    </p>
+
+    <p class="MsoBlockText">
+        On the far right of the function bar, there is a scanner status indicator (1) which displays the status of the current network scanning cycle.
+    </p>
+
+    <p class="MsoBlockText">
+        Each network scanning cycle is divided into four phases, represented by the segments of the scanner status indicator. A network scan is complete when the indicator has gone through all four segments.
+    </p>
+
+    <p class="MsoBlockText">
+        A right-click on the status indicator brings up a context menu with one item:
+    </p>
+
+
+    <p class="MsoBlockText"><img border="0" width="306" height="172" src="html_files/image022.png"></p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="56" valign="top" class="class32">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Icon</span></p>
+                </td>
+                <td width="76" valign="top" class="class33">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="366" valign="top" class="class34">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Function</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="56" valign="top" class="class35">
+                <p class="TabelleTextlinks"><b><img border="0" width="43" height="43" id="Grafik 3" src="html_files/image023.png"></b></p>
+            </td>
+            <td width="76" class="class36">
+                <p class="TabelleTextlinks"><span lang="DE">Start Scanner</span></p>
+            </td>
+            <td width="366" rowspan="2" class="class37">
+                <p class="TabelleTextlinks">
+                    Toggles the network scan: If it is currently running, it will be stopped, and vice versa.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="56" valign="top" class="class35">
+                <p class="TabelleTextlinks"><b><img border="0" width="43" height="43" id="Grafik 4" src="html_files/image024.png"></b></p>
+            </td>
+            <td width="76" class="class36">
+                <p class="TabelleTextlinks"><span lang="DE">Stop Scanner</span></p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">
+        While the scanner is stopped, no network load is generated, and no changes to the topology are acquired. In the <a href="ohGeneralSettings.html"><span lang="EN-US">General Settings</span></a> dialog you can control whether PRONETA Basic will scan the network only once or continuously upon start of the scanner.
+    </p>
+
+    <p class="FormatvorlageBlocktitel"><a id="ohTopologyView">Graphical View</a></p>
+
+    <p class="MsoBlockText">
+        The Graphical View is a graphical display of the PROFINET network, its devices and their connections to each other either during a current network scan or from a previously stored reference network. The Graphical View occupies the top left corner of the PRONETA Basic window.
+    </p>
+
+    <p class="MsoBlockText">
+        While over empty space, clicking and subsequent dragging will shift the visible network segment. Hovering the mouse pointer over a device will change the open hand to an arrow and bring up a <span lang="DE"><a href="#olDeviceToolTip"><span lang="EN-US">Device Tooltip</span></a></span> with basic information about that device.
+    </p>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText"><b>Device Display</b></p>
+
+    <p class="MsoBlockText">
+        The device status is indicated by different colors of the device symbol and its borders:
+    </p>
+
+    <ul>
+        <li>
+            Field colors:
+        </li>
+        <ul>
+            <li>
+                Light
+                grey with a green bar on top: Regular network device
+            </li>
+            <li>
+                Dark
+                grey: Network device without valid IP address or without valid device name, or
+                generic PC
+            </li>
+            <li>
+                Light
+                blue: PC with active PRONETA Basic or STEP&nbsp;7
+            </li>
+            <li>
+                Yellow:
+                Device matching the <a href="#olDeviceSearch"><span lang="EN-US">Device Search</span></a>
+            </li>
+        </ul>
+        <li>
+            Borders:
+        </li>
+        <ul>
+            <li>
+                Orange:
+                Device parametrization conflict (duplicate IP address or device name)
+            </li>
+            <li>
+                Dark
+                blue: Selected device and corresponding connections
+            </li>
+
+        </ul>
+    </ul>
+    <p class="MsoBlockText">&nbsp;</p>
+    <p class="FormatvorlageBlocktitel">Tool Bar</p>
+
+    <p class="MsoBlockText">
+        In the top section of the view, there is a tool bar with a variety of function icons:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="134" valign="top" class="class39">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Icon</span></p>
+                </td>
+                <td width="103" valign="top" class="class40">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="261" valign="top" class="class41">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Function</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 133" src="html_files/image025.png"></b></p>
+            </td>
+            <td width="103" class="class43">
+                <p class="TabelleTextlinks">Show Overview of Topology</p>
+            </td>
+            <td width="261" class="class44">
+                <p class="TabelleTextlinks">
+                    Toggles a topology overview within the Online View. (See <a href="#ohTopologyOverview"><span lang="EN-US">Topology Overview</span></a>)
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="42" height="42" id="Grafik 133" src="html_files/image070.png"></b></p>
+            </td>
+            <td width="103" class="class43">
+                <p class="TabelleTextlinks">Zoom Selection</p>
+            </td>
+            <td width="261" class="class44">
+                <p class="TabelleTextlinks">
+                    Lets you draw a rectangle inside the Graphical View. Once you release the mouse button, the view will zoom to display the rectangle area.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 134" src="html_files/image026.png"></b></p>
+            </td>
+            <td width="103" class="class43">
+                <p class="TabelleTextlinks">Zoom Fit to Screen</p>
+            </td>
+            <td width="261" class="class44">
+                <p class="TabelleTextlinks">
+                    Zooms the view back in a way that all network
+                    devices fit inside the view.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="120" height="23" id="Grafik 136" src="html_files/image027.png"></b></p>
+            </td>
+            <td width="103" class="class43">
+                <p class="TabelleTextlinks">Zoom Bar</p>
+            </td>
+            <td width="261" class="class44">
+                <p class="TabelleTextlinks">
+                    Zoom into the network or back by dragging the
+                    handle to the right or the left, respectively, or clicking on “-“ or “+”.
+                    (You can also zoom into and out of the Graphical View by placing the mouse
+                    over the view and using the scroll wheel.)
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 11" src="html_files/image028.png"></p>
+            </td>
+            <td width="103" class="class43">
+                <p class="TabelleTextlinks">Show Physical Connection Types</p>
+            </td>
+            <td width="261" class="class44">
+                <p class="TabelleTextlinks">
+                    Indicates different transmission mediums used in
+                    different colors. (See <span lang="DE"><a href="#ohTopologyOverview"><span lang="EN-US">Device Connection Types</span></a></span>)
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">
+        <a id="ohTopologyOverview">
+            Topology Overview
+        </a>
+    <p class="MsoBlockText">
+        The Topology Overview is a view in the top left segment of the Graphical View which helps with the examination of large networks. It shows a schematic of all devices found during the current network scan, regardless of the zoom factor selected for the Online View.
+    </p><p class="MsoBlockText">
+        The network segment currently visible in the Online View is indicated by a light blue partly transparent rectangle. Drag the rectangle across the Topology Overview to move the visible network segment in the Online View.
+    </p> <p class="MsoBlockText">
+        Drag the right or bottom border of the Topology Overview to change the size of the view.
+    </p>
+    </p>
+
+    <p class="FormatvorlageBlocktitel">
+        <a id="ohDeviceConnetionType">
+            Device
+            Connection Types
+        </a>
+    </p>
+
+    <p class="MsoBlockText">
+        If the option “Show Physical Connection Types” from the tool bar has been selected, connections between devices are color-coded as follows:
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>Black: Copper Ethernet wiring</p>
+
+    <p class="BulletText1"><span class="class31"></span>Orange: Fiber optical connection</p>
+
+    <p class="MsoBlockText">Two parallel lines indicate a ring topology.</p>
+
+    <p class="MsoBlockText">
+        For devices which are displayed without any connection to
+        other devices, the required information could not be gathered.
+    </p>
+
+    <p class="FormatvorlageBlocktitel"><a id="olDeviceToolTip">Device Tooltip</a>s</p>
+
+    <p class="MsoBlockText">
+        Hovering over a device will bring up a tooltip which displays:
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>Device name</p>
+
+    <p class="BulletText1"><span class="class31"></span>Device type</p>
+
+    <p class="BulletText1"><span class="class31"></span>IP address</p>
+
+    <p class="BulletText1"><span class="class31"></span>Firmware Version (where applicable)</p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="378" height="171" id="Grafik 53" src="html_files/image029.jpg"></p>
+
+    <p class="MsoBlockText">
+        Hovering over a device
+        port displays:
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>Interface name</p>
+
+    <p class="BulletText1"><span class="class31"></span>IP address</p>
+
+    <p class="BulletText1"><span class="class31"></span>Port ID</p>
+
+    <p class="BulletText1"><span class="class31"></span>Name of the neighbor</p>
+
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="378" height="171" id="Grafik 54" src="html_files/image030.jpg"></p>
+
+    <p class="FormatvorlageBlocktitel">
+        <a id="olDeviceContextMenu">
+            Device Context
+            Menu
+        </a>
+    </p>
+
+    <p class="MsoBlockText">
+        By right-clicking on any device in a Graphical View or in the corresponding Device Table, you can bring up a context menu with various functions.
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="378" height="274" id="Grafik 55" src="html_files/image031.png"></p>
+
+    <p class="MsoBlockText">
+        Not all menu entries are available for all devices with the actual entries depending on the state of the device.
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="58" class="class45">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Icon</span></p>
+                </td>
+                <td width="136" valign="top" class="class46">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="304" valign="top" class="class47">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Function</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 8" src="html_files/image032.png"></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks">
+                    <span lang="DE">
+                        Flash
+                        LED
+                    </span>
+                </p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Sets the LEDs on the physical device to flashing
+                    for easy identification.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 9" src="html_files/image033.png"></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks"><span lang="DE">Start IO Test</span></p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Immediately launches an <span lang="DE"><a href=" ohIOTestTask.html"><span lang="EN-US">IO Test Task</span></a></span> with
+                    the selected device.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 12" src="html_files/image034.png"></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks"><span lang="DE">Open Web Browser</span></p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Opens your PCs web browser and establishes a
+                    connection to the device’s web server.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 26" src="html_files/image035.png"></b></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks">
+                    Start (Stop) Flashing LED of Duplicates in Name/IP
+                    address
+                </p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Like “Flash LED”, but flashes the LEDs of <b>all</b>
+                    devices which share their name and/or IP address with the selected device.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 14" src="html_files/image036.png"></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks"><span lang="DE">Set Network Parameters</span></p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Opens a popup window which allows you to set
+                    various networking parameters of the chosen device.
+                </p>
+                <p class="TabelleTextlinks">For details, see <span lang="DE"><a href="#olSetNetworkParameters"><span lang="EN-US">Set Network Parameters</span></a></span><span class="MsoHyperlink">.</span></p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 38" src="html_files/image037.png"></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks"><span lang="DE">Reset Network Parameters</span></p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Performs a factory reset of the device’s IP address
+                    and device name.
+                </p>
+                <p class="TabelleTextlinks">
+                    If the command is chosen from the <span lang="DE"><a href="#olDevicesList"><span lang="EN-US">Device Table</span></a></span>, it is
+                    possible to reset several selected devices simultaneously.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 44" src="html_files/image038.png"></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks">Edit Additional I&amp;M Data</p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Opens a popup window which lets you enter data concerning
+                    identification and maintenance (“I&amp;M”) of the device, like location and
+                    date of the installation.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 45" src="html_files/image039.png"></b></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks">Use as Starting Point in Graphical View</p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Redraws the Graphical View with the chosen device
+                    in the upper left corner.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel"><a id="olDevicesList">Device Table</a></p>
+
+    <p class="MsoBlockText">
+        This table lists the devices found either during your current network scan (Online mode only), or in a stored reference network. It is displayed below the Graphical View of the PRONETA Basic window.
+    </p>
+
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="491" height="162" id="Grafik 60" src="html_files/image040.png"></p>
+
+    <p class="MsoBlockText">
+        The table can display a large amount of different device data. Right-click anywhere in the table header fields to bring up a menu from which you can select the information fields you wish to display.
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="396" height="477" id="Grafik 27" src="html_files/image041.png"></p>
+
+    <p class="MsoBlockText">
+        Orange borders around table cells indicate duplicate device names or IP addresses.
+    </p>
+
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="491" height="201" id="Grafik 16" src="html_files/image042.png"></p>
+
+    <p class="MsoBlockText">
+        White cells inside the table allow information to be entered. The new values will be written to the respective device immediately when the cell loses focus. (This is an alternative way to the use of the context menu entry “<span lang="DE"><a href="#olSetNetworkParameters"><span lang="EN-US">Set network parameters</span></a></span>”)
+    </p>
+
+    <p class="MsoBlockText">
+        A left click on a column header will sort the table according to the data in this column in ascending order, another click reverses the order. Small triangles “&#9650;” or “&#9660;” in the column header indicate the sorting criterion.
+    </p>
+
+    <p class="MsoBlockText">
+        Dragging a column header with the mouse rearranges the table columns accordingly.
+    </p>
+
+    <p class="MsoBlockText">
+        Right-clicking on any table entry brings up the current device context menu.
+    </p>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="Blocktitel"><a id="olDeviceDetails">Device Details</a></p>
+
+    <p class="MsoBlockText">
+        In the right part of the PRONETA Basic window, a details view is displayed.
+    </p>
+
+    <p class="MsoBlockText">
+        This view shows additional device information for a device which has previously been selected in the <span lang="DE"><a href="#olDevicesList"><span lang="EN-US">Device Table</span></a></span>
+    </p>
+
+    <p class="MsoBlockText">
+        Branches of the tree of device properties can be opened and collapsed by clicking the triangular symbol of the corresponding branch.
+    </p>
+
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="492" height="533" id="Grafik 76" src="html_files/image043.png"></p>
+
+    <p class="MsoBlockText">
+        For Non-PROFINET devices which are connected to PROFINET devices and provide an Asset Management Record (AMR), data from the AMR is displayed in the Device Details, too.
+    </p>
+
+    <p class="FormatvorlageBlocktitel"><a id="olSetNetworkParameters">Set Network Parameters</a></p>
+
+    <p class="MsoBlockText">
+        This popup window allows the immediate input of the following parameters for an individual device:
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>Device name</p>
+
+    <p class="BulletText1"><span class="class31"></span>Static or DHCP IP configuration</p>
+
+    <p class="MsoBlockText">Plus, where applicable:</p>
+
+    <p class="BulletText1"><span class="class31"></span>IP address</p>
+
+    <p class="BulletText1"><span class="class31"></span>Network mask</p>
+
+    <p class="BulletText1"><span class="class31"></span>Address of the gateway router</p>
+
+    <p class="MsoBlockText">
+        Checking the box “Apply settings permanently” will ensure that the new parameters are retained across a power-off of the device.
+    </p>
+
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="378" height="398" id="Grafik 77" src="html_files/image044.png"></p>
+<br>
+</body>
+</html>

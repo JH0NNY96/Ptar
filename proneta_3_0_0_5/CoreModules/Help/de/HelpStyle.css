@@ -1,0 +1,188 @@
+body {
+    font-family: Siemens Sans Global, Calibre, Arial, Helvetica, sans-serif;
+    background: #EBF1F5;
+    padding: 0px;
+    margin: 0px;
+    color: #1C1C1C;
+}
+
+a:link {
+    font-size: 14px;
+    color: #0066CC;
+}
+
+a:visited {
+    font-size: 14px;
+    color: #0066CC;
+}
+
+a:active {
+    font-size: 14px;
+    color: #0066CC;
+}
+
+a.current {
+    font-size: 14px;
+    font-weight: bold;
+    color: #003399 !Important;
+}
+
+h1 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1C1C1C;
+    padding: 10px 10px 10px 10px;
+    margin: 0px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 14px;
+    color: #1C1C1C;
+    padding: 10px 10px 10px 10px;
+    margin: 0px;
+}
+
+h3 {
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #879BAA;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #ffffff;
+    padding: 2px 10px 2px 10px;
+    margin: 0px;
+}
+
+h4 {
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #879BAA;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #ffffff;
+    padding: 2px 10px 2px 10px;
+    margin: 0px;
+}
+
+p {
+    font-size: 14px;
+}
+
+ul {
+    font-size: 14px;
+    list-style-image: url('html_files/ident.png');
+    padding: 0px 10px 0px 10px;
+    margin: 0px 0px 0px 10px;
+}
+
+    ul li {
+        font-size: 14px;
+        padding: 5px 0px 0px 0px;
+    }
+
+    ul.WithoutBulletPoint {
+        font-size: 14px;
+        list-style-image: none;
+        list-style: none;
+        list-style-position: inside;
+        padding: 0px 10px 0px 10px;
+        margin: 0px 0px 0px 10px;
+    }
+
+
+
+ol {
+    font-size: 14px;
+}
+
+table {
+    font-size: 14px;
+    margin: 10px;
+}
+
+
+p {
+    margin: 10px;
+}
+
+    p.BulletText1 {
+    }
+
+    p.Blocktitel {
+        font-size: 14px;
+        font-weight: bold;
+        color: #333333;
+        background-color: #CDD9E1;
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: #ffffff;
+        padding: 2px 10px 2px 10px;
+        margin: 0px;
+    }
+
+    p.FormatvorlageBlocktitel {
+        font-size: 14px;
+        font-weight: bold;
+        color: #333333;
+        background-color: #CDD9E1;
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: #ffffff;
+        padding: 2px 10px 2px 10px;
+        margin: 0px;
+    }
+
+    p.SecondaryContent {
+        margin: 10px 20px 10px 20px;
+    }
+
+    p.MsoNormal {
+        margin: 10px;
+    }
+
+    p.MsoListParagraphCxSpFirst {
+        margin: 10px;
+    }
+
+    p.MsoListParagraphCxSpMiddle {
+        margin: 10px;
+    }
+
+    p.MsoListParagraphCxSpLast {
+        margin: 10px;
+    }
+
+    p.BulletTextTest {
+        display: inline-block;
+        margin: 0px;
+    }
+
+
+span.class31 {
+    background: url(html_files/ident.png) left center;
+    background-repeat: no-repeat;
+    width: 3px;
+    height: 3px;
+    display: block;
+    float: left;
+    background-position: center;
+    margin: 0px 4px 6px 4px;
+    display: inline-block;
+}
+
+span.class46 {
+    background: url(html_files/ident.png) left center;
+    background-repeat: no-repeat;
+    width: 3px;
+    height: 3px;
+    display: block;
+    float: left;
+    background-position: center;
+    margin: 0px 4px 6px 20px;
+    display: inline-block;
+}
+
+span.class62 {
+    font-weight: bold;
+}

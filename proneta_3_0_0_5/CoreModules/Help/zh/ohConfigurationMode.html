@@ -1,0 +1,372 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="HelpStyle.css">
+</head>
+<body id="ScrollablePanel">
+    <h2 class="class44">
+        3
+        网络分析任务
+    </h2>
+
+    <p class="MsoBlockText">
+        PRONETA Basic 的网络分析可帮助用户快速了解 PROFINET 网络中安装的设备及其彼此互连的方式。“网络分析”(Network Analysis) 还允许用户查看和更改设备的各种网络参数，如 IP 地址、设备名称等。
+    </p>
+
+    <p class="MsoBlockText">
+        可以将不同的网络相互比较，并且可以自动或手动组态设备。
+    </p>
+    <h3>
+        3.4
+        组态模式
+    </h3>
+
+    <p class="MsoBlockText">
+        “组态”(Configuration) 模式提供一种半自动机制，可将参考网络中的设备名称分配到物理网络中的全部设备或单台设备。
+    </p>
+
+    <p class="MsoBlockText">
+        这种机制为组态大量相同安装操作（例如安装一系列开关柜）提供了一种快速可靠的方法。随后，可在“ <span lang="DE"><a href="ohComparisonMode.html"><span lang="EN-US">比较模式”(Comparison Mode)</span></a></span>中检查结果。
+    </p>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">主画面分为：</p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>A <span lang="DE">
+            <a href="ohOfflineMode.html#olTopologyList">
+                <span lang="EN-US">
+                    拓扑列表
+                </span>
+            </a>
+        </span> (1)
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>一个主（顶部）和两个小（底部）<span lang="DE"><a href="ohOnlineMode.html#ohTopologyView"><span lang="EN-US">图形视图</span></a></span> (2)<a href="#_ftn1" title="" id="_ftnref1"><span class="MsoFootnoteReference"><span class="MsoFootnoteReference"></span></span></a></p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>A <span lang="DE">
+            <a href="ohOnlineMode.html#olDevicesList">
+                <span lang="EN-US">
+                    设备表
+                </span>
+            </a>
+        </span> (3)，包含选定拓扑中存储的设备
+    </p>
+
+    <p class="MsoBlockText"><img border="0" width="491" height="393" src="html_files/image063.png"></p>
+
+    <p class="FormatvorlageBlocktitel">功能栏</p>
+
+    <p class="MsoBlockText">
+        功能栏中提供以下功能：
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td valign="top" class="class76">
+                    <p class="TabelleKopfzentriert"><span lang="DE">图标</span></p>
+                </td>
+                <td valign="top" class="class77">
+                    <p class="TabelleKopfzentriert"><span lang="DE">名称</span></p>
+                </td>
+                <td valign="top" class="class78">
+                    <p class="TabelleKopfzentriert"><span lang="DE">功能</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td class="class79">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 71" src="html_files/image046.png"></b></p>
+            </td>
+            <td class="class80">
+                <p class="TabelleTextlinks">添加拓扑文件</p>
+            </td>
+            <td class="class81">
+                <p class="TabelleTextlinks">
+                    将<span lang="DE"><a href="ohOfflineMode.html#olTopologyImport"><span lang="EN-US">之前存储的拓扑</span></a></span> 添加到拓扑列表中。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class79">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="158" height="33" id="Grafik 73" src="html_files/image064.png"></b></p>
+            </td>
+            <td class="class80">
+                <p class="TabelleTextlinks">匹配设备</p>
+            </td>
+            <td class="class81">
+                <p class="TabelleTextlinks">
+                    尝试根据 <span lang="DE">
+                        <a href="#olMatchingCriteraConfig">
+                            <span lang="EN-US">
+                                组态模式中的匹配条件
+                            </span>
+                        </a>
+                    </span>对参考网络和物理网络中的设备进行匹配；找到的匹配设备以绿色突出显示。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class79">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="158" height="34" id="Grafik 74" src="html_files/image065.png"></b></p>
+            </td>
+            <td class="class80">
+                <p class="TabelleTextlinks">删除所有匹配</p>
+            </td>
+            <td class="class81">
+                <p class="TabelleTextlinks">
+                    丢弃上次匹配操作的结果。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class79">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="158" height="34" id="Grafik 75" src="html_files/image066.png"></b></p>
+            </td>
+            <td class="class80">
+                <p class="TabelleTextlinks">分配设备名称</p>
+            </td>
+            <td class="class81">
+                <p class="TabelleTextlinks">
+                    将参考网络中找到匹配的所有设备的设备名称写入物理网络中的相应设备。
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">
+        最后两个命令在设备的快捷菜单中有配对命令。这些命令不在网络的所有设备上运行，而仅在所选设备中运行。
+    </p>
+
+    <p class="FormatvorlageBlocktitel">图形视图</p>
+
+    <p class="MsoBlockText">
+        “图形视图”(Graphical View) 是 PROFINET 网络的一种图形显示形式。有关其操作的详细信息，请参见在线模式下的 <span lang="DE"><a href="ohOnlineMode.html#ohTopologyView"><span lang="EN-US">图形视图</span></a></span>。
+    </p>
+
+    <p class="MsoBlockText">
+        设备颜色表示设备组态的可用性：
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td valign="top" class="class17">
+                    <p class="TabelleKopfzentriert"><span lang="DE">图标</span></p>
+                </td>
+                <td valign="top" class="class18">
+                    <p class="TabelleKopfzentriert"><span lang="DE">颜色</span></p>
+                </td>
+                <td valign="top" class="class18">
+                    <p class="TabelleKopfzentriert"><span lang="DE">含义</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td valign="top" class="class19">
+                <p class="TabelleTextlinks"><img border="0" width="134" height="78" id="Grafik 243" src="html_files/image067.png"></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks"><span lang="DE">灰显</span></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    在物理网络中未找到参考网络中此设备的匹配设备。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td valign="top" class="class19">
+                <p class="TabelleTextlinks"><img border="0" width="134" height="78" id="Grafik 280" src="html_files/image068.jpg"></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks"><span lang="DE">浅灰色</span></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    尚未执行匹配，或在物理网络中未找到此设备的唯一匹配设备。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td valign="top" class="class19">
+                <p class="TabelleTextlinks"><img border="0" width="134" height="78" id="Grafik 281" src="html_files/image069.jpg"></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks"><span lang="DE">绿色</span></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    参考网络中的设备已成功与物理网络中的设备匹配，或用户已手动匹配设备。
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">
+        将鼠标指针悬停在设备上时，会显示“<span lang="DE"><a href="ohOnlineMode.html#olDeviceToolTip"><span lang="EN-US">设备工具提示”(Device Tooltip)</span></a></span>，其中包含设备的基本信息。
+    </p>
+
+    <p class="FormatvorlageBlocktitel">工具栏</p>
+
+    <p class="MsoBlockText">
+        在视图顶部有一个带有各种功能图标的工具栏：
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td valign="top" class="class17">
+                    <p class="TabelleKopfzentriert"><span lang="DE">图标</span></p>
+                </td>
+                <td valign="top" class="class18">
+                    <p class="TabelleKopfzentriert"><span lang="DE">名称</span></p>
+                </td>
+                <td valign="top" class="class18">
+                    <p class="TabelleKopfzentriert"><span lang="DE">功能</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td class="class25">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 79" src="html_files/image070.png"></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    缩放选择
+                </p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    可使用此工具在“图形视图”(Graphical View) 中绘制一个矩形。释放鼠标按钮后，视图便会缩放以显示矩形区域。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class25">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 80" src="html_files/image071.png"></b></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">根据画面大小进行缩放</p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    将视图缩放到所有网络设备都适合显示在视图内的大小。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class25">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="123" height="31" id="Grafik 81" src="html_files/image072.png"></b></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">缩放条</p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    可向左或向右拖动手柄或单击“-”或“+”放大或缩小网络。（还可以通过将鼠标置于视图上并使用鼠标滚轮来放大和缩小图形视图。）
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">设备快捷菜单</p>
+
+    <p class="MsoBlockText">
+        右键单击“图形视图”(Graphical View) 或相应“设备表”(Device Table) 中的任意设备，可调出具有各种功能的快捷菜单。
+    </p>
+
+    <p class="MsoBlockText">
+        并非所有的菜单条目都适用于具有实际条目的所有设备，具体取决于设备状态和设备类型。
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td class="class45">
+                    <p class="TabelleKopfzentriert"><span lang="DE">图标</span></p>
+                </td>
+                <td valign="top" class="class82">
+                    <p class="TabelleKopfzentriert"><span lang="DE">名称</span></p>
+                </td>
+                <td valign="top" class="class83">
+                    <p class="TabelleKopfzentriert"><span lang="DE">功能</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td class="class48">
+                <p class="TabelleTextlinks" align="center">&nbsp;</p>
+            </td>
+            <td class="class84">
+                <p class="TabelleTextlinks">分配设备名称</p>
+            </td>
+            <td class="class85">
+                <p class="TabelleTextlinks">
+                    将设备名称从参考拓扑复制到物理网络中与其匹配的设备。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class48">
+                <p class="TabelleTextlinks" align="center">&nbsp;</p>
+            </td>
+            <td class="class84">
+                <p class="TabelleTextlinks">
+                    删除匹配
+                </p>
+            </td>
+            <td class="class85">
+                <p class="TabelleTextlinks">
+                    丢弃“图形视图”(Graphical View) 中的匹配结果。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 83" src="html_files/image039.png"></b></p>
+            </td>
+            <td class="class84">
+                <p class="TabelleTextlinks">用作图形视图的起点</p>
+            </td>
+            <td class="class85">
+                <p class="TabelleTextlinks">
+                    使用左上角的选定设备重绘图形视图。
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">设备表</p>
+
+    <p class="MsoBlockText">
+        此表列出了所选参考网络中现有的设备。处理方式与在线模式下的“<span lang="DE"><a href="ohOnlineMode.html#olDevicesList"><span lang="EN-US">设备表”(Device Table)</span></a></span> 类似，但禁用全部写操作。
+
+<p class="FormatvorlageBlocktitel">
+    <a id="olMatchingCriteraConfig">
+        在组态模式中查找匹配设备
+    </a>
+    </p>
+
+<p class="MsoBlockText">
+    在此模式下，设备间的匹配基于以下内容确定：
+</p>
+
+<p class="BulletText1"><span class="class31"></span>设备 ID</p>
+
+<p class="BulletText1"><span class="class31"></span>供应商 ID</p>
+
+<p class="BulletText1"><span class="class31"></span>设备间的连接</p>
+
+<p class="MsoBlockText">
+    请注意，以上匹配项固定，不同之处在于比较模式下确定差异的方式 - 请参 <a href="ohComparisonMode.html#olSetComparisonCriteria"><span lang="EN-US">设置比较条件</span></a>。
+</p>
+<br>
+</body>
+</html>

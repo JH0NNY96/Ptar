@@ -1,0 +1,240 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="HelpStyle.css">
+</head>
+<body id="ScrollablePanel" id="ScrollablePanel" id="ScrollablePanel" id="ScrollablePanel">
+    <h1>
+        1
+        Allgemeines
+    </h1>
+
+    <h2>
+        1.1
+        PRONETA Basic und PRONETA Professional
+    </h2>
+    <p class="MsoBlockText">PRONETA Professional ist ein kommerzielles, lizenziertes Software-Produkt, das von SIEMENS vertrieben wird. Es umfasst den Funktionsumfang von PRONETA Basic und stellt darüberhinaus zusätzliche Funktionalitäten zur Verfügung.</p>
+    <h2>
+        1.2
+        Eigenschaften
+    </h2>
+
+    <p class="FormatvorlageBlocktitel">Bezug von PRONETA Basic</p>
+
+    <p class="MsoBlockText">
+        PRONETA Basic ist als kostenloser Download im SIEMENS Support-Portal erhältlich:
+    </p>
+
+    <p class="BulletText1">
+        <span class="MsoHyperlink">
+            <span class="class31"></span>
+        </span><span lang="DE"><a href="https://support.industry.siemens.com/cs/ww/de/view/67460624"><span lang="EN-US">https://support.industry.siemens.com/cs/ww/de/view/67460624</span></a></span>
+    </p>
+
+    <p class="MsoBlockText">Dieses Handbuch bezieht sich auf Version 3.0.</p>
+
+    <p class="FormatvorlageBlocktitel">Systemvoraussetzungen</p>
+
+    <p class="MsoBlockText">
+        <a id="_Ref365545761">
+            PRONETA Basic läuft auf jedem modernen PC, PG oder Laptop unter Windows 7, Windows Embedded Compact 7, Windows 8 oder Windows 10 (alle jeweils als 32- oder 64-Bit-Version).
+        </a>
+    </p>
+
+    <p class="MsoBlockText">
+        Die Verbindung mit PROFINET wird über ein Industrial Ethernet-Kabel hergestellt.
+    </p>
+
+    <p class="MsoBlockText">
+        Folgende zusätzliche Software-Komponenten müssen ebenfalls vorhanden sein:
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span><span lang="DE"><a href="http://www.microsoft.com/en-us/download/details.aspx?id=17718"><span lang="EN-US">.NET Framework v4.6.1</span></a></span>
+    </p>
+
+    <p class="BulletText1">
+        <span class="class3">
+            <span class="class31"></span><span lang="DE">
+                <a href="http://www.winpcap.org/install/default.htm">
+                    WinPcap
+                    4.1.3
+                </a>
+            </span> oder höher
+</p>
+
+    <p class="MsoBlockText">
+        Falls .NET auf Ihrem PC fehlt, wird Sie der Installer zu einer Download-Adresse führen. WinPcap ist Teil der PRONETA Basic-Distribution und wird beim ersten Start von PRONETA Basic installiert, falls es nicht gefunden wird.
+    </p>
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class6">
+                <p class="CWDGraphic" align="center"><b>HINWEIS</b></p>
+            </td>
+            <td width="493" valign="top" class="class8">
+                <ul>
+                    <li>
+                        Je nach verwendeter Windows Embedded Distribution sind die Treiber für .NET Framework und WinPcap eventuell nicht in der Standardinstallation enthalten und müssen daher manuell installiert werden.
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        Die 32-Bit-Version von Microsoft Visual C++ ist auch für 64-Bit-Versionen von Windows zu verwenden.
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">Unterstützte SIMATIC-Software</p>
+
+    <p class="MsoBlockText">
+        Mit PRONETA Basic können Sie Referenzprojekte laden, die mit STEP 7, Versionen 5.4, 5.5 oder 5.6 erstellt wurden. Es können ferner AML-Dateien („Automation Markup Language“) importiert werden, die mit TIA Portal erstellt wurden.
+    </p>
+
+    <p class="Blocktitel">Einschränkungen</p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>Die maximale Größe eines Netzwerks, bei der Netzwerkscans verlässlich durchgeführt werden, beträgt 500 Geräte. Bei größeren Netzwerken kann es sein, dass Geräte unentdeckt bleiben oder PRONETA Basic abstürzt. (Siehe auch <a href="ohOnlineMode.html"><span class="class9">Online-Modus</span></a><u><span class="class9">)</span></u>
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>Beim IO-Test werden Signaländerungen mit einer Dauer von weniger als 256 ms möglicherweise nicht zuverlässig entdeckt. (Siehe auch <a href="ohIOTestTask.html"><span class="class9">I/O Testmodus</span></a>)
+    </p>
+
+    <h2>
+        1.3
+        Unterstützte Baugruppen
+    </h2>
+
+    <p class="MsoBlockText">
+        PRONETA Basic unterstützt alle PROFINET-konformen Geräte unabhängig von deren Hersteller. Der unterstützte Funktionsumfang ist abhängig von den einzelnen Geräten.
+    </p>
+
+    <p class="MsoBlockText">Der IO-Test unterstützt die folgenden Module:</p>
+
+    <p class="BulletText1">
+        <span class="class31" /></span>Die meisten aktuellen SIMATIC ET 200-Module
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>SIMATIC IO-Link Module (Master/Device)
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>SIMATIC Compact Field Units (CFU)
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>SIRIUS Motor Starter mit Firmware-Versionen ab 1.1
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>Heizungssteuerung SIPLUS HCS4200/4300
+    </p>
+
+    <p class="Blocktitel">Referenzliste</p>
+
+    <p class="MsoBlockText">
+        Eine laufend aktualisierte Liste der unterstützten Module für PRONETA Basic finden Sie auf der <span lang="DE"><a href="https://support.industry.siemens.com/cs/ww/de/view/67460624"><span lang="EN-US">PRONETA Basic Download-Seite</span></a></span>
+    </p>
+
+    <p class="Blocktitel">Aktualisierung der PRONETA Basic GSDML-Datenbank</p>
+
+    <p class="MsoBlockText">
+        <a id="_Toc368404974">
+            Module, die nach der Freigabe der Version 2.6 erschienen sind, können durch einen Import der GSDML-Datei von den Webseiten des SIEMENS
+        </a><a href="https://support.industry.siemens.com/cs/ww/de/">Industry Online Support-Portals</a>
+        nachträglich unterstützt werden, sofern sie keine neuen Funktionen benötigen. Nähere Informationen hierzu erhalten Sie im Kapitel <a href="ohGSDMLManager.html">GSDML-Manager</a>.
+    </p>
+
+    <h2>
+        1.4
+        PRONETA Basic installieren und ausführen
+    </h2>
+
+    <p class="FormatvorlageBlocktitel">Installation</p>
+
+    <p class="MsoBlockText">
+        Extrahieren Sie das PRONETA Basic-Dateiarchiv in einen Ordner Ihres PCs, und verbinden Sie Ihren PC über ein Industrial Ethernet-Kabel mit Ihrer Anlage.
+    </p>
+
+    <p class="MsoBlockText">Es ist keine weitere Installation für PRONETA Basic notwendig.</p>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class6">
+                <p class="CWDGraphic" align="center"><b>HINWEIS</b></p>
+            </td>
+            <td width="493" valign="top" class="class8">
+                <p class="Hinweis">
+                    Der Pfad zum Extrahieren von PRONETA Basic darf keines der Sonderzeichen „#“ oder „;“ enthalten.
+                </p>
+                <p class="Hinweis">
+                    Für die Durchführung von IO-Tests (siehe <a href="ohIOTestTask.html"><span class="class9">I/O Testmodus</span></a>) muss PRONETA in einem Verzeichnis installiert werden, in dem es bei der Ausführung Schreibrechte hat.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">PRONETA Basic starten</p>
+
+    <p class="MsoBlockText">
+        Nach der Installation können Sie PRONETA Basic durch einen einfachen Doppelklick auf das Programmsymbol im Extraktionsordner starten.
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="83" height="87" id="Grafik 19" src="html_files/image003.jpg"></p>
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class6">
+                <p class="CWDGraphic" align="center"><b><span lang="DE">HINWEIS</span></b></p>
+            </td>
+            <td width="493" valign="top" class="class8">
+                <p class="TabelleTextlinks">
+                    <span class="class11">
+                        Beim ersten Ausführen von PRONETA Basic werden Sie aufgefordert, die Lizenzbedingungen zu akzeptieren, bevor Sie fortfahren können.
+                    </span>
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">
+        Sie können auch eine Verknüpfung zu PRONETA Basic auf Ihrem Desktop erstellen und das Programm von dort aus starten.
+    </p>
+
+    <p class="FormatvorlageBlocktitel">
+        PRONETA Basic beenden
+    </p>
+
+    <p class="MsoBlockText">
+        Um PRONETA Basic zu beenden, klicken Sie auf das „Schließen“-Symbol im Programmfenster.
+    </p>
+
+    <p class="MsoBlockText"><img border="0" width="210" height="107" src="html_files/image004.png"></p>
+
+    <p class="FormatvorlageBlocktitel">Deinstallation</p>
+
+    <p class="MsoBlockText">
+        Wenn Sie PRONETA Basic nicht weiter verwenden möchten, führen Sie die beiden folgenden Schritte aus:
+    </p>
+
+    <p class="NummerierteListe">
+        1.<span class="class1">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+        </span>Löschen Sie den Ordner, in den Sie PRONETA Basic extrahiert haben.
+    </p>
+
+    <p class="NummerierteListe">
+        2.<span class="class1">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+        </span>Führen Sie im Windows-Startmenü „WinPcap -> WinPcap 4.1.3 deinstallieren“ aus.
+    </p>
+
+</body>
+</html>

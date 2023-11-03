@@ -1,0 +1,379 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="HelpStyle.css">
+</head>
+<body id="ScrollablePanel">
+    <h2 class="class44">
+        3
+        Netzwerkanalyse
+    </h2>
+
+    <p class="MsoBlockText">
+        Durch die Netzwerkanalyse von PRONETA Basic erhalten Sie einen schnellen Überblick darüber, welche Geräte in Ihrem PROFINET-Netzwerk installiert sind und darüber, wie diese miteinander verbunden sind. Mit der Netzwerkanalyse können Sie sich ferner verschiedene Netzwerkparameter der Geräte, wie z. B. die IP-Adressen, Gerätenamen usw. ansehen und diese ändern.
+    </p>
+
+    <p class="MsoBlockText">
+        Es können verschiedene Netzwerke miteinander verglichen werden und Geräte automatisch oder manuell projektiert werden.
+    </p>
+    <h3>
+        3.3
+        Vergleichsmodus
+    </h3>
+
+    <p class="MsoBlockText">
+        Der Vergleichsmodus dient dazu, zwei Netzwerke miteinander zu vergleichen, wobei das eine normalerweise ein während eines Netzwerk-Scans erkanntes physisches Netzwerk und das andere ein Referenznetzwerk ist. Das Referenznetzwerk wiederum kann als gespeicherte Topologiedatei eines Netzwerk-Scans, als STEP 7-Projekt oder in Form einer AML-Datei vorliegen.
+    </p>
+
+    <p class="MsoBlockText"><img border="0" width="491" height="343" src="html_files/image052.png"></p>
+
+    <p class="MsoBlockText">Der Hauptbildschirm ist unterteilt in:</p>
+
+    <p class="BulletText1"><span class="class31"></span>Eine <span lang="DE"><a href="#olTopologyListComparison"><span lang="EN-US">Topologieliste</span></a></span> (1) der „Zu vergleichenden Topologien“</p>
+
+    <p class="BulletText1"><span class="class31"></span>Eine große (oben) und zwei kleinere (unten) grafische Ansichten (2)</p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>Zwei <span lang="DE">
+            <a href="ohOnlineMode.html#olDevicesList">
+                <span lang="EN-US">
+                    Gerätetabellen
+                </span>
+            </a>
+        </span> (3) mit den in den ausgewählten Topologien gespeicherten Geräten
+    </p>
+
+    <p class="MsoBlockText">
+        Mittels des Fensterrahmens (4) können die unteren grafischen Ansichten geöffnet und geschlossen und ihre relative Größe angepasst werden.
+    </p>
+
+    <p class="FormatvorlageBlocktitel">Funktionsleiste</p>
+
+    <p class="MsoBlockText">
+        Über die Funktionsleiste stehen folgende Funktionen zur Verfügung:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="70" valign="top" class="class64">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Symbol</span></p>
+                </td>
+                <td width="166" valign="top" class="class65">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="262" valign="top" class="class66">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Funktion</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="70" class="class67">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 56" src="html_files/image046.png"></p>
+            </td>
+            <td width="166" class="class68">
+                <p class="TabelleTextlinks">Topologiedatei hinzufügen</p>
+            </td>
+            <td width="262" class="class69">
+                <p class="TabelleTextlinks">
+                    Fügt der Topologieliste eine <span lang="DE"><a href="ohOfflineMode.html#olTopologyImport"><span lang="EN-US">zuvor gespeicherte Topologie</span></a></span> hinzu.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="70" class="class67">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 58" src="html_files/image015.png"></p>
+            </td>
+            <td width="166" class="class68">
+                <p class="TabelleTextlinks">Topologien exportieren</p>
+            </td>
+            <td width="262" class="class69">
+                <p class="TabelleTextlinks">Führt einen <a href="ohOnlineMode.html#olTopologyExport"><span lang="EN-US">Topologie-Export</span></a> auf eine Festplatte durch.</p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="70" class="class67">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 59" src="html_files/image053.png"></p>
+            </td>
+            <td width="166" class="class68">
+                <p class="TabelleTextlinks">
+                    Vergleichskriterien auswählen
+                </p>
+            </td>
+            <td width="262" class="class69">
+                <p class="TabelleTextlinks">Wählt den Filter zum Gerätevergleich aus.</p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">Ganz rechts in der Funktionsleiste befinden sich die <a href="ohOnlineMode.html#olDeviceSearch"><span lang="EN-US">Gerätesuche</span></a> und die <span lang="DE"><a href="ohOnlineMode.html#olScannerStatusIndicator"><span lang="EN-US">Scanner-Statusanzeige</span></a></span><span class="MsoHyperlink">.</span></p>
+
+    <p class="Blocktitel"><a id="olSetComparisonCriteria">Vergleichskriterien auswählen</a></p>
+
+    <p class="MsoBlockText">
+        Die Vergleichskriterien legen fest, welche Geräteparameter verwendet werden, um jeweils die Unterschiede zwischen Topologien bzw. Geräten zu bestimmen. Zwei Geräte werden nur dann als „Gegenstücke” voneinander betrachtet, wenn sie die gleichen Werte für alle in diesem Dialog ausgewählten Parameter haben und falls sie sich innerhalb des gewählten IP-Adressbereich befinden, falls einer festgelegt wurde.
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="333" height="242" id="Grafik 32" src="html_files/image054.jpg"></p>
+
+    <p class="FormatvorlageBlocktitel"><a id="olTopologyListComparison">Topologieliste</a></p>
+
+    <p class="MsoBlockText">
+        In diesem Fenster werden die aktuelle Online-Topologie und eine Liste der gespeicherten Netzwerktopologien zum Vergleich angezeigt. Mit Hilfe der Befehle in der Funktionsleiste können Sie weitere Topologien hinzufügen.
+    </p>
+
+    <p class="MsoBlockText">
+        Um einen Eintrag zu entfernen, klicken Sie mit der rechten Maustaste in die Liste und verwenden Sie den Befehl „Datei entfernen“.
+    </p>
+
+    <p class="MsoBlockText">
+        Um zwei Topologien aus der Liste miteinander zu vergleichen, wählen Sie beide Waage-Symbole rechts neben den entsprechenden Topologienamen aus. Der oberste Eintrag des Paars wird in der grafischen Ansicht angezeigt und mit dem unteren Eintrag verglichen.
+    </p>
+
+    <p class="MsoBlockText">
+        Die Liste der hier angezeigten Topologien wird zwischen den PRONETA Basic-Sitzungen beibehalten.
+    </p>
+
+    <p class="FormatvorlageBlocktitel">Grafische Ansicht</p>
+
+    <p class="MsoBlockText">
+        Die grafische Ansicht ist eine grafische Darstellung des PROFINET-Netzwerks. Nähere Informationen zu ihrer Bedienung finden sie unter <span lang="DE"><a href="ohOnlineMode.html#ohTopologyView"><span lang="EN-US">Grafische Ansicht</span></a></span> im Online-Modus.
+    </p>
+
+    <p class="Blocktitel">Anzeige von Geräten ohne Gegenstück</p>
+
+    <p class="MsoBlockText">
+        Für Geräte mit einem roten Rand wurde kein entsprechendes Gegenstück in der anderen Topologie gefunden. Die Vergleichbarkeit wird durch die in <a href="#olSetComparisonCriteria"><span lang="EN-US">Vergleichskriterien auswählen</span></a><span class="class70"> eingestellten Parameter bestimmt.</span></u>
+    </p>
+
+    <p class="FormatvorlageBlocktitel">Grafische Ansichten „Übersicht” und „Detail“</p>
+
+    <p class="MsoBlockText">
+        Die größere Ansicht zeigt eine Übersicht des obersten, in der Topologieliste ausgewählten Netzwerks.
+    </p>
+
+    <p class="MsoBlockText">
+        Unter der Ansicht befinden sich zwei Topologie-Detailansichten, in denen das in der Übersicht oder in den Gerätetabellen ausgewählte Gerät hervorgehoben ist. Hierbei wird in der linken Detailansicht das Gerät in der ersten Topologie und in der rechten Detailansicht die zweite Topologiekonfiguration angezeigt (falls vorhanden).
+    </p>
+
+    <p class="MsoBlockText">
+        Ein roter Rahmen um ein Gerätesymbol weist auf Abweichungen zwischen den Geräten im ersten und zweiten Netzwerk hin. Durch Bewegen des Mauszeigers über ein solches Symbol in einer der Detailansichten erscheint ein Tooltip mit weiteren Details bezüglich der Unterschiede.
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="375" height="90" id="Grafik 149" src="html_files/image055.png"></p>
+
+    <p class="MsoBlockText">
+        Ein Klick auf „Details hier“ stellt eine detailliertere Zusammenfassung der Unterschiede bereit.
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="491" height="324" id="Grafik 149" src="html_files/image056.png"></p>
+
+    <p class="MsoBlockText">
+        Unterschiede können z. B. bei der Netzwerkkonfiguration, dem Modulstatus etc. bestehen, je nach Konfiguration durch <a href="#olSetComparisonCriteria"><span lang="EN-US">Vergleichskriterien auswählen</span></a><span class="class70">.</span></u>
+    </p>
+
+    <p class="FormatvorlageBlocktitel">Symbolleiste</p>
+
+    <p class="MsoBlockText">
+        Im oberen Bereich der Ansicht befindet sich eine Symbolleiste mit einer Reihe von Funktionssymbolen:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="134" valign="top" class="class39">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Symbol</span></p>
+                </td>
+                <td width="100" valign="top" class="class71">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="265" valign="top" class="class72">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Funktion</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="42" height="42" id="Grafik 143" src="html_files/image057.png"></b></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">Zoomauswahl</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    Ermöglicht das Aufziehen eines Rechtecks innerhalb der grafischen Ansicht. Sobald Sie die Maustaste loslassen, wird so in die Ansicht gezoomt, dass nur der Bereich innerhalb des Rechtecks sichtbar ist.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="42" height="42" id="Grafik 144" src="html_files/image058.png"></b></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">Vergrößerung an Bildschirm anpassen</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    Zoomt so zurück, dass wieder alle Netzwerkteilnehmer in der Ansicht sichtbar sind.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="123" height="23" id="Grafik 145" src="html_files/image059.png"></b></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">Zoomleiste</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    Zoomt in das Netzwerk oder zurück durch Ziehen des Reglers nach rechts bzw. links oder aber durch Klicken auf „-“ bzw. „+“. (Sie können auch in die und aus der grafischen Ansicht zoomen, indem Sie die Maus über die Ansicht bewegen und das Scrollrad verwenden.)
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 64" src="html_files/image060.png"></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">
+                    Vergleich aktualisieren
+                </p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    Startet einen neuen Netzwerk-Scan. (Im Gegensatz zum Online-Modus wird die grafische Ansicht im Vergleichsmodus nicht ständig aktualisiert.)
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 65" src="html_files/image061.png"></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">Angezeigte Topologie in der Übersicht wechseln</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    Legt fest, welche der beiden ausgewählten Topologien in der Übersicht angezeigt wird.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 66" src="html_files/image062.png"></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">Zum vorherigen Unterschied wechseln</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    Wählt den vorherigen Konflikt in einem Vergleich aus (sofern einer vorliegt).
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 67" src="html_files/image062.png"></b></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">Zum nächsten Unterschied wechseln</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    Wählt den nächsten Konflikt in einem Vergleich aus (sofern einer vorliegt).
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">Geräte-Kontextmenü</p>
+
+    <p class="MsoBlockText">
+        Durch Klicken mit der rechten Maustaste auf ein beliebiges Gerät in einer grafischen Ansicht oder in der entsprechenden Gerätetabelle öffnet sich ein Kontextmenü mit unterschiedlichen Funktionen.
+    </p>
+
+    <p class="MsoBlockText">
+        Nicht alle Menüeinträge sind auch für alle Geräte verfügbar, wobei die tatsächlichen Einträge vom Status des jeweiligen Gerätes und des Gerätetyps abhängen.
+    </p>
+
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="58" class="class45">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Symbol</span></p>
+                </td>
+                <td width="136" valign="top" class="class46">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="304" valign="top" class="class47">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Funktion</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 35" src="html_files/image032.png"></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks">
+                    <span lang="DE">
+                        LED-Blinken starten
+                    </span>
+                </p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Lässt die LEDs am realen Gerät zur einfachen Identifizierung blinken.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><a id="_GoBack"><img border="0" width="43" height="43" id="Grafik 41" src="html_files/image037.png"></a></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks"><span lang="DE">Netzwerkparameter zurücksetzen</span></p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Setzt die IP-Adresse und den Gerätenamen des ausgewählten Gerätes auf die Werkseinstellungen zurück.
+                </p>
+                <p class="TabelleTextlinks">
+                    (Nur für Geräte der Online-Topologie aus der <a href="ohOnlineMode.html#olDevicesList">
+                        Gerätetabelle
+                    </a> auswählbar.)
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 48" src="html_files/image039.png"></b></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks">Als Ausgangspunkt in der grafischen Ansicht benutzen</p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Arrangiert die grafische Ansicht neu, so dass das ausgewählte Gerät in der oberen linken Ecke erscheint.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">Gerätetabellen</p>
+
+    <p class="MsoBlockText">
+        Auf der rechten Seite des Konfigurationsmodus-Fensters befinden sich zwei nebeneinander liegende Gerätetabellen. In der linken Tabelle sind die im ersten Netzwerk erkannten Geräte aufgelistet, während in der rechten Tabelle die Geräte des zweiten Netzwerks aufgelistet sind.
+    </p>
+
+    <p class="MsoBlockText">
+        Durch Klicken auf einen Eintrag in einer der Tabellen liegt der Fokus des entsprechenden Netzwerks in den grafischen Ansichten auf diesem Gerät.
+    </p>
+
+    <p class="MsoBlockText">&nbsp;</p>
+    <br>
+</body>
+</html>

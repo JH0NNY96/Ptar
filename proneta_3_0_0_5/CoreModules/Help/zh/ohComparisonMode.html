@@ -1,0 +1,375 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="HelpStyle.css">
+</head>
+<body id="ScrollablePanel">
+    <h2 class="class44">
+        3
+        网络分析任务
+    </h2>
+
+    <p class="MsoBlockText">
+        PRONETA Basic 的网络分析可帮助用户快速了解 PROFINET 网络中安装的设备及其彼此互连的方式。“网络分析”(Network Analysis) 还允许用户查看和更改设备的各种网络参数，如 IP 地址、设备名称等。
+    </p>
+
+    <p class="MsoBlockText">
+        可以将不同的网络相互比较，并且可以自动或手动组态设备。
+    </p>
+    <h3>
+        3.3
+        比较模式
+    </h3>
+
+    <p class="MsoBlockText">
+        在比较模式下，可将两个网络相互比较 - 通常一个是当前网络扫描中发现的物理网络，另一个是参考网络。反之，参考网络也可以是保存的网络扫描拓扑文件、STEP 7 项目中组态的网络或 AML 数据。
+    </p>
+
+    <p class="MsoBlockText"><img border="0" width="491" height="343" src="html_files/image052.png"></p>
+
+    <p class="MsoBlockText">主画面分为：</p>
+
+    <p class="BulletText1"><span class="class31"></span>“比较拓扑”的<span lang="DE"><a href="#olTopologyListComparison"><span lang="EN-US">拓扑列表</span></a></span> (1)</p>
+
+    <p class="BulletText1"><span class="class31"></span>一个主（顶部）和两个小（底部）图形视图&nbsp;(2)</p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>两个<span lang="DE">
+            <a href="ohOnlineMode.html#olDevicesList">
+                <span lang="EN-US">
+                    设备表
+                </span>
+            </a>
+        </span> (3)，包含选定拓扑中存储的设备
+    </p>
+
+    <p class="MsoBlockText">
+        窗格边框 (4) 允许打开和关闭底部“图形视图”(Graphical Views)，并允许改变相对大小
+    </p>
+
+    <p class="FormatvorlageBlocktitel">功能栏</p>
+
+    <p class="MsoBlockText">
+        功能栏中提供以下功能：
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="70" valign="top" class="class64">
+                    <p class="TabelleKopfzentriert"><span lang="DE">图标</span></p>
+                </td>
+                <td width="166" valign="top" class="class65">
+                    <p class="TabelleKopfzentriert"><span lang="DE">名称</span></p>
+                </td>
+                <td width="262" valign="top" class="class66">
+                    <p class="TabelleKopfzentriert"><span lang="DE">功能</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="70" class="class67">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 56" src="html_files/image046.png"></p>
+            </td>
+            <td width="166" class="class68">
+                <p class="TabelleTextlinks">添加拓扑文件</p>
+            </td>
+            <td width="262" class="class69">
+                <p class="TabelleTextlinks">
+                    将<span lang="DE"><a href="ohOfflineMode.html#olTopologyImport"><span lang="EN-US">之前存储的拓扑</span></a></span>添加到拓扑列表中。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="70" class="class67">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 58" src="html_files/image016.png"></p>
+            </td>
+            <td width="166" class="class68">
+                <p class="TabelleTextlinks">导出拓扑</p>
+            </td>
+            <td width="262" class="class69">
+                <p class="TabelleTextlinks">对硬盘执行 <a href="ohOnlineMode.html#olTopologyExport"><span lang="EN-US">拓扑导出</span></a>。</p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="70" class="class67">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 59" src="html_files/image053.png"></p>
+            </td>
+            <td width="166" class="class68">
+                <p class="TabelleTextlinks">设置比较条件</p>
+            </td>
+            <td width="262" class="class69">
+                <p class="TabelleTextlinks">选择用于设备比较的过滤设置。</p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">在功能栏最右侧具有 <a href="ohOnlineMode.html#olDeviceSearch"><span lang="EN-US">设备搜索</span></a>和<span lang="DE"><a href="ohOnlineMode.html#olScannerStatusIndicator"><span lang="EN-US">扫描装置状态指示器</span></a></span><span class="MsoHyperlink">。</span></p>
+
+    <p class="Blocktitel"><a id="olSetComparisonCriteria">设置比较条件</a></p>
+
+    <p class="MsoBlockText">
+        比较条件确定建立拓扑或设备之间的差异时分别使用哪些设备参数。仅当两台设备在此对话框中检查的所有参数值都相同，且都位于所选 IP 地址范围内并已定义其中一台设备时，这两台设备才互为“配对设备”。
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="378" height="286" id="Grafik 32" src="html_files/image054.jpg"></p>
+
+    <p class="FormatvorlageBlocktitel"><a id="olTopologyListComparison">拓扑列表</a></p>
+
+    <p class="MsoBlockText">
+        在此窗口中，将显示当前在线拓扑和用于比较的存储网络拓扑列表。通过功能栏中的命令添加更多拓扑。
+    </p>
+
+    <p class="MsoBlockText">
+        要删除条目，请右键单击列表并应用“删除文件”(Remove File) 命令。
+    </p>
+
+    <p class="MsoBlockText">
+        要将列表中的两个拓扑相互比较，请选择对应拓扑名称右侧的两个平衡图标。两个拓扑的顶部条目会显示在“图形视图”(Graphical View) 中，并与底部条目进行比较。
+    </p>
+
+    <p class="MsoBlockText">
+        此处显示的拓扑列表将保留在 PRONETA Basic 会话之间。
+    </p>
+
+    <p class="FormatvorlageBlocktitel">图形视图</p>
+
+    <p class="MsoBlockText">
+        T“图形视图”(Graphical View) 是 PROFINET 网络的一种图形显示形式。有关其操作的详细信息，请参见在线模式下的<span lang="DE"><a href="ohOnlineMode.html#ohTopologyView"><span lang="EN-US">图形视图</span></a></span>。
+    </p>
+
+    <p class="Blocktitel">显示无配对设备的设备</p>
+
+    <p class="MsoBlockText">
+        对于带红框的设备，在其它拓扑中找不到对等配对设备。由通过<a href="#olSetComparisonCriteria"><span lang="EN-US">设置比较条件组态的参数确定是否对等</span></a><span class="class70">。</span></u>
+    </p>
+
+    <p class="FormatvorlageBlocktitel">图形视图“概览”和“详细信息”</p>
+
+    <p class="MsoBlockText">
+        较大的视图显示拓扑列表中选定的顶层网络的概览。
+    </p>
+
+    <p class="MsoBlockText">
+        “概览”(Overview) 下方为两个拓扑的“详细信息视图”(Detail Views)，突出显示在概览或“设备表”(Device Table) 中选择的任何设备；左侧详细信息视图显示第一个拓扑中的设备，右侧视图显示第二个拓扑中的对应拓扑组态（如存在）。
+    </p>
+
+    <p class="MsoBlockText">
+        设备符号周围的红色边框表示第一个和第二个网络中的设备之间存在差异。将鼠标悬停在任意详细信息视图中的符号上都会显示工具提示，其中包含有关差异的更多详细信息。
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="378" height="140" id="Grafik 149" src="html_files/image055.png"></p>
+
+    <p class="MsoBlockText">
+        单击“在此处查看详细信息”(See details here) 可提供更详细的差异汇总信息。
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="491" height="334" id="Grafik 149" src="html_files/image056.png"></p>
+
+    <p class="MsoBlockText">
+        差异可能是通过<a href="#olSetComparisonCriteria"><span lang="EN-US">设置比较条件</span></a><span class="class70">组态的网络组态、模块状态等。</span></u>
+    </p>
+
+    <p class="FormatvorlageBlocktitel">工具栏</p>
+
+    <p class="MsoBlockText">
+        在视图顶部有一个带有各种功能图标的工具栏：
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="134" valign="top" class="class39">
+                    <p class="TabelleKopfzentriert"><span lang="DE">图标</span></p>
+                </td>
+                <td width="100" valign="top" class="class71">
+                    <p class="TabelleKopfzentriert"><span lang="DE">名称</span></p>
+                </td>
+                <td width="265" valign="top" class="class72">
+                    <p class="TabelleKopfzentriert"><span lang="DE">功能</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="42" height="42" id="Grafik 143" src="html_files/image049.png"></b></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">缩放选择</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    可使用此工具在“图形视图”(Graphical View) 中绘制一个矩形。释放鼠标按钮后，视图便会缩放以显示矩形区域。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="42" height="42" id="Grafik 144" src="html_files/image057.png"></b></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">根据画面大小进行缩放</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    将视图缩放到所有网络设备都适合显示在视图内的大小。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="123" height="23" id="Grafik 145" src="html_files/image058.png"></b></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">缩放条</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    可向左或向右拖动手柄或单击“-”或“+”放大或缩小网络。（还可以通过将鼠标置于视图上并使用鼠标滚轮来放大和缩小图形视图。）
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 64" src="html_files/image059.png"></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">刷新比较</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    启动新的网络扫描循环。（与“在线”模式相反，在“比较”模式下，“图形视图”无法持续更新。）
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 65" src="html_files/image060.png"></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">更改概览中显示的拓扑</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    在两个选定的拓扑之间进行切换，确定显示在概览中的拓扑。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 66" src="html_files/image061.png"></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">转到上一个差异</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    选择比较中的上一个冲突（如果存在）。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 67" src="html_files/image062.png"></b></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">转到下一个差异</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    选择比较中的下一个冲突（如果存在）。
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">设备快捷菜单</p>
+
+    <p class="MsoBlockText">
+        右键单击“图形视图”(Graphical View) 或相应“设备表”(Device Table) 中的任意设备，可调出具有各种功能的快捷菜单。
+    </p>
+
+    <p class="MsoBlockText">
+        并非所有的菜单条目都适用于具有实际条目的所有设备，具体取决于设备状态和设备类型。
+    </p>
+
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="58" class="class45">
+                    <p class="TabelleKopfzentriert"><span lang="DE">图标</span></p>
+                </td>
+                <td width="136" valign="top" class="class46">
+                    <p class="TabelleKopfzentriert"><span lang="DE">名称</span></p>
+                </td>
+                <td width="304" valign="top" class="class47">
+                    <p class="TabelleKopfzentriert"><span lang="DE">功能</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 35" src="html_files/image032.png"></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks">
+                    <span lang="DE">
+                        使 LED 闪烁
+                    </span>
+                </p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    将物理设备上的 LED 设置为闪烁以便于识别。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><a id="_GoBack"><img border="0" width="43" height="43" id="Grafik 41" src="html_files/image037.png"></a></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks"><span lang="DE">复位网络参数</span></p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    恢复设备 IP 地址和设备名称的出厂设置。
+                </p>
+                <p class="TabelleTextlinks">
+                    （仅适用于在线拓扑中“<a href="ohOnlineMode.html#olDevicesList">
+                        设备表”(Device Table)
+                    </a> 内的设备。）
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 48" src="html_files/image039.png"></b></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks">用作图形视图的起点</p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    使用左上角的选定设备重绘图形视图。
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">设备表</p>
+
+    <p class="MsoBlockText">
+        在“比较”(Comparison) 模式窗口的右侧有两个并排设备表。左侧的设备表列出了第一个网络中找到的设备，右侧的设备表列出了第二个网络中找到的设备。
+    </p>
+
+    <p class="MsoBlockText">
+        单击任一表中的条目可在“图形视图”(Graphical Views) 中选中此设备对应的网络。
+    </p>
+
+    <p class="MsoBlockText">&nbsp;</p>
+<br>
+</body>
+</html>

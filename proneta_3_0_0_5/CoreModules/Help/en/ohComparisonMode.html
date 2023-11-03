@@ -1,0 +1,399 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="HelpStyle.css">
+</head>
+<body id="ScrollablePanel">
+    <h2 class="class44">
+        3
+        Network Analysis Task
+    </h2>
+
+    <p class="MsoBlockText">
+        PRONETA Basic’s Network Analysis gives you a quick overview about which devices are installed in your PROFINET network, and how they are connected with each other. The Network Analysis also lets you view and change various network parameters of the devices, like IP addresses, device names etc.
+    </p>
+
+    <p class="MsoBlockText">
+        Different networks can be compared with each other, and the devices can be configured automatically or manually.
+    </p>
+    <h3>
+        3.3
+        Comparison Mode
+    </h3>
+
+    <p class="MsoBlockText">
+        Comparison mode serves to compare two networks with each other – usually one will be the physical network as found during the current network scans, and the other one will be a reference network. The reference network in turn can be a saved topology file of a network scan, a network as configured in a STEP 7 project, or AML data.
+    </p>
+
+    <p class="MsoBlockText"><img border="0" width="491" height="343" src="html_files/image052.png"></p>
+
+    <p class="MsoBlockText">The main screen is separated into:</p>
+
+    <p class="BulletText1"><span class="class31"></span>A <span lang="DE"><a href="#olTopologyListComparison"><span lang="EN-US">Topologies List</span></a></span> (1) of “Topologies for Comparison”</p>
+
+    <p class="BulletText1"><span class="class31"></span>One major (top) and two smaller (bottom) Graphical Views&nbsp;(2)</p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>Two <span lang="DE">
+            <a href="ohOnlineMode.html#olDevicesList">
+                <span lang="EN-US">
+                    Device
+                    Tables
+                </span>
+            </a>
+        </span> (3) with the devices stored in the selected topologies
+    </p>
+
+    <p class="MsoBlockText">
+        A pane border&nbsp;(4) allows for the opening and closing
+        of the bottom Graphical Views and for changing the relative sizes
+    </p>
+
+    <p class="FormatvorlageBlocktitel">Function Bar</p>
+
+    <p class="MsoBlockText">
+        The following functions are available in the Function Bar:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="70" valign="top" class="class64">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Icon</span></p>
+                </td>
+                <td width="166" valign="top" class="class65">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="262" valign="top" class="class66">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Function</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="70" class="class67">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 56" src="html_files/image046.png"></p>
+            </td>
+            <td width="166" class="class68">
+                <p class="TabelleTextlinks">Add Topology File</p>
+            </td>
+            <td width="262" class="class69">
+                <p class="TabelleTextlinks">
+                    Adds a <span lang="DE"><a href="ohOfflineMode.html#olTopologyImport"><span lang="EN-US">previously stored topology</span></a></span> to the topologies
+                    list.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="70" class="class67">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 58" src="html_files/image016.png"></p>
+            </td>
+            <td width="166" class="class68">
+                <p class="TabelleTextlinks">Export Topologies</p>
+            </td>
+            <td width="262" class="class69">
+                <p class="TabelleTextlinks">Performs a <a href="ohOnlineMode.html#olTopologyExport"><span lang="EN-US">Topology Export</span></a> to disk.</p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="70" class="class67">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 59" src="html_files/image053.png"></p>
+            </td>
+            <td width="166" class="class68">
+                <p class="TabelleTextlinks">Set Comparison Criteria</p>
+            </td>
+            <td width="262" class="class69">
+                <p class="TabelleTextlinks">Selects filter setting for the device comparison.</p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">On the far right of the Function Bar, there are the <a href="ohOnlineMode.html#olDeviceSearch"><span lang="EN-US">Device Search</span></a> and the <span lang="DE"><a href="ohOnlineMode.html#olScannerStatusIndicator"><span lang="EN-US">Scanner Status Indicator</span></a></span><span class="MsoHyperlink">.</span></p>
+
+    <p class="Blocktitel"><a id="olSetComparisonCriteria">Set Comparison Criteria</a></p>
+
+    <p class="MsoBlockText">
+        The comparison criteria determine which device parameters are used in establishing differences between topologies or devices, respectively. Two devices are considered “counterparts” to each other only if they have the same values for all the parameters checked in this dialog, and if they fall within the IP address range chosen, if one is defined.
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="378" height="286" id="Grafik 32" src="html_files/image054.jpg"></p>
+
+    <p class="FormatvorlageBlocktitel"><a id="olTopologyListComparison">Topology List</a></p>
+
+    <p class="MsoBlockText">
+        In this window the current online topology and a list of stored network topologies for comparison is displayed. Add more topologies through the commands in the function bar.
+    </p>
+
+    <p class="MsoBlockText">
+        To remove an entry,
+        right-click in the list, and apply the “Remove File” command.
+    </p>
+
+    <p class="MsoBlockText">
+        To compare two of the topologies from the list with each
+        other, select both balance icons to the right of the respective topology names.
+        The top entry of the pair will be displayed in the Graphical View and compared
+        to the bottom entry.
+    </p>
+
+    <p class="MsoBlockText">
+        The list of topologies displayed here is retained between PRONETA Basic sessions.
+    </p>
+
+    <p class="FormatvorlageBlocktitel">Graphical View</p>
+
+    <p class="MsoBlockText">
+        The Graphical View is a graphical display of the PROFINET network. For details on its operation, see <span lang="DE"><a href="ohOnlineMode.html#ohTopologyView"><span lang="EN-US">Graphical View</span></a></span> in the
+        Online mode.
+    </p>
+
+    <p class="Blocktitel">Display of Devices without a Counterpart</p>
+
+    <p class="MsoBlockText">
+        For devices with a red border, no equivalent counterpart was found in the other topology. Equivalency is determined by the parameters configured through <a href="#olSetComparisonCriteria"><span lang="EN-US">Set Comparison Criteria</span></a><span class="class70">.</span></u>
+    </p>
+
+    <p class="FormatvorlageBlocktitel">Graphical Views “Overview” and “Details”</p>
+
+    <p class="MsoBlockText">
+        The larger view shows an overview of the top network chosen in the topologies list.
+    </p>
+
+    <p class="MsoBlockText">
+        Below the Overview are two topology Detail Views which highlight any device selected in the overview or the Device Table; the left detail view showing the device in the first topology, the right one showing the corresponding topology configuration in the second one (if there is any).
+    </p>
+
+    <p class="MsoBlockText">
+        A red border around a device symbol indicates that differences between the devices in the first and the second network exist. Hovering over such a symbol in either of the detail views brings up a tooltip with more details about the differences.
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="378" height="140" id="Grafik 149" src="html_files/image055.png"></p>
+
+    <p class="MsoBlockText">
+        A click on “See details here” provides a more detailled summary of differences.
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="491" height="334" id="Grafik 149" src="html_files/image056.png"></p>
+
+    <p class="MsoBlockText">
+        Differences may be the network configuration, module status etc., as configured through <a href="#olSetComparisonCriteria"><span lang="EN-US">Set Comparison Criteria</span></a><span class="class70">.</span></u>
+    </p>
+
+    <p class="FormatvorlageBlocktitel">Tool Bar</p>
+
+    <p class="MsoBlockText">
+        In the top section of the view, there is a tool bar with a variety of function icons:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="134" valign="top" class="class39">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Icon</span></p>
+                </td>
+                <td width="100" valign="top" class="class71">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="265" valign="top" class="class72">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Function</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="42" height="42" id="Grafik 143" src="html_files/image049.png"></b></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">Zoom Selection</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    Lets you draw a rectangle inside the Graphical
+                    View. Once you release the mouse button, the view will zoom to display the
+                    rectangle area.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="42" height="42" id="Grafik 144" src="html_files/image057.png"></b></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">Zoom Fit to Screen</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    Zooms the view back in a way that all network
+                    devices fit inside the view.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="123" height="23" id="Grafik 145" src="html_files/image058.png"></b></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">Zoom Bar</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    Zoom into the network or back by dragging the
+                    handle to the right or the left, respectively, or clicking on “-“ or “+”.
+                    (You can also zoom into and out of the Graphical View by placing the mouse
+                    over the view and using the scroll wheel.)
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 64" src="html_files/image059.png"></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">Refresh Comparison</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    Starts a new scanner cycle of the network. (As
+                    opposed to the Online mode, in Comparison mode the Graphical View is <i>not</i>
+                    constantly updated.)
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 65" src="html_files/image060.png"></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">Change Topology Displayed in Overview</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    Toggles which of the two selected topologies is
+                    displayed in the overview.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 66" src="html_files/image061.png"></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">Go to Previous Difference</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    Selects the previous conflict in a comparison (if
+                    there is one).
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 67" src="html_files/image062.png"></b></p>
+            </td>
+            <td width="100" class="class73">
+                <p class="TabelleTextlinks">Go to Next Difference</p>
+            </td>
+            <td width="265" class="class74">
+                <p class="TabelleTextlinks">
+                    Selects the subsequent conflict in a comparison (if
+                    there is one).
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">Device Context Menu</p>
+
+    <p class="MsoBlockText">
+        By right-clicking on any device in a Graphical View or in the corresponding Device Table, you can bring up a context menu with various functions.
+    </p>
+
+    <p class="MsoBlockText">
+        Not all menu entries are available for all devices with the actual entries depending on the state of the device and the device type.
+    </p>
+
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="58" class="class45">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Icon</span></p>
+                </td>
+                <td width="136" valign="top" class="class46">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="304" valign="top" class="class47">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Function</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 35" src="html_files/image032.png"></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks">
+                    <span lang="DE">
+                        Flash
+                        LED
+                    </span>
+                </p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Sets the LEDs on the physical device to flashing
+                    for easy identification.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><a id="_GoBack"><img border="0" width="43" height="43" id="Grafik 41" src="html_files/image037.png"></a></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks"><span lang="DE">Reset Network Parameters</span></p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Performs a factory reset of the device’s IP address
+                    and device name.
+                </p>
+                <p class="TabelleTextlinks">
+                    (Available only from the <a href="ohOnlineMode.html#olDevicesList">
+                        Device
+                        Table
+                    </a> for devices in the online topology.)
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 48" src="html_files/image039.png"></b></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks">Use as Starting Point in Graphical View</p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Redraws the Graphical View with the chosen device
+                    in the upper left corner.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">Device Tables</p>
+
+    <p class="MsoBlockText">
+        On the right side of the Comparison mode window there are two side-by-side device tables. The left table lists the devices found in the first network, while the right table lists the devices of the second network.
+    </p>
+
+    <p class="MsoBlockText">
+        Clicking on an entry in either table will focus the corresponding network in the Graphical Views on this device.
+    </p>
+
+    <p class="MsoBlockText">&nbsp;</p>
+<br>
+</body>
+</html>

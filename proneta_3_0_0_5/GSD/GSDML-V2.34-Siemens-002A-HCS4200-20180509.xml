@@ -1,0 +1,1556 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-V2.34.xsd">
+	<ProfileHeader>
+		<ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+		<ProfileRevision>1.00</ProfileRevision>
+		<ProfileName>Device Profile for PROFINET Devices</ProfileName>
+		<ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>4</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>GSDML</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity VendorID="0x002A" DeviceID="0x1003">
+			<InfoText TextId="TOK_DevIdent_InfoText" />
+			<VendorName Value="SIEMENS AG" />
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Family MainFamily="General" ProductFamily="HeaterControl" />
+		</DeviceFunction>
+		<ApplicationProcess>
+			<DeviceAccessPointList>
+				<DeviceAccessPointItem ID="DAP" PhysicalSlots="0..25" ModuleIdentNumber="0x00000001" MinDeviceInterval="32" ImplementationType="ERTEC200" DNS_CompatibleName="HCS4200" AddressAssignment="DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1" NameOfStationNotTransferable="true" RequiredSchemaVersion="V2.0" DeviceAccessSupported="false" PNIO_Version="V2.2" CheckDeviceID_Allowed="false">
+					<ModuleInfo>
+						<Name TextId="TOK_DAP" />
+						<InfoText TextId="TOK_ModInfo_InfoTextId_DAP" />
+						<VendorName Value="Siemens AG" />
+						<OrderNumber Value="6BK1942-1AA00-0AA*"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="TOK_Subslot_8000" />
+						<SubslotItem SubslotNumber="32769" TextId="TOK_Subslot_8001" />
+						<SubslotItem SubslotNumber="32770" TextId="TOK_Subslot_8002" />
+					</SubslotList>
+					<IOConfigData MaxInputLength="460" MaxOutputLength="460" />
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_CIM_PN" AllowedInSlots="1" FixedInSlots="1" />
+						<ModuleItemRef ModuleItemTarget="ID_Mod_POM16" AllowedInSlots="2..25" />
+						<ModuleItemRef ModuleItemTarget="ID_Mod_POM12" AllowedInSlots="2..25" />
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP" SubmoduleIdentNumber="0x0001" MayIssueProcessAlarm="true">
+							<IOData/>
+							<ModuleInfo>
+								<Name TextId="TOK_DAP" />
+								<InfoText TextId="TOK_ModInfo_InfoTextId_DAP" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem ID="IDS_2I" SubslotNumber="32768" SubmoduleIdentNumber="0x000B" SupportedRT_Classes="RT_CLASS_1" TextId="TOK_DAP_InterfaceModule" SupportedProtocols="SNMP;LLDP" DelayMeasurementSupported="true">
+							<ApplicationRelations NumberOfAdditionalInputCR="0" NumberOfAdditionalMulticastProviderCR="0" NumberOfAdditionalOutputCR="0" NumberOfMulticastConsumerCR="0">
+								<TimingProperties SendClock="32 40 48 56 64 72 80 88 96 104 112 120 128" ReductionRatio="1 2 4 8 16 32 64 128 256 512" />
+							</ApplicationRelations>
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem ID="IDS_2P1" SubslotNumber="32769" SubmoduleIdentNumber="0x000C" MAUTypes="16" TextId="TOK_Port1">
+							<MAUTypeList ExtensionSupported="false">
+								<MAUTypeItem Value="16" Extension="0" AdjustSupported="true" />
+							</MAUTypeList>
+						</PortSubmoduleItem>
+						<PortSubmoduleItem ID="IDS_2P2" SubslotNumber="32770" SubmoduleIdentNumber="0x000C" MAUTypes="16" TextId="TOK_Port2">
+							<MAUTypeList ExtensionSupported="false">
+								<MAUTypeItem Value="16" Extension="0" AdjustSupported="true" />
+							</MAUTypeList>
+						</PortSubmoduleItem>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_2" />
+					</Graphics>
+					<SlotList>
+						<SlotItem SlotNumber="1" TextId="IDSLOT_CIM_PM"/>
+						<SlotItem SlotNumber="2" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="3" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="4" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="5" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="6" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="7" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="8" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="9" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="10" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="11" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="12" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="13" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="14" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="15" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="16" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="17" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="18" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="19" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="20" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="21" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="22" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="23" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="24" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="25" TextId="IDSLOT_POM"/>
+					</SlotList>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem ID="DAP_V2" PhysicalSlots="0..25" ModuleIdentNumber="0x00000011" MinDeviceInterval="32" ImplementationType="ERTEC200" DNS_CompatibleName="HCS4200" AddressAssignment="DCP" FixedInSlots="0" ObjectUUID_LocalIndex="1" NameOfStationNotTransferable="true" RequiredSchemaVersion="V2.32" DeviceAccessSupported="true" NumberOfDeviceAccessAR="1" IO_SupervisorSupported="false" PNIO_Version="V2.32" MultipleWriteSupported="true" LLDP_NoD_Supported="true" ResetToFactoryModes="2" CheckDeviceID_Allowed="false">
+					<ModuleInfo>
+						<Name TextId="TOK_DAP_V2" />
+						<InfoText TextId="TOK_ModInfo_InfoTextId_DAP_V2" />
+						<VendorName Value="Siemens AG" />
+						<OrderNumber Value="6BK1942-1AA00-0AA*"/>
+					</ModuleInfo>
+					<CertificationInfo ConformanceClass="B" ApplicationClass="" NetloadClass="III" />
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="TOK_Subslot_8000" />
+						<SubslotItem SubslotNumber="32769" TextId="TOK_Subslot_8001" />
+						<SubslotItem SubslotNumber="32770" TextId="TOK_Subslot_8002" />
+					</SubslotList>
+					<IOConfigData MaxInputLength="460" MaxOutputLength="460" />
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_Mod_CIM_PN" AllowedInSlots="1" FixedInSlots="1" />
+						<ModuleItemRef ModuleItemTarget="ID_Mod_POM16" AllowedInSlots="2..25" />
+						<ModuleItemRef ModuleItemTarget="ID_Mod_POM12" AllowedInSlots="2..25" />
+						<ModuleItemRef ModuleItemTarget="ID_Mod_POM8" AllowedInSlots="2..13" />
+						<ModuleItemRef ModuleItemTarget="ID_Mod_POMFlex" AllowedInSlots="2..25" />
+						<ModuleItemRef ModuleItemTarget="ID_Mod_POM9" AllowedInSlots="6..25" />
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP_V2" SubmoduleIdentNumber="0x0001" Writeable_IM_Records="1 2 3" MayIssueProcessAlarm="true">
+							<IOData/>
+							<ModuleInfo>
+								<Name TextId="TOK_DAP_V2" />
+								<InfoText TextId="TOK_ModInfo_InfoTextId_DAP_V2" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem ID="IDS_2I_V2" SubslotNumber="32768" SubmoduleIdentNumber="0x000B" SupportedRT_Classes="RT_CLASS_1" TextId="TOK_DAP_InterfaceModule" SupportedProtocols="SNMP;LLDP" DelayMeasurementSupported="true" PTP_BoundarySupported="true" DCP_BoundarySupported="true">
+							<ApplicationRelations NumberOfAR="1" NumberOfAdditionalInputCR="0" NumberOfAdditionalMulticastProviderCR="0" NumberOfAdditionalOutputCR="0" NumberOfMulticastConsumerCR="0" StartupMode="Legacy;Advanced">
+								<TimingProperties SendClock="32 40 48 56 64 72 80 88 96 104 112 120 128" ReductionRatio="1 2 4 8 16 32 64 128 256 512" />
+							</ApplicationRelations>
+							<MediaRedundancy SupportedRole="Client" MaxMRP_Instances="1"/>
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem ID="IDS_2P1_V2" SubslotNumber="32769" SubmoduleIdentNumber="0x000C" MAUTypes="16" TextId="TOK_Port1" SupportsRingportConfig="true" IsDefaultRingport="true" LinkStateDiagnosisCapability="Up+Down" PortDeactivationSupported="true" CheckMAUTypeSupported="true" CheckMAUTypeDifferenceSupported="true">
+							<MAUTypeList ExtensionSupported="false">
+								<MAUTypeItem Value="16" Extension="0" AdjustSupported="true" />
+							</MAUTypeList>
+						</PortSubmoduleItem>
+						<PortSubmoduleItem ID="IDS_2P2_V2" SubslotNumber="32770" SubmoduleIdentNumber="0x000C" MAUTypes="16" TextId="TOK_Port2" SupportsRingportConfig="true" IsDefaultRingport="true" LinkStateDiagnosisCapability="Up+Down" PortDeactivationSupported="true" CheckMAUTypeSupported="true" CheckMAUTypeDifferenceSupported="true">
+							<MAUTypeList ExtensionSupported="false">
+								<MAUTypeItem Value="16" Extension="0" AdjustSupported="true" />
+							</MAUTypeList>
+						</PortSubmoduleItem>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="ID_Graph_2" />
+					</Graphics>
+					<SlotList>
+						<SlotItem SlotNumber="1" TextId="IDSLOT_CIM_PM"/>
+						<SlotItem SlotNumber="2" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="3" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="4" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="5" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="6" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="7" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="8" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="9" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="10" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="11" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="12" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="13" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="14" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="15" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="16" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="17" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="18" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="19" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="20" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="21" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="22" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="23" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="24" TextId="IDSLOT_POM"/>
+						<SlotItem SlotNumber="25" TextId="IDSLOT_POM"/>
+					</SlotList>
+				</DeviceAccessPointItem>
+			</DeviceAccessPointList>
+			<ModuleList>
+				<ModuleItem ID="ID_Mod_CIM_PN" ModuleIdentNumber="0x00004210" PhysicalSubslots="2" RequiredSchemaVersion="V2.1">
+					<ModuleInfo>
+						<Name TextId="TOK_TextId_Module_CIM" />
+						<InfoText TextId="TOK_InfoTextId_Module_CIM" />
+						<OrderNumber Value="6BK1942-1AA00-0AA*"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="1" SubmoduleIdentNumber="0x0001" API="0" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned8" TextId="TOK_CIM_State" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="TOK_CIM_Control_0"/>
+										<BitDataItem BitOffset="1" TextId="TOK_CIM_Control_1"/>
+										<BitDataItem BitOffset="2" TextId="TOK_CIM_Control_2"/>
+									</DataItem>
+									<DataItem DataType="Unsigned8" TextId="TOK_Reserve" UseAsBits="false"/>
+								</Input>
+								<Output Consistency="Item consistency">
+									<DataItem DataType="Unsigned8" TextId="TOK_CIM_Control" UseAsBits="true">
+										<BitDataItem BitOffset="0" TextId="TOK_CIM_Control_0"/>
+										<BitDataItem BitOffset="1" TextId="TOK_CIM_Control_1"/>
+										<BitDataItem BitOffset="2" TextId="TOK_CIM_Control_2"/>
+									</DataItem>
+									<DataItem DataType="Unsigned8" TextId="TOK_Reserve" UseAsBits="false"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="1" Length="4">
+									<Name TextId="TOK_PAR_General"/>
+									<Ref ValueItemTarget="ConfigCtrlEnabling" DataType="Bit" ByteOffset="0" BitOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="TOK_PAR_ConfigCtrl"/>
+									<Ref DataType="Unsigned8"  ByteOffset="1" DefaultValue="0" Changeable="false" Visible="false" TextId="TOK_PAR_CimRes"/>
+									<Ref DataType="Unsigned16" ByteOffset="2" DefaultValue="230" AllowedValues="40..300" TextId="TOK_PAR_LineVoltage"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo>
+								<Name TextId="TOK_TextId_Module_Virtual" />
+								<InfoText TextId="TOK_InfoTextId_Module_Virtual" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="IDS_SubMod_CIM_TEMP" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="IDS_SubMod_CIM_DIDO" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="IDS_SubMod_CIM_UI" AllowedInSubslots="2"/>
+					</UseableSubmodules>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_POM16" ModuleIdentNumber="0x00004220" RequiredSchemaVersion="V2.1">
+					<ModuleInfo>
+						<Name TextId="TOK_TextId_Module_POM16" />
+						<InfoText TextId="TOK_InfoTextId_Module_POM16" />
+						<OrderNumber Value="6BK1942-2AA00-0AA*"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="2" SubmoduleIdentNumber="0x0001" API="0" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="Item consistency">
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_1" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_2" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_3" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_4" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_5" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_6" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_7" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_8" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_9" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_10" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_11" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_12" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_13" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_14" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_15" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_16" UseAsBits="false"/>
+								</Input>
+								<Output Consistency="Item consistency">
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_1" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_2" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_3" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_4" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_5" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_6" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_7" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_8" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_9" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_10" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_11" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_12" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_13" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_14" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_15" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_16" UseAsBits="false"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<!--The module has one 4 octet record data object with index "1". The description
+								of this record data object is "General Parameter" in the English language.-->
+								<ParameterRecordDataItem Index="1" Length="4">
+									<Name TextId="TOK_POM_Parameter"/>
+									<Ref ValueItemTarget="POM_CtrlMode" DataType="BitArea"   ByteOffset="0" BitOffset="0" BitLength="4" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="TOK_POM_CtrlMode"/>
+									<Ref ValueItemTarget="POM_LXn"            DataType="Bit" ByteOffset="1" BitOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_LX1"/>
+									<Ref ValueItemTarget="POM_LXn"            DataType="Bit" ByteOffset="1" BitOffset="1" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_LX3"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_1_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="1" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_2_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="2" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_3_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="3" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_4_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="4" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_5_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="5" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_6_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="6" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_7_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="7" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_8_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="3" BitOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_9_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="3" BitOffset="1" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_10_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="3" BitOffset="2" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_11_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="3" BitOffset="3" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_12_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="3" BitOffset="4" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_13_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="3" BitOffset="5" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_14_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="3" BitOffset="6" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_15_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="3" BitOffset="7" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_16_SUBST"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo>
+								<Name TextId="TOK_TextId_Module_POM16" />
+								<InfoText TextId="TOK_InfoTextId_Module_Virtual" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_POM12" ModuleIdentNumber="0x00004221" RequiredSchemaVersion="V2.1">
+					<ModuleInfo>
+						<Name TextId="TOK_TextId_Module_POM12" />
+						<InfoText TextId="TOK_InfoTextId_Module_POM12" />
+						<OrderNumber Value="6BK1942-2CA00-0AA*"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="3" SubmoduleIdentNumber="0x0001" API="0" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="Item consistency">
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_1" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_2" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_3" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_4" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_5" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_6" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_7" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_8" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_9" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_10" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_11" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_12" UseAsBits="false"/>
+								</Input>
+								<Output Consistency="Item consistency">
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_1" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_2" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_3" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_4" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_5" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_6" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_7" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_8" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_9" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_10" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_11" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_12" UseAsBits="false"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<!--The module has one 6 octet record data object with index "1". The description
+								of this record data object is "General Parameter" in the English language.-->
+								<ParameterRecordDataItem Index="1" Length="6">
+									<Name TextId="TOK_POM_Parameter"/>
+									<Ref ValueItemTarget="POM_CtrlMode"       DataType="BitArea" ByteOffset="0" BitOffset="0" BitLength="4" DefaultValue="0" AllowedValues="0..7" Changeable="true" TextId="TOK_POM_CtrlMode"/>
+									<Ref ValueItemTarget="POM_LXn"            DataType="Bit" ByteOffset="1" BitOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_LX1"/>
+									<Ref ValueItemTarget="POM_LXn"            DataType="Bit" ByteOffset="1" BitOffset="1" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_LX3"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_1_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="1" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_2_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="2" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_3_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="3" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_4_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="4" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_5_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="5" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_6_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="6" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_7_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="7" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_8_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="3" BitOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_9_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="3" BitOffset="1" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_10_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="3" BitOffset="2" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_11_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="3" BitOffset="3" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_12_SUBST"/>
+									<Ref                                      DataType="Unsigned8" ByteOffset="4" DefaultValue="0" Changeable="false" Visible="false" TextId="TOK_Reserve"/>
+									<Ref                                      DataType="Unsigned8" ByteOffset="5" DefaultValue="0" Changeable="false" Visible="false" TextId="TOK_Reserve"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo>
+								<Name TextId="TOK_TextId_Module_POM12" />
+								<InfoText TextId="TOK_InfoTextId_Module_Virtual" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_POM8" ModuleIdentNumber="0x00004222" RequiredSchemaVersion="V2.32">
+					<ModuleInfo>
+						<Name TextId="TOK_TextId_Module_POM8" />
+						<InfoText TextId="TOK_InfoTextId_Module_POM8" />
+						<OrderNumber Value="6BK1942-2DA00-0AA*"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="5" SubmoduleIdentNumber="0x0001" API="0" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="Item consistency">
+									<DataItem DataType="Unsigned16" TextId="TOK_TextId_Module_POM_1" UseAsBits="false"/>
+									<DataItem DataType="Unsigned16" TextId="TOK_TextId_Module_POM_2" UseAsBits="false"/>
+									<DataItem DataType="Unsigned16" TextId="TOK_TextId_Module_POM_3" UseAsBits="false"/>
+									<DataItem DataType="Unsigned16" TextId="TOK_TextId_Module_POM_4" UseAsBits="false"/>
+									<DataItem DataType="Unsigned16" TextId="TOK_TextId_Module_POM_5" UseAsBits="false"/>
+									<DataItem DataType="Unsigned16" TextId="TOK_TextId_Module_POM_6" UseAsBits="false"/>
+									<DataItem DataType="Unsigned16" TextId="TOK_TextId_Module_POM_7" UseAsBits="false"/>
+									<DataItem DataType="Unsigned16" TextId="TOK_TextId_Module_POM_8" UseAsBits="false"/>
+								</Input>
+								<Output Consistency="Item consistency">
+									<DataItem DataType="Unsigned16" TextId="TOK_TextId_Module_POM_1" UseAsBits="false"/>
+									<DataItem DataType="Unsigned16" TextId="TOK_TextId_Module_POM_2" UseAsBits="false"/>
+									<DataItem DataType="Unsigned16" TextId="TOK_TextId_Module_POM_3" UseAsBits="false"/>
+									<DataItem DataType="Unsigned16" TextId="TOK_TextId_Module_POM_4" UseAsBits="false"/>
+									<DataItem DataType="Unsigned16" TextId="TOK_TextId_Module_POM_5" UseAsBits="false"/>
+									<DataItem DataType="Unsigned16" TextId="TOK_TextId_Module_POM_6" UseAsBits="false"/>
+									<DataItem DataType="Unsigned16" TextId="TOK_TextId_Module_POM_7" UseAsBits="false"/>
+									<DataItem DataType="Unsigned16" TextId="TOK_TextId_Module_POM_8" UseAsBits="false"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<!--The module has one 6 octet record data object with index "1". The description
+								of this record data object is "General Parameter" in the English language.-->
+								<ParameterRecordDataItem Index="1" Length="6">
+									<Name TextId="TOK_POM_Parameter"/>
+									<Ref ValueItemTarget="POM_CtrlMode2"        DataType="BitArea" ByteOffset="0" BitOffset="0" BitLength="4" DefaultValue="0" AllowedValues="0..7" TextId="TOK_POM_CtrlMode2"/>
+									<Ref ValueItemTarget="POM_AlwaysSoft"       DataType="Bit" ByteOffset="1" BitOffset="7" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_AlwaysSoft"/>
+									<Ref ValueItemTarget="POM_ConnectType"    DataType="BitArea" ByteOffset="0" BitOffset="4" BitLength="4" DefaultValue="0" AllowedValues="0..4" TextId="TOK_POM_ConnectType"/>
+									<Ref ValueItemTarget="POM_LXn"                   DataType="Bit" ByteOffset="1" BitOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_LX1"/>
+									<Ref ValueItemTarget="POM_LXn"                   DataType="Bit" ByteOffset="1" BitOffset="1" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_LX3"/>
+									<Ref ValueItemTarget="POM_PowerReg"        DataType="Bit" ByteOffset="1" BitOffset="6" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_PowerReg"/>
+									<Ref ValueItemTarget="POM_EnableIE"          DataType="Bit" ByteOffset="1" BitOffset="5" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_EnableIE"/>
+									<Ref DataType="Unsigned16" ByteOffset="4" DefaultValue="400" AllowedValues="400..2000" TextId="TOK_POM_Value_IE"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_1_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="1" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_2_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="2" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_3_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="3" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_4_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="4" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_5_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="5" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_6_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="6" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_7_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="7" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_8_SUBST"/>
+									<Ref                                                                    DataType="Unsigned8" ByteOffset="3" DefaultValue="0" Changeable="false" Visible="false" TextId="TOK_Reserve"/>
+								</ParameterRecordDataItem>
+								<!--The module needs a second octet record data object with index "2". The description
+								of this record data object is "Parameter parallel load" in the English language.-->
+								<ParameterRecordDataItem Index="2" Length="34">
+									<Name TextId="TOK_POM_Parameter_Parallel"/>
+									<Ref ValueItemTarget="POM_ParallelUsed"     DataType="Bit" ByteOffset="32" BitOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_ParallelUsed_1"/>
+									<Ref DataType="Unsigned16" ByteOffset="0" DefaultValue="2500" AllowedValues="400..9600" TextId="TOK_POM_Value_Power"/>
+									<Ref DataType="Unsigned16" ByteOffset="2" DefaultValue="500" AllowedValues="50..2000" TextId="TOK_POM_Value_Delta_Power"/>
+									<Ref ValueItemTarget="POM_ParallelUsed"     DataType="Bit" ByteOffset="32" BitOffset="1" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_ParallelUsed_2"/>
+									<Ref DataType="Unsigned16" ByteOffset="4" DefaultValue="2500" AllowedValues="400..9600" TextId="TOK_POM_Value_Power"/>
+									<Ref DataType="Unsigned16" ByteOffset="6" DefaultValue="500" AllowedValues="50..2000" TextId="TOK_POM_Value_Delta_Power"/>
+									<Ref ValueItemTarget="POM_ParallelUsed"     DataType="Bit" ByteOffset="32" BitOffset="2" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_ParallelUsed_3"/>
+									<Ref DataType="Unsigned16" ByteOffset="8" DefaultValue="2500" AllowedValues="400..9600" TextId="TOK_POM_Value_Power"/>
+									<Ref DataType="Unsigned16" ByteOffset="10" DefaultValue="500" AllowedValues="50..2000" TextId="TOK_POM_Value_Delta_Power"/>
+									<Ref ValueItemTarget="POM_ParallelUsed"     DataType="Bit" ByteOffset="32" BitOffset="3" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_ParallelUsed_4"/>
+									<Ref DataType="Unsigned16" ByteOffset="12" DefaultValue="2500" AllowedValues="400..9600" TextId="TOK_POM_Value_Power"/>
+									<Ref DataType="Unsigned16" ByteOffset="14" DefaultValue="500" AllowedValues="50..2000" TextId="TOK_POM_Value_Delta_Power"/>
+									<Ref ValueItemTarget="POM_ParallelUsed"     DataType="Bit" ByteOffset="32" BitOffset="4" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_ParallelUsed_5"/>
+									<Ref DataType="Unsigned16" ByteOffset="16" DefaultValue="2500" AllowedValues="400..9600" TextId="TOK_POM_Value_Power"/>
+									<Ref DataType="Unsigned16" ByteOffset="18" DefaultValue="500" AllowedValues="50..2000" TextId="TOK_POM_Value_Delta_Power"/>
+									<Ref ValueItemTarget="POM_ParallelUsed"     DataType="Bit" ByteOffset="32" BitOffset="5" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_ParallelUsed_6"/>
+									<Ref DataType="Unsigned16" ByteOffset="20" DefaultValue="2500" AllowedValues="400..9600" TextId="TOK_POM_Value_Power"/>
+									<Ref DataType="Unsigned16" ByteOffset="22" DefaultValue="500" AllowedValues="50..2000" TextId="TOK_POM_Value_Delta_Power"/>
+									<Ref ValueItemTarget="POM_ParallelUsed"     DataType="Bit" ByteOffset="32" BitOffset="6" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_ParallelUsed_7"/>
+									<Ref DataType="Unsigned16" ByteOffset="24" DefaultValue="2500" AllowedValues="400..9600" TextId="TOK_POM_Value_Power"/>
+									<Ref DataType="Unsigned16" ByteOffset="26" DefaultValue="500" AllowedValues="50..2000" TextId="TOK_POM_Value_Delta_Power"/>
+									<Ref ValueItemTarget="POM_ParallelUsed"     DataType="Bit" ByteOffset="32" BitOffset="7" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_ParallelUsed_8"/>
+									<Ref DataType="Unsigned16" ByteOffset="28" DefaultValue="2500" AllowedValues="400..9600" TextId="TOK_POM_Value_Power"/>
+									<Ref DataType="Unsigned16" ByteOffset="30" DefaultValue="500" AllowedValues="50..2000" TextId="TOK_POM_Value_Delta_Power"/>
+									<Ref                                                                    DataType="Unsigned8" ByteOffset="33" DefaultValue="0" Changeable="false" Visible="false" TextId="TOK_Reserve"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo>
+								<Name TextId="TOK_TextId_Module_POM8" />
+								<InfoText TextId="TOK_InfoTextId_Module_Virtual" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_POMFlex" ModuleIdentNumber="0x00004223" RequiredSchemaVersion="V2.32">
+					<ModuleInfo>
+						<Name TextId="TOK_TextId_Module_POMFlex" />
+						<InfoText TextId="TOK_InfoTextId_Module_POMFlex" />
+						<OrderNumber Value="6BK1942-2FA00-0AA*"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="6" SubmoduleIdentNumber="0x0001" API="0" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="Item consistency">
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_1" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_2" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_3" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_4" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_5" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_6" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_7" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_8" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_9" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_10" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_11" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_12" UseAsBits="false"/>
+								</Input>
+								<Output Consistency="Item consistency">
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_1" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_2" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_3" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_4" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_5" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_6" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_7" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_8" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_9" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_10" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_11" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_12" UseAsBits="false"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<!--The module has one 6 octet record data object with index "1". The description
+								of this record data object is "General Parameter" in the English language.-->
+								<ParameterRecordDataItem Index="1" Length="6">
+									<Name TextId="TOK_POM_Parameter"/>
+									<Ref ValueItemTarget="POM_CtrlMode"       DataType="BitArea" ByteOffset="0" BitOffset="0" BitLength="4" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="TOK_POM_CtrlMode"/>
+									<Ref ValueItemTarget="POM_VoltRange"      DataType="BitArea" ByteOffset="0" BitOffset="4" BitLength="4" DefaultValue="0" AllowedValues="0..3" TextId="TOK_POM_VoltRange"/>
+									<Ref ValueItemTarget="POM_LXn"            DataType="Bit" ByteOffset="1" BitOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_LX1"/>
+									<Ref ValueItemTarget="POM_LXn"            DataType="Bit" ByteOffset="1" BitOffset="1" DefaultValue="0" AllowedValues="0..1" TextId="TOK_POM_LX3"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_1_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="1" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_2_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="2" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_3_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="3" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_4_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="4" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_5_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="5" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_6_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="6" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_7_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="7" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_8_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="3" BitOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_9_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="3" BitOffset="1" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_10_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="3" BitOffset="2" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_11_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="3" BitOffset="3" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_12_SUBST"/>
+									<Ref                                      DataType="Unsigned8" ByteOffset="4" DefaultValue="0" Changeable="false" Visible="false" TextId="TOK_Reserve"/>
+									<Ref                                      DataType="Unsigned8" ByteOffset="5" DefaultValue="0" Changeable="false" Visible="false" TextId="TOK_Reserve"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo>
+								<Name TextId="TOK_TextId_Module_POMFlex" />
+								<InfoText TextId="TOK_InfoTextId_Module_Virtual" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="ID_Mod_POM9" ModuleIdentNumber="0x00000020" RequiredSchemaVersion="V2.1">
+					<ModuleInfo>
+						<Name TextId="TOK_TextId_Module_POM9" />
+						<InfoText TextId="TOK_InfoTextId_Module_POM9" />
+						<OrderNumber Value="6BK1943-2*A00-0AA*"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="4" SubmoduleIdentNumber="0x0001" API="0" MayIssueProcessAlarm="true">
+							<IOData>
+								<Input Consistency="Item consistency">
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_1" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_2" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_3" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_4" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_5" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_6" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_7" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_8" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_9" UseAsBits="false"/>
+								</Input>
+								<Output Consistency="Item consistency">
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_1" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_2" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_3" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_4" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_5" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_6" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_7" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_8" UseAsBits="false"/>
+									<DataItem DataType="Unsigned8" TextId="TOK_TextId_Module_POM_9" UseAsBits="false"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<!--The module has one 4 octet record data object with index "1". The description
+								of this record data object is "General Parameter" in the English language.-->
+								<ParameterRecordDataItem Index="1" Length="4">
+									<Name TextId="TOK_POM_Parameter"/>
+									<Ref ValueItemTarget="POM_CtrlMode" DataType="BitArea"   ByteOffset="0" BitOffset="0" BitLength="4" DefaultValue="0" AllowedValues="0..7" Changeable="true" TextId="TOK_POM_CtrlMode"/>
+									<Ref                                DataType="Unsigned8" ByteOffset="1" DefaultValue="0" Changeable="false" Visible="false" TextId="TOK_PAR_PomRes"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_1_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="1" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_2_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="2" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_3_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="3" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_4_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="4" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_5_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="5" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_6_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="6" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_7_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="2" BitOffset="7" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_8_SUBST"/>
+									<Ref ValueItemTarget="POM_SubstitueValue" DataType="Bit" ByteOffset="3" BitOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="TOK_TextId_Module_POM_9_SUBST"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo>
+								<Name TextId="TOK_TextId_Module_POM9" />
+								<InfoText TextId="TOK_InfoTextId_Module_Virtual" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+			</ModuleList>
+			<SubmoduleList>
+				<SubmoduleItem ID="IDS_SubMod_CIM_TEMP" SubmoduleIdentNumber="0x00004010" MayIssueProcessAlarm="true">
+					<IOData>
+						<Input Consistency="Item consistency">
+							<!-- - Analog values in [1/100 mA]
+							     - Values are set to 0x8000 (-32768) on channel error or when value not yet available during startup-->
+							<DataItem DataType="Integer16" TextId="TOK_CIM_TEMP_Val_Ai_Ch1" UseAsBits="false"/>
+							<DataItem DataType="Integer16" TextId="TOK_CIM_TEMP_Val_Ai_Ch2" UseAsBits="false"/>
+							<DataItem DataType="Integer16" TextId="TOK_CIM_TEMP_Val_Ai_Ch3" UseAsBits="false"/>
+							<DataItem DataType="Integer16" TextId="TOK_CIM_TEMP_Val_Ai_Ch4" UseAsBits="false"/>
+							<!-- - Temperature values in [1/10 °C]
+							     - Values are set to 0x8000 (-32768) on channel error or when value not yet available during startup-->
+							<DataItem DataType="Integer16" TextId="TOK_CIM_TEMP_Val_Temp_Ch1" UseAsBits="false"/>
+							<DataItem DataType="Integer16" TextId="TOK_CIM_TEMP_Val_Temp_Ch2" UseAsBits="false"/>
+							<DataItem DataType="Integer16" TextId="TOK_CIM_TEMP_Val_Temp_Ch3" UseAsBits="false"/>
+							<DataItem DataType="Integer16" TextId="TOK_CIM_TEMP_Val_Temp_Ch4" UseAsBits="false"/>
+						</Input>
+						<Output Consistency="Item consistency">
+							<!-- - Compensation temperature value in [1/10 °C]
+							     - Value can be set to 0x8000 (-32768) to signal an error or when value not yet available during startup-->
+							<DataItem DataType="Integer16" TextId="TOK_CIM_TEMP_Val_Comp" UseAsBits="false"/>						
+						</Output>
+					</IOData>
+					<RecordDataList>
+						<!--The module has one 10 octet record data object with index "1".-->
+						<ParameterRecordDataItem Index="1" Length="10">
+							<Name TextId="TOK_Module_TEMP_Parameter"/>
+							<Ref ValueItemTarget="TEMP_AiRange"       DataType="Unsigned8" ByteOffset="0" DefaultValue="0" TextId="TOK_TEMP_Ai_Ch1_Type"/>
+							<Ref ValueItemTarget="TEMP_AiRange"       DataType="Unsigned8" ByteOffset="1" DefaultValue="0" TextId="TOK_TEMP_Ai_Ch2_Type"/>
+							<Ref ValueItemTarget="TEMP_AiRange"       DataType="Unsigned8" ByteOffset="2" DefaultValue="0" TextId="TOK_TEMP_Ai_Ch3_Type"/>
+							<Ref ValueItemTarget="TEMP_AiRange"       DataType="Unsigned8" ByteOffset="3" DefaultValue="0" TextId="TOK_TEMP_Ai_Ch4_Type"/>
+							<Ref ValueItemTarget="TEMP_SensorType_4W" DataType="Unsigned8" ByteOffset="4" DefaultValue="2" TextId="TOK_TEMP_Temp_Ch1_Type"/>
+							<Ref ValueItemTarget="TEMP_SensorType"    DataType="Unsigned8" ByteOffset="5" DefaultValue="2" TextId="TOK_TEMP_Temp_Ch2_Type"/>
+							<Ref ValueItemTarget="TEMP_SensorType_4W" DataType="Unsigned8" ByteOffset="6" DefaultValue="2" TextId="TOK_TEMP_Temp_Ch3_Type"/>
+							<Ref ValueItemTarget="TEMP_SensorType"    DataType="Unsigned8" ByteOffset="7" DefaultValue="2" TextId="TOK_TEMP_Temp_Ch4_Type"/>
+							<Ref ValueItemTarget="TEMP_TcComp"        DataType="Unsigned8" ByteOffset="8" DefaultValue="0" TextId="TOK_TEMP_TC_Comp"/>
+							<Ref DataType="Unsigned8" Changeable="false" Visible="false"   ByteOffset="9" DefaultValue="0" TextId="TOK_Reserve"/>
+						</ParameterRecordDataItem>
+					</RecordDataList>
+					<ModuleInfo>
+						<Name TextId="TOK_TextId_Module_TEMP"/>
+						<InfoText TextId="TOK_InfoTextId_Module_TEMP"/>
+						<OrderNumber Value="6BK1900-0AA00-0AA*"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem ID="IDS_SubMod_CIM_DIDO" SubmoduleIdentNumber="0x00004020" MayIssueProcessAlarm="true">
+					<IOData>
+						<Input Consistency="Item consistency">
+							<DataItem DataType="Unsigned8" TextId="TOK_CIM_DIDO_DI_para" UseAsBits="true"/>
+						</Input>
+						<Output Consistency="Item consistency">
+							<DataItem DataType="Unsigned8" TextId="TOK_CIM_DIDO_DO" UseAsBits="true"/>
+							<DataItem DataType="Unsigned8" TextId="TOK_CIM_DIDO_DO_para" UseAsBits="true"/>
+						</Output>
+					</IOData>
+					<RecordDataList>
+						<!--The module has one 8 octet record data object with index "1".-->
+						<ParameterRecordDataItem Index="1" Length="8">
+							<Name TextId="TOK_Module_DIDO_Parameter"/>
+							<Ref ValueItemTarget="DIDO_TypeChannel"    DataType="Bit" ByteOffset="0" BitOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="TOK_DIDO_Type_Ch9"/>
+							<Ref ValueItemTarget="DIDO_TypeChannel"    DataType="Bit" ByteOffset="0" BitOffset="1" DefaultValue="0" AllowedValues="0..1" TextId="TOK_DIDO_Type_Ch10"/>
+							<Ref ValueItemTarget="DIDO_TypeChannel"    DataType="Bit" ByteOffset="0" BitOffset="2" DefaultValue="0" AllowedValues="0..1" TextId="TOK_DIDO_Type_Ch11"/>
+							<Ref ValueItemTarget="DIDO_TypeChannel"    DataType="Bit" ByteOffset="0" BitOffset="3" DefaultValue="0" AllowedValues="0..1" TextId="TOK_DIDO_Type_Ch12"/>
+							<Ref ValueItemTarget="DIDO_TypeChannel"    DataType="Bit" ByteOffset="0" BitOffset="4" DefaultValue="0" AllowedValues="0..1" TextId="TOK_DIDO_Type_Ch13"/>
+							<Ref ValueItemTarget="DIDO_TypeChannel"    DataType="Bit" ByteOffset="0" BitOffset="5" DefaultValue="0" AllowedValues="0..1" TextId="TOK_DIDO_Type_Ch14"/>
+							<Ref ValueItemTarget="DIDO_TypeChannel"    DataType="Bit" ByteOffset="0" BitOffset="6" DefaultValue="0" AllowedValues="0..1" TextId="TOK_DIDO_Type_Ch15"/>
+							<Ref ValueItemTarget="DIDO_TypeChannel"    DataType="Bit" ByteOffset="0" BitOffset="7" DefaultValue="0" AllowedValues="0..1" TextId="TOK_DIDO_Type_Ch16"/>
+							<Ref ValueItemTarget="DIDO_Alarm"          DataType="Bit" ByteOffset="6" BitOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="TOK_DIDO_Alarm_Break"/>
+							<Ref ValueItemTarget="DIDO_Alarm"          DataType="Bit" ByteOffset="6" BitOffset="4" DefaultValue="0" AllowedValues="0..1" TextId="TOK_DIDO_Alarm_24V"/>
+							<Ref ValueItemTarget="DIDO_SubstitueValue" DataType="BitArea" ByteOffset="2" BitOffset="0" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_DIDO_SUBST_Ch1"/>
+							<Ref ValueItemTarget="DIDO_SubstitueValue" DataType="BitArea" ByteOffset="2" BitOffset="2" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_DIDO_SUBST_Ch2"/>
+							<Ref ValueItemTarget="DIDO_SubstitueValue" DataType="BitArea" ByteOffset="2" BitOffset="4" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_DIDO_SUBST_Ch3"/>
+							<Ref ValueItemTarget="DIDO_SubstitueValue" DataType="BitArea" ByteOffset="2" BitOffset="6" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_DIDO_SUBST_Ch4"/>
+							<Ref ValueItemTarget="DIDO_SubstitueValue" DataType="BitArea" ByteOffset="3" BitOffset="0" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_DIDO_SUBST_Ch5"/>
+							<Ref ValueItemTarget="DIDO_SubstitueValue" DataType="BitArea" ByteOffset="3" BitOffset="2" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_DIDO_SUBST_Ch6"/>
+							<Ref ValueItemTarget="DIDO_SubstitueValue" DataType="BitArea" ByteOffset="3" BitOffset="4" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_DIDO_SUBST_Ch7"/>
+							<Ref ValueItemTarget="DIDO_SubstitueValue" DataType="BitArea" ByteOffset="3" BitOffset="6" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_DIDO_SUBST_Ch8"/>
+							<Ref ValueItemTarget="DIDO_SubstitueValue" DataType="BitArea" ByteOffset="4" BitOffset="0" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_DIDO_SUBST_Ch9"/>
+							<Ref ValueItemTarget="DIDO_SubstitueValue" DataType="BitArea" ByteOffset="4" BitOffset="2" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_DIDO_SUBST_Ch10"/>
+							<Ref ValueItemTarget="DIDO_SubstitueValue" DataType="BitArea" ByteOffset="4" BitOffset="4" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_DIDO_SUBST_Ch11"/>
+							<Ref ValueItemTarget="DIDO_SubstitueValue" DataType="BitArea" ByteOffset="4" BitOffset="6" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_DIDO_SUBST_Ch12"/>
+							<Ref ValueItemTarget="DIDO_SubstitueValue" DataType="BitArea" ByteOffset="5" BitOffset="0" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_DIDO_SUBST_Ch13"/>
+							<Ref ValueItemTarget="DIDO_SubstitueValue" DataType="BitArea" ByteOffset="5" BitOffset="2" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_DIDO_SUBST_Ch14"/>
+							<Ref ValueItemTarget="DIDO_SubstitueValue" DataType="BitArea" ByteOffset="5" BitOffset="4" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_DIDO_SUBST_Ch15"/>
+							<Ref ValueItemTarget="DIDO_SubstitueValue" DataType="BitArea" ByteOffset="5" BitOffset="6" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_DIDO_SUBST_Ch16"/>
+							<Ref                                       DataType="Unsigned8" ByteOffset="1" DefaultValue="0" Changeable="false" Visible="false" TextId="TOK_Reserve"/>
+							<Ref                                       DataType="Unsigned8" ByteOffset="7" DefaultValue="0" Changeable="false" Visible="false" TextId="TOK_Reserve"/>
+						</ParameterRecordDataItem>
+					</RecordDataList>
+					<ModuleInfo>
+						<Name TextId="TOK_TextId_Module_DIDO"/>
+						<InfoText TextId="TOK_InfoTextId_Module_DIDO"/>
+						<OrderNumber Value="6BK1900-0BA00-0AA*"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem ID="IDS_SubMod_CIM_UI"   SubmoduleIdentNumber="0x00004030" MayIssueProcessAlarm="true">
+					<IOData>
+						<Input Consistency="Item consistency">
+							<DataItem DataType="Unsigned16" TextId="TOK_CIM_UI_VoltageL1"/>
+							<DataItem DataType="Unsigned16" TextId="TOK_CIM_UI_VoltageL2"/>
+							<DataItem DataType="Unsigned16" TextId="TOK_CIM_UI_VoltageL3"/>
+						</Input>
+					</IOData>
+					<RecordDataList>
+						<!--The module has one 6 octet record data object with index "1".-->
+						<ParameterRecordDataItem Index="1" Length="6">
+							<Name TextId="TOK_Module_UI_Parameter"/>
+							<Ref ValueItemTarget="UI_TypeVoltConnect" DataType="BitArea" ByteOffset="0" BitOffset="0" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_UI_TypeVoltConnect"/>
+							<Ref ValueItemTarget="UI_TypeCurrTransf"  DataType="BitArea" ByteOffset="0" BitOffset="4" BitLength="2" DefaultValue="0" AllowedValues="0..2" TextId="TOK_UI_TypeCurrTransf"/>
+							<Ref                                      DataType="Unsigned8" ByteOffset="1" DefaultValue="0" Changeable="false" Visible="false" TextId="TOK_Reserve"/>
+							<Ref                                      DataType="Unsigned8" ByteOffset="2" DefaultValue="0" Changeable="false" Visible="false" TextId="TOK_Reserve"/>
+							<Ref                                      DataType="Unsigned8" ByteOffset="3" DefaultValue="0" Changeable="false" Visible="false" TextId="TOK_Reserve"/>
+							<Ref                                      DataType="Unsigned16" ByteOffset="4" DefaultValue="0" Changeable="false" Visible="false" TextId="TOK_Reserve"/>
+						</ParameterRecordDataItem>
+					</RecordDataList>
+					<ModuleInfo>
+						<Name TextId="TOK_TextId_Module_UI"/>
+						<InfoText TextId="TOK_InfoTextId_Module_UI"/>
+						<OrderNumber Value="6BK1900-0CA00-0AA*"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+			</SubmoduleList>
+			<ValueList>
+				<ValueItem ID="ConfigCtrlEnabling">
+					<Help TextId="TOK_PAR_ConfigCtrl_Help"/>
+					<Assignments>
+						<Assign Content="0" TextId="TOK_InfoTextNo"/>
+						<Assign Content="1" TextId="TOK_InfoTextYes"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="TEMP_SensorType_4W">
+					<Help TextId="TOK_TEMP_SensorType"/>
+					<Assignments>
+						<Assign Content="0" TextId="TOK_TEMP_SensorType_PT100_4W"/>
+						<Assign Content="1" TextId="TOK_TEMP_SensorType_PT1000_4W"/>
+						<Assign Content="2" TextId="TOK_TEMP_SensorType_NC"/>
+						<Assign Content="3" TextId="TOK_TEMP_SensorType_PT100"/>
+						<Assign Content="4" TextId="TOK_TEMP_SensorType_PT1000"/>
+						<Assign Content="5" TextId="TOK_TEMP_SensorType_TC_J"/>
+						<Assign Content="6" TextId="TOK_TEMP_SensorType_TC_K"/>
+						<Assign Content="7" TextId="TOK_TEMP_SensorType_TC_L"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="TEMP_SensorType">
+					<Help TextId="TOK_TEMP_SensorType"/>
+					<Assignments>
+						<Assign Content="2" TextId="TOK_TEMP_SensorType_NC"/>
+						<Assign Content="3" TextId="TOK_TEMP_SensorType_PT100"/>
+						<Assign Content="4" TextId="TOK_TEMP_SensorType_PT1000"/>
+						<Assign Content="5" TextId="TOK_TEMP_SensorType_TC_J"/>
+						<Assign Content="6" TextId="TOK_TEMP_SensorType_TC_K"/>
+						<Assign Content="7" TextId="TOK_TEMP_SensorType_TC_L"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="TEMP_AiRange">
+					<Help TextId="TOK_TEMP_AiRange"/>
+					<Assignments>
+						<Assign Content="0"  TextId="TOK_TEMP_AiRange_NC"/>
+						<Assign Content="1"  TextId="TOK_TEMP_AiRange_0_20"/>
+						<Assign Content="2"  TextId="TOK_TEMP_AiRange_4_20"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="TEMP_TcComp">
+					<Help TextId="TOK_TEMP_TcComp"/>
+					<Assignments>
+						<Assign Content="0"  TextId="TOK_TEMP_TcComp_None"/>
+						<Assign Content="1"  TextId="TOK_TEMP_TcComp_Intern"/>
+						<Assign Content="2"  TextId="TOK_TEMP_TcComp_Value"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="DIDO_TypeChannel">
+					<Help TextId="TOK_DIDO_TypeChannel"/>
+					<Assignments>
+						<Assign Content="0" TextId="TOK_DIDO_Input"/>
+						<Assign Content="1" TextId="TOK_DIDO_Output"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="DIDO_Alarm">
+					<Help TextId="TOK_DIDO_Alarm"/>
+					<Assignments>
+						<Assign Content="0" TextId="TOK_InfoTextNo"/>
+						<Assign Content="1" TextId="TOK_InfoTextYes"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="DIDO_SubstitueValue">
+					<Help TextId="TOK_DIDO_SubstitueValue"/>
+					<Assignments>
+						<Assign Content="0" TextId="TOK_POM_InfoTextSwitchOff"/>
+						<Assign Content="1" TextId="TOK_POM_InfoTextLastValue"/>
+						<Assign Content="2" TextId="TOK_DIDO_InfoTextSubstValue"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="UI_TypeVoltConnect">
+					<Help TextId="TOK_UI_TypeVoltConnect"/>
+					<Assignments>
+						<Assign Content="0" TextId="TOK_UI_VoltageStarConnect"/>
+						<Assign Content="1" TextId="TOK_UI_VoltageDeltaConnect"/>
+						<Assign Content="2" TextId="TOK_UI_VoltageNoConnect"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="UI_TypeCurrTransf">
+					<Help TextId="TOK_UI_TypeCurrTransf"/>
+					<Assignments>
+						<Assign Content="0" TextId="TOK_UI_CurrentNo"/>
+						<Assign Content="1" TextId="TOK_UI_Current1A"/>
+						<Assign Content="2" TextId="TOK_UI_Current5A"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="POM_CtrlMode">
+					<Help TextId="TOK_POM_CtrlMode"/>
+					<Assignments>
+						<Assign Content="0" TextId="TOK_MenuHalfWave"/>
+						<Assign Content="1" TextId="TOK_MenuHalfWaveSoft"/>
+						<Assign Content="2" TextId="TOK_MenuHalfWaveSoft2"/>
+						<Assign Content="3" TextId="TOK_MenuHalfWaveSoft3"/>
+						<Assign Content="4" TextId="TOK_PhasenAngle"/>
+						<Assign Content="5" TextId="TOK_PhasenAngleSoft"/>
+						<Assign Content="6" TextId="TOK_PhasenAngleSoft2"/>
+						<Assign Content="7" TextId="TOK_PhasenAngleSoft3"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="POM_CtrlMode2">
+					<Help TextId="TOK_POM_CtrlMode2"/>
+					<Assignments>
+						<Assign Content="0" TextId="TOK_MenuHalfWave"/>
+						<Assign Content="1" TextId="TOK_MenuHalfWaveSoft"/>
+						<Assign Content="2" TextId="TOK_MenuHalfWaveSoft2"/>
+						<Assign Content="6" TextId="TOK_MenuHalfWaveSoftEasy"/>
+						<Assign Content="8" TextId="TOK_MenuHalfWaveSoftPara"/>
+						<Assign Content="3" TextId="TOK_PhasenAngle"/>
+						<Assign Content="4" TextId="TOK_PhasenAngleSoft"/>
+						<Assign Content="5" TextId="TOK_PhasenAngleSoft2"/>
+						<Assign Content="7" TextId="TOK_PhasenAngleSoftEasy"/>
+						<Assign Content="9" TextId="TOK_PhasenAngleSoftPara"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="POM_ConnectType">
+					<Help TextId="TOK_POM_ConnectType"/>
+					<Assignments>
+						<Assign Content="0" TextId="TOK_MenuStern"/>
+						<Assign Content="1" TextId="TOK_MenuDreieck"/>
+						<Assign Content="2" TextId="TOK_MenuZweipoligStern"/>
+						<Assign Content="3" TextId="TOK_MenuZweipoligDreieck"/>
+						<Assign Content="4" TextId="TOK_MenuSpar"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="POM_VoltRange">
+					<Help TextId="TOK_POM_VoltRange"/>
+					<Assignments>
+						<Assign Content="0" TextId="TOK_Menu277V"/>
+						<Assign Content="1" TextId="TOK_Menu110V"/>
+						<Assign Content="2" TextId="TOK_Menu70V"/>
+						<Assign Content="3" TextId="TOK_Menu45V"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="POM_LXn">
+					<Help TextId="TOK_POM_LXn_Help"/>
+					<Assignments>
+						<Assign Content="0" TextId="TOK_POM_LXn_connected"/>
+						<Assign Content="1" TextId="TOK_POM_LXn_not_connected"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="POM_AlwaysSoft">
+					<Help TextId="TOK_POM_AlwaysSoft"/>
+					<Assignments>
+						<Assign Content="0" TextId="TOK_POM_No"/>
+						<Assign Content="1" TextId="TOK_POM_Yes"/>
+					</Assignments>
+				</ValueItem>		
+				<ValueItem ID="POM_PowerReg">
+					<Help TextId="TOK_POM_PowerReg"/>
+					<Assignments>
+						<Assign Content="0" TextId="TOK_POM_No"/>
+						<Assign Content="1" TextId="TOK_POM_Yes"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="POM_EnableIE">
+					<Help TextId="TOK_POM_EnableIE"/>
+					<Assignments>
+						<Assign Content="0" TextId="TOK_POM_No"/>
+						<Assign Content="1" TextId="TOK_POM_Yes"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="POM_ParallelUsed">
+					<Help TextId="TOK_POM_ParallelUsed_Help"/>
+					<Assignments>
+						<Assign Content="0" TextId="TOK_POM_No"/>
+						<Assign Content="1" TextId="TOK_POM_Yes"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="POM_SubstitueValue">
+					<Help TextId="TOK_PAR_SubstitueValue"/>
+					<Assignments>
+						<Assign Content="0" TextId="TOK_POM_InfoTextSwitchOff"/>
+						<Assign Content="1" TextId="TOK_POM_InfoTextLastValue"/>
+					</Assignments>
+				</ValueItem>
+			</ValueList>
+			<ChannelDiagList>
+				<ChannelDiagItem ErrorType="20736">
+					<Name TextId="TOK_POM_ChannelError_0"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20737">
+					<Name TextId="TOK_POM_ChannelError_1"/>
+					<Help TextId="TOK_POM_ChannelError_1_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20738">
+					<Name TextId="TOK_POM_ChannelError_2"/>
+					<Help TextId="TOK_POM_ChannelError_2_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20739">
+					<Name TextId="TOK_POM_ChannelError_3"/>
+					<Help TextId="TOK_POM_ChannelError_3_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20740">
+					<Name TextId="TOK_POM_ChannelError_4"/>
+					<Help TextId="TOK_POM_ChannelError_4_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20741">
+					<Name TextId="TOK_POM_ChannelError_5"/>
+					<Help TextId="TOK_POM_ChannelError_5_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20742">
+					<Name TextId="TOK_POM_ChannelError_6"/>
+					<Help TextId="TOK_POM_ChannelError_6_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20743">
+					<Name TextId="TOK_POM_ChannelError_7"/>
+					<Help TextId="TOK_POM_ChannelError_7_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20744">
+					<Name TextId="TOK_POM_ChannelError_8"/>
+					<Help TextId="TOK_POM_ChannelError_8_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20745">
+					<Name TextId="TOK_POM_ChannelError_9"/>
+					<Help TextId="TOK_POM_ChannelError_9_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20746">
+					<Name TextId="TOK_POM_ChannelError_10"/>
+					<Help TextId="TOK_POM_ChannelError_10_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20747">
+					<Name TextId="TOK_POM_ChannelError_11"/>
+					<Help TextId="TOK_POM_ChannelError_11_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20748">
+					<Name TextId="TOK_POM_ChannelError_12"/>
+					<Help TextId="TOK_POM_ChannelError_12_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20749">
+					<Name TextId="TOK_POM_ChannelError_13"/>
+					<Help TextId="TOK_POM_ChannelError_13_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20750">
+					<Name TextId="TOK_POM_ChannelError_14"/>
+					<Help TextId="TOK_POM_ChannelError_14_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20751">
+					<Name TextId="TOK_POM_ChannelError_15"/>
+					<Help TextId="TOK_POM_ChannelError_15_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20752">
+					<Name TextId="TOK_POM_ChannelError_16"/>
+					<Help TextId="TOK_POM_ChannelError_16_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20754">
+					<Name TextId="TOK_POM_ChannelError_18"/>
+					<Help TextId="TOK_POM_ChannelError_18_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20755">
+					<Name TextId="TOK_POM_ChannelError_19"/>
+					<Help TextId="TOK_POM_ChannelError_19_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20756">
+					<Name TextId="TOK_POM_ChannelError_20"/>
+					<Help TextId="TOK_POM_ChannelError_20_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20757">
+					<Name TextId="TOK_POM_ChannelError_21"/>
+					<Help TextId="TOK_POM_ChannelError_21_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20758">
+					<Name TextId="TOK_POM_ChannelError_22"/>
+					<Help TextId="TOK_POM_ChannelError_22_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20759">
+					<Name TextId="TOK_POM_ChannelError_23"/>
+					<Help TextId="TOK_POM_ChannelError_23_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20760">
+					<Name TextId="TOK_POM_ChannelError_24"/>
+					<Help TextId="TOK_POM_ChannelError_24_HELP"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20761">
+					<Name TextId="TOK_POM_ChannelError_25"/>
+					<Help TextId="TOK_POM_ChannelError_25_HELP"/>
+				</ChannelDiagItem>
+			</ChannelDiagList>
+			<GraphicsList>
+				<GraphicItem ID="ID_Graph_1" GraphicFile="GSDML-002A-1003-HCS4200" />
+				<GraphicItem ID="ID_Graph_2" GraphicFile="GSDML-002A-1003-HCS4200" />
+			</GraphicsList>
+			<ExternalTextList>
+				<PrimaryLanguage>
+					<!--english-->
+					<Text TextId="TOK_DevIdent_InfoText" Value="Heater Control Systems" />
+					<!--DAPs-->
+					<Text TextId="TOK_DAP" Value="HCS4200" />
+					<Text TextId="TOK_DAP_V2" Value="HCS4200 V2" />
+					<Text TextId="TOK_ModInfo_InfoTextId_DAP" Value="Heating Control Systems HCS4200 for controlling max. 24 Power Output Modules; 1 I/O Module plug-in; available with PROFINET and PROFIBUS interface"/>
+					<Text TextId="TOK_ModInfo_InfoTextId_DAP_V2" Value="Heating Control Systems HCS4200 for controlling max. 24 Power Output Modules; 1 I/O Module plug-in; with Configuration control; POM4320 can be applied"/>
+					<!--port name-->
+					<Text TextId="TOK_Subslot_8000" Value="I1" />
+					<Text TextId="TOK_Subslot_8001" Value="X1" />
+					<Text TextId="TOK_Subslot_8002" Value="X2" />
+					<Text TextId="TOK_DAP_InterfaceModule" Value="Interface" />
+					<Text TextId="TOK_Port1" Value="port 1 - RJ45 10/100 MBit/s" />
+					<Text TextId="TOK_Port2" Value="port 2 - RJ45 10/100 MBit/s" />
+					<!--module name-->
+					<Text TextId="TOK_TextId_Module_CIM" Value="CIM4210 PROFINET" />
+					<Text TextId="TOK_TextId_Module_Virtual" Value="header module CIM-PN"/>
+					<Text TextId="TOK_TextId_Module_POM16" Value="POM4220 Lowend" />
+					<Text TextId="TOK_TextId_Module_POM12" Value="POM4220 Midrange" />
+					<Text TextId="TOK_TextId_Module_POM8" Value="POM4220 Highend" />
+					<Text TextId="TOK_TextId_Module_POMFlex" Value="POM4220 Flexible" />
+					<Text TextId="TOK_TextId_Module_POM9" Value="POM4320" />
+					<Text TextId="TOK_TextId_Module_TEMP" Value="PM temperature" />
+					<Text TextId="TOK_TextId_Module_DIDO" Value="PM DI/DO" />
+					<Text TextId="TOK_TextId_Module_UI" Value="PM U/I" />
+					<Text TextId="TOK_TextId_Module_POM_1" Value="POM channel 1"/>
+					<Text TextId="TOK_TextId_Module_POM_2" Value="POM channel 2"/>
+					<Text TextId="TOK_TextId_Module_POM_3" Value="POM channel 3"/>
+					<Text TextId="TOK_TextId_Module_POM_4" Value="POM channel 4"/>
+					<Text TextId="TOK_TextId_Module_POM_5" Value="POM channel 5"/>
+					<Text TextId="TOK_TextId_Module_POM_6" Value="POM channel 6"/>
+					<Text TextId="TOK_TextId_Module_POM_7" Value="POM channel 7"/>
+					<Text TextId="TOK_TextId_Module_POM_8" Value="POM channel 8"/>
+					<Text TextId="TOK_TextId_Module_POM_9" Value="POM channel 9"/>
+					<Text TextId="TOK_TextId_Module_POM_10" Value="POM channel 10"/>
+					<Text TextId="TOK_TextId_Module_POM_11" Value="POM channel 11"/>
+					<Text TextId="TOK_TextId_Module_POM_12" Value="POM channel 12"/>
+					<Text TextId="TOK_TextId_Module_POM_13" Value="POM channel 13"/>
+					<Text TextId="TOK_TextId_Module_POM_14" Value="POM channel 14"/>
+					<Text TextId="TOK_TextId_Module_POM_15" Value="POM channel 15"/>
+					<Text TextId="TOK_TextId_Module_POM_16" Value="POM channel 16"/>
+					<Text TextId="TOK_TextId_Module_POM_1_SUBST" Value="Channel 1 behavior in case of error"/>
+					<Text TextId="TOK_TextId_Module_POM_2_SUBST" Value="Channel 2 behavior in case of error"/>
+					<Text TextId="TOK_TextId_Module_POM_3_SUBST" Value="Channel 3 behavior in case of error"/>
+					<Text TextId="TOK_TextId_Module_POM_4_SUBST" Value="Channel 4 behavior in case of error"/>
+					<Text TextId="TOK_TextId_Module_POM_5_SUBST" Value="Channel 5 behavior in case of error"/>
+					<Text TextId="TOK_TextId_Module_POM_6_SUBST" Value="Channel 6 behavior in case of error"/>
+					<Text TextId="TOK_TextId_Module_POM_7_SUBST" Value="Channel 7 behavior in case of error"/>
+					<Text TextId="TOK_TextId_Module_POM_8_SUBST" Value="Channel 8 behavior in case of error"/>
+					<Text TextId="TOK_TextId_Module_POM_9_SUBST" Value="Channel 9 behavior in case of error"/>
+					<Text TextId="TOK_TextId_Module_POM_10_SUBST" Value="Channel 10 behavior in case of error"/>
+					<Text TextId="TOK_TextId_Module_POM_11_SUBST" Value="Channel 11 behavior in case of error"/>
+					<Text TextId="TOK_TextId_Module_POM_12_SUBST" Value="Channel 12 behavior in case of error"/>
+					<Text TextId="TOK_TextId_Module_POM_13_SUBST" Value="Channel 13 behavior in case of error"/>
+					<Text TextId="TOK_TextId_Module_POM_14_SUBST" Value="Channel 14 behavior in case of error"/>
+					<Text TextId="TOK_TextId_Module_POM_15_SUBST" Value="Channel 15 behavior in case of error"/>
+					<Text TextId="TOK_TextId_Module_POM_16_SUBST" Value="Channel 16 behavior in case of error"/>
+					<!--module info name-->
+					<Text TextId="TOK_InfoTextId_Module_CIM" Value="Central Interface Module with PROFINET interface and one subslot for I/O module" />
+					<Text TextId="TOK_InfoTextId_Module_POM16" Value="Power Output Module with 16 channels" />
+					<Text TextId="TOK_InfoTextId_Module_POM12" Value="Power Output Module with 12 channels" />
+					<Text TextId="TOK_InfoTextId_Module_POM8" Value="Power Output Module with 8 channels" />
+					<Text TextId="TOK_InfoTextId_Module_POMFlex" Value="Power Output Module with 12 channels for different voltage ranges" />
+					<Text TextId="TOK_InfoTextId_Module_POM9" Value="Power Output Module with 9 channels" />
+					<Text TextId="TOK_InfoTextId_Module_Virtual" Value="Virtual submodule"/>
+					<Text TextId="TOK_InfoTextId_Module_TEMP" Value="I/O module for measuring of 4 analog and 4 temperature inputs" />
+					<Text TextId="TOK_InfoTextId_Module_DIDO" Value="I/O module with 8 digital outputs and 8 digital in-/outputs" />
+					<Text TextId="TOK_InfoTextId_Module_UI" Value="I/O module for measuring netvoltage and netcurrent" />
+					<Text TextId="TOK_InfoTextNo" Value="no"/>
+					<Text TextId="TOK_InfoTextYes" Value="yes"/>
+					<!--DataItem name-->
+					<Text TextId="TOK_Reserve" Value="Reserve"/>
+					<Text TextId="TOK_CIM_State" Value="Status bits"/>
+					<Text TextId="TOK_CIM_Control" Value="Control bits"/>
+					<Text TextId="TOK_CIM_Control_0" Value="Heater"/>
+					<Text TextId="TOK_CIM_Control_1" Value="Operating mode"/>
+					<Text TextId="TOK_CIM_Control_2" Value="Line voltage compensation"/>
+					<Text TextId="TOK_CIM_TEMP_Val_Comp" Value="Compensation temperature" />
+					<Text TextId="TOK_CIM_TEMP_Val_Temp_Ch1" Value="Temperature channel 1" />
+					<Text TextId="TOK_CIM_TEMP_Val_Temp_Ch2" Value="Temperature channel 2" />
+					<Text TextId="TOK_CIM_TEMP_Val_Temp_Ch3" Value="Temperature channel 3" />
+					<Text TextId="TOK_CIM_TEMP_Val_Temp_Ch4" Value="Temperature channel 4" />
+					<Text TextId="TOK_CIM_TEMP_Val_Ai_Ch1" Value="Analog channel 1" />
+					<Text TextId="TOK_CIM_TEMP_Val_Ai_Ch2" Value="Analog channel 2" />
+					<Text TextId="TOK_CIM_TEMP_Val_Ai_Ch3" Value="Analog channel 3" />
+					<Text TextId="TOK_CIM_TEMP_Val_Ai_Ch4" Value="Analog channel 4" />
+					<Text TextId="TOK_CIM_DIDO_DI_para" Value="Digital Inputs 9-16" />
+					<Text TextId="TOK_CIM_DIDO_DO" Value="Digital Outputs 1-8" />
+					<Text TextId="TOK_CIM_DIDO_DO_para" Value="Digital Outputs 9-16" />
+					<Text TextId="TOK_CIM_UI_VoltageL1" Value="Line voltage L1/L12" />
+					<Text TextId="TOK_CIM_UI_VoltageL2" Value="Line voltage L2/L23" />
+					<Text TextId="TOK_CIM_UI_VoltageL3" Value="Line voltage L3/L31" />
+					<!--Slot defines-->
+					<Text TextId="IDSLOT_CIM_PM" Value="Slot for CIM with PM"/>
+					<Text TextId="IDSLOT_POM" Value="Slot for POM"/>
+					<!--Parameter-->
+					<Text TextId="TOK_PAR_General" Value="General parameter"/>
+					<Text TextId="TOK_PAR_ConfigCtrl" Value="Configuration control enabled"/>
+					<Text TextId="TOK_PAR_ConfigCtrl_Help" Value="Configuration control provides you with the option of configuring the Heating Control System HCS4200 with its maximum configuration and nevertheless operating with missing modules."/>
+					<Text TextId="TOK_PAR_SubstitueValue" Value="Channel substitute value in error case"/>
+					<Text TextId="TOK_PAR_LineVoltage" Value="Line Voltage [V]"/>
+					<Text TextId="TOK_PAR_CimRes" Value="CIM reserved" />
+					<Text TextId="TOK_POM_Parameter" Value="Parameter POM"/>
+					<Text TextId="TOK_POM_Parameter_Parallel" Value="Parameter parallel connection of loads"/>
+					<Text TextId="TOK_POM_Common" Value="Common parameter"/>
+					<Text TextId="TOK_PAR_PomRes" Value="POM reserved" />
+					<Text TextId="TOK_POM_CtrlMode" Value="Control mode"/>
+					<Text TextId="TOK_POM_CtrlMode2" Value="Control mode"/>
+					<Text TextId="TOK_POM_ConnectType" Value="Connection type"/>
+					<Text TextId="TOK_POM_VoltRange" Value="Nominal Voltage"/>
+					<Text TextId="TOK_POM_AlwaysSoft" Value="Soft start for each channel switch-on operationl"/>
+					<Text TextId="TOK_POM_PowerReg" Value="Enable power-control"/>
+					<Text TextId="TOK_POM_EnableIE" Value="Enable fault current monitoring"/>
+					<Text TextId="TOK_POM_ParallelUsed_Help" Value="Parallel connection of loads"/>
+					<Text TextId="TOK_POM_ParallelUsed_1" Value="Parallel connection of loads channel 1"/>
+					<Text TextId="TOK_POM_ParallelUsed_2" Value="Parallel connection of loads channel 2"/>
+					<Text TextId="TOK_POM_ParallelUsed_3" Value="Parallel connection of loads channel 3"/>
+					<Text TextId="TOK_POM_ParallelUsed_4" Value="Parallel connection of loads channel 4"/>
+					<Text TextId="TOK_POM_ParallelUsed_5" Value="Parallel connection of loads channel 5"/>
+					<Text TextId="TOK_POM_ParallelUsed_6" Value="Parallel connection of loads channel 6"/>
+					<Text TextId="TOK_POM_ParallelUsed_7" Value="Parallel connection of loads channel 7"/>
+					<Text TextId="TOK_POM_ParallelUsed_8" Value="Parallel connection of loads channel 8"/>
+					<Text TextId="TOK_POM_CtrlSubstitueValue" Value="Substitute value"/>
+					<Text TextId="TOK_POM_InfoTextSwitchOff" Value="Switch off" />
+					<Text TextId="TOK_POM_InfoTextLastValue" Value="Hold last Value" />
+					<Text TextId="TOK_MenuHalfWave" Value="Half-wave control"/>
+					<Text TextId="TOK_MenuHalfWaveSoft" Value="Half-wave control with softstart option 1"/>
+					<Text TextId="TOK_MenuHalfWaveSoft2" Value="Half-wave control with softstart option 2 "/>
+					<Text TextId="TOK_MenuHalfWaveSoft3" Value="Half-wave control with softstart option 3"/>
+					<Text TextId="TOK_MenuHalfWaveSoftPara" Value="Half-wave control with softstart parameterised"/>
+					<Text TextId="TOK_MenuHalfWaveSoftEasy" Value="Half-wave control with softstart adaptive"/>
+					<Text TextId="TOK_PhasenAngle" Value="Phase angle control"/>
+					<Text TextId="TOK_PhasenAngleSoft" Value="Phase angle control with softstart option 1"/>
+					<Text TextId="TOK_PhasenAngleSoft2" Value="Phase angle control with softstart option 2"/>
+					<Text TextId="TOK_PhasenAngleSoft3" Value="Phase angle control with softstart option 3"/>
+					<Text TextId="TOK_PhasenAngleSoftPara" Value="Phase angle control with softstart parameterised"/>
+					<Text TextId="TOK_PhasenAngleSoftEasy" Value="Phase angle control with softstart adaptive"/>
+					<Text TextId="TOK_MenuStern" Value="Connectin between phase and neutral conductor"/>
+					<Text TextId="TOK_MenuDreieck" Value="Connectin between phase and phase"/>
+					<Text TextId="TOK_MenuSpar" Value="2-leg control"/>
+					<Text TextId="TOK_MenuZweipoligStern" Value="2-pole connectin between phase and neutral conductor"/>
+					<Text TextId="TOK_MenuZweipoligDreieck" Value="2-pole donnectin between phase and phase"/>
+					<Text TextId="TOK_Menu277V" Value="230V/277V"/>
+					<Text TextId="TOK_Menu110V" Value="110V"/>
+					<Text TextId="TOK_Menu70V" Value="70V"/>
+					<Text TextId="TOK_Menu45V" Value="45V"/>
+					<Text TextId="TOK_POM_LXn_Help" Value="Phase LX1 / LX3 connector"/>
+					<Text TextId="TOK_POM_LX1" Value="Phase LX1"/>
+					<Text TextId="TOK_POM_LX3" Value="Phase LX3"/>
+					<Text TextId="TOK_POM_LXn_connected" Value="connected"/>
+					<Text TextId="TOK_POM_LXn_not_connected" Value="not connected"/>
+					<Text TextId="TOK_POM_Value_IE" Value="Threshold for fault current monitoring [mA]"/>
+					<Text TextId="TOK_POM_Value_Power" Value=" Total power [W]"/>
+					<Text TextId="TOK_POM_Value_Delta_Power" Value="max. permitted deviation from total power [W]"/>
+					<Text TextId="TOK_POM_Yes" Value="Yes"/>
+					<Text TextId="TOK_POM_No" Value="No"/>
+					<Text TextId="TOK_Module_TEMP_Parameter" Value="Parameter submodule temperature"/>
+					<Text TextId="TOK_TEMP_Temp_Ch1_Type" Value="Temperature channel 1 sensor type"/>
+					<Text TextId="TOK_TEMP_Temp_Ch2_Type" Value="Temperature channel 2 sensor type"/>
+					<Text TextId="TOK_TEMP_Temp_Ch3_Type" Value="Temperature channel 3 sensor type"/>
+					<Text TextId="TOK_TEMP_Temp_Ch4_Type" Value="Temperature channel 4 sensor type"/>
+					<Text TextId="TOK_TEMP_SensorType" Value="Sensor type connected to a temperature channel"/>
+					<Text TextId="TOK_TEMP_SensorType_NC" Value="Not connected"/>
+					<Text TextId="TOK_TEMP_SensorType_PT100_4W" Value="Pt 100 (Four wires)"/>
+					<Text TextId="TOK_TEMP_SensorType_PT1000_4W" Value="Pt 1000 (Four wires)"/>
+					<Text TextId="TOK_TEMP_SensorType_PT100" Value="Pt 100"/>
+					<Text TextId="TOK_TEMP_SensorType_PT1000" Value="Pt 1000"/>
+					<Text TextId="TOK_TEMP_SensorType_TC_J" Value="Thermocouple type J"/>
+					<Text TextId="TOK_TEMP_SensorType_TC_K" Value="Thermocouple type K"/>
+					<Text TextId="TOK_TEMP_SensorType_TC_L" Value="Thermocouple type L"/>
+					<Text TextId="TOK_TEMP_Ai_Ch1_Type" Value="Analog channel 1 measuring range"/>
+					<Text TextId="TOK_TEMP_Ai_Ch2_Type" Value="Analog channel 2 measuring range"/>
+					<Text TextId="TOK_TEMP_Ai_Ch3_Type" Value="Analog channel 3 measuring range"/>
+					<Text TextId="TOK_TEMP_Ai_Ch4_Type" Value="Analog channel 4 measuring range"/>
+					<Text TextId="TOK_TEMP_AiRange" Value="Measuring range for an analog input channel"/>
+					<Text TextId="TOK_TEMP_AiRange_NC" Value="Not connected"/>
+					<Text TextId="TOK_TEMP_AiRange_4_20" Value="4-20 mA (Wirebreak detection)"/>
+					<Text TextId="TOK_TEMP_AiRange_0_20" Value="0-20 mA"/>
+					<Text TextId="TOK_TEMP_TC_Comp" Value="Compensation method"/>
+					<Text TextId="TOK_TEMP_TcComp"  Value="Source of the compensation temperature needed for thermocouples"/>
+					<Text TextId="TOK_TEMP_TcComp_None" Value="No compensation (No thermocouples connected)"/>
+					<Text TextId="TOK_TEMP_TcComp_Intern" Value="Internal sensor"/>
+					<Text TextId="TOK_TEMP_TcComp_Value" Value="External value"/>
+					<Text TextId="TOK_Module_DIDO_Parameter" Value="Parameter submodule digital input/output"/>
+					<Text TextId="TOK_DIDO_Type_Ch9" Value="Digital channel 9"/>
+					<Text TextId="TOK_DIDO_Type_Ch10" Value="Digital channel 10"/>
+					<Text TextId="TOK_DIDO_Type_Ch11" Value="Digital channel 11"/>
+					<Text TextId="TOK_DIDO_Type_Ch12" Value="Digital channel 12"/>
+					<Text TextId="TOK_DIDO_Type_Ch13" Value="Digital channel 13"/>
+					<Text TextId="TOK_DIDO_Type_Ch14" Value="Digital channel 14"/>
+					<Text TextId="TOK_DIDO_Type_Ch15" Value="Digital channel 15"/>
+					<Text TextId="TOK_DIDO_Type_Ch16" Value="Digital channel 16"/>
+					<Text TextId="TOK_DIDO_Alarm_Break" Value="Alarm with linebreak"/>
+					<Text TextId="TOK_DIDO_Alarm_24V" Value="Alarm with 24V missing"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch1" Value="Output 1 behavior in case of error"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch2" Value="Output 2 behavior in case of error"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch3" Value="Output 3 behavior in case of error"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch4" Value="Output 4 behavior in case of error"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch5" Value="Output 5 behavior in case of error"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch6" Value="Output 6 behavior in case of error"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch7" Value="Output 7 behavior in case of error"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch8" Value="Output 8 behavior in case of error"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch9" Value="Output 9 behavior in case of error"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch10" Value="Output 10 behavior in case of error"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch11" Value="Output 11 behavior in case of error"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch12" Value="Output 12 behavior in case of error"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch13" Value="Output 13 behavior in case of error"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch14" Value="Output 14 behavior in case of error"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch15" Value="Output 15 behavior in case of error"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch16" Value="Output 16 behavior in case of error"/>
+					<Text TextId="TOK_DIDO_TypeChannel" Value="type of configurable digital inputs/outputs"/>
+					<Text TextId="TOK_DIDO_Input" Value="input"/>
+					<Text TextId="TOK_DIDO_Output" Value="output"/>
+					<Text TextId="TOK_DIDO_Alarm" Value="alarm information"/>
+					<Text TextId="TOK_DIDO_SubstitueValue" Value="alarm information with missing 24V"/>
+					<Text TextId="TOK_DIDO_InfoTextSubstValue" Value="switch on"/>
+					<Text TextId="TOK_Module_UI_Parameter" Value="Parameter submodule netvoltage/netcurrent"/>
+					<Text TextId="TOK_UI_TypeVoltConnect" Value="type of voltage connection"/>
+					<Text TextId="TOK_UI_VoltageStarConnect" Value="star"/>
+					<Text TextId="TOK_UI_VoltageDeltaConnect" Value="delta"/>
+					<Text TextId="TOK_UI_VoltageNoConnect" Value="none"/>
+					<Text TextId="TOK_UI_TypeCurrTransf" Value="type of current transformer"/>
+					<Text TextId="TOK_UI_CurrentNo" Value="none"/>
+					<Text TextId="TOK_UI_Current1A" Value="1A"/>
+					<Text TextId="TOK_UI_Current5A" Value="5A"/>
+					<!--Diagnoctics-->
+					<Text TextId="TOK_POM_ChannelError_0" Value="-"/>
+					<Text TextId="TOK_POM_ChannelError_1" Value="Communication error HCS-bus"/>
+					<Text TextId="TOK_POM_ChannelError_1_HELP" Value="Internal communication on HCS-bus disconnected"/>
+					<Text TextId="TOK_POM_ChannelError_2" Value="Line voltage error"/>
+					<Text TextId="TOK_POM_ChannelError_2_HELP" Value="Invalid line voltage"/>
+					<Text TextId="TOK_POM_ChannelError_3" Value="Frequency error"/>
+					<Text TextId="TOK_POM_ChannelError_3_HELP" Value="Invalid frequency"/>
+					<Text TextId="TOK_POM_ChannelError_4" Value="Triac short-circuited"/>
+					<Text TextId="TOK_POM_ChannelError_4_HELP" Value="Power output error: triac short-circuited"/>
+					<Text TextId="TOK_POM_ChannelError_5" Value="Incoming fuse tripped or triac is highly resistive"/>
+					<Text TextId="TOK_POM_ChannelError_5_HELP" Value="Power output error: incoming fuse tripped or triac is highly resistive"/>
+					<Text TextId="TOK_POM_ChannelError_6" Value="Outgoing fuse tripped"/>
+					<Text TextId="TOK_POM_ChannelError_6_HELP" Value="Power output error: outgoing fuse tripped"/>
+					<Text TextId="TOK_POM_ChannelError_7" Value="External error"/>
+					<Text TextId="TOK_POM_ChannelError_7_HELP" Value="Power output error: heating element defective"/>
+					<Text TextId="TOK_POM_ChannelError_8" Value="Internal temperature warning "/>
+					<Text TextId="TOK_POM_ChannelError_8_HELP" Value="Warning, internal temperature is close to threshold"/>
+					<Text TextId="TOK_POM_ChannelError_9" Value="Internal temperature error"/>
+					<Text TextId="TOK_POM_ChannelError_9_HELP" Value="Error, internal temperature exceeds threshold"/>
+					<Text TextId="TOK_POM_ChannelError_10" Value="Internal fan error"/>
+					<Text TextId="TOK_POM_ChannelError_10_HELP" Value="Internal fan defective"/>
+					<Text TextId="TOK_POM_ChannelError_11" Value="At least one phase is not connected"/>
+					<Text TextId="TOK_POM_ChannelError_11_HELP" Value="At least one phase is not connected"/>
+					<Text TextId="TOK_POM_ChannelError_12" Value="Internal error"/>
+					<Text TextId="TOK_POM_ChannelError_12_HELP" Value="Internal error"/>
+					<Text TextId="TOK_POM_ChannelError_13" Value="CIM communication error"/>
+					<Text TextId="TOK_POM_ChannelError_13_HELP" Value="CIM-module Internal error"/>
+					<Text TextId="TOK_POM_ChannelError_14" Value="Error rotating field"/>
+					<Text TextId="TOK_POM_ChannelError_14_HELP" Value="The direction of rotation field is not correct."/>
+					<Text TextId="TOK_POM_ChannelError_15" Value="Phase LX1 is not connected"/>
+					<Text TextId="TOK_POM_ChannelError_15_HELP" Value="Phase LX1 is not connected"/>
+					<Text TextId="TOK_POM_ChannelError_16" Value="Phase LX3 is not connected"/>
+					<Text TextId="TOK_POM_ChannelError_16_HELP" Value="Phase LX3 is not connected"/>
+					<Text TextId="TOK_POM_ChannelError_18" Value="Polarity error on measuring input"/>
+					<Text TextId="TOK_POM_ChannelError_18_HELP" Value="Analog input is connected incorrect"/>
+					<Text TextId="TOK_POM_ChannelError_19" Value="partial load missing"/>
+					<Text TextId="TOK_POM_ChannelError_19_HELP" Value="Power output error - only if parallel connection of loads is projected: actual power is below the allowed deviation from expected power"/>
+					<Text TextId="TOK_POM_ChannelError_20" Value="permitted channel current exceeded"/>
+					<Text TextId="TOK_POM_ChannelError_20_HELP" Value="Power output error: the allowed maximum of current is exceeded"/>
+					<Text TextId="TOK_POM_ChannelError_21" Value="permitted current phase LX1 exceeded"/>
+					<Text TextId="TOK_POM_ChannelError_21_HELP" Value="the allowed maximum of current for phase LX1 is exceeded"/>
+					<Text TextId="TOK_POM_ChannelError_22" Value="permitted current phase LX3 exceeded"/>
+					<Text TextId="TOK_POM_ChannelError_22_HELP" Value="the allowed maximum of current for phase LX3 is exceeded"/>
+					<Text TextId="TOK_POM_ChannelError_23" Value="power-setpoint cannot be reached"/>
+					<Text TextId="TOK_POM_ChannelError_23_HELP" Value="Power output error - only if power control is projected: the channel setpoint cannot be reached"/>
+					<Text TextId="TOK_POM_ChannelError_24" Value="fault current exceeded"/>
+					<Text TextId="TOK_POM_ChannelError_24_HELP" Value="Power output error - only if fault current monitoring is enabled: the threshold for the fault current is exceeded"/>
+					<Text TextId="TOK_POM_ChannelError_25" Value="adaptive softstart can not be finished"/>
+					<Text TextId="TOK_POM_ChannelError_25_HELP" Value="Power output error - only if adaptive softstart  is projected: the used heating element can not be switched on"/>
+				</PrimaryLanguage>
+				<Language xml:lang="de">
+					<!--german-->
+					<Text TextId="TOK_DevIdent_InfoText" Value="Heizstrahlersteuerung" />
+					<!--DAPs-->
+					<Text TextId="TOK_DAP" Value="HCS4200" />
+					<Text TextId="TOK_DAP_V2" Value="HCS4200 V2" />
+					<Text TextId="TOK_ModInfo_InfoTextId_DAP" Value="Heizungssteuerungssysteme HCS4200 zur Steuerung von max. 24 Power Output Modulen; 1 Peripheriemodul steckbar; verfügbar mit PROFINET und PROFIBUS Schnittstelle"/>
+					<Text TextId="TOK_ModInfo_InfoTextId_DAP_V2" Value="Heizungssteuerungssysteme HCS4200 zur Steuerung von max. 24 Power Output Modulen; 1 Peripheriemodul steckbar; mit Konfigurationssteuerung; Kombibetrieb mit POM4320 möglich"/>
+					<!--port name-->
+					<Text TextId="TOK_Subslot_8000" Value="I1" />
+					<Text TextId="TOK_Subslot_8001" Value="X1" />
+					<Text TextId="TOK_Subslot_8002" Value="X2" />
+					<Text TextId="TOK_DAP_InterfaceModule" Value="Interface" />
+					<Text TextId="TOK_Port1" Value="port 1 - RJ45 10/100 MBit/s" />
+					<Text TextId="TOK_Port2" Value="port 2 - RJ45 10/100 MBit/s" />
+					<!--module name-->
+					<Text TextId="TOK_TextId_Module_CIM" Value="CIM4210 PROFINET" />
+					<Text TextId="TOK_TextId_Module_Virtual" Value="Modulkopf CIM-PN"/>
+					<Text TextId="TOK_TextId_Module_POM16" Value="POM4220 Lowend" />
+					<Text TextId="TOK_TextId_Module_POM12" Value="POM4220 Midrange" />
+					<Text TextId="TOK_TextId_Module_POM8" Value="POM4220 Highend" />
+					<Text TextId="TOK_TextId_Module_POMFlex" Value="POM4220 Flexible" />
+					<Text TextId="TOK_TextId_Module_POM9" Value="POM4320" />
+					<Text TextId="TOK_TextId_Module_TEMP" Value="PM Temperatur" />
+					<Text TextId="TOK_TextId_Module_DIDO" Value="PM DI/DO" />
+					<Text TextId="TOK_TextId_Module_UI" Value="PM U/I" />
+					<Text TextId="TOK_TextId_Module_POM_1" Value="POM Kanal 1"/>
+					<Text TextId="TOK_TextId_Module_POM_2" Value="POM Kanal 2"/>
+					<Text TextId="TOK_TextId_Module_POM_3" Value="POM Kanal 3"/>
+					<Text TextId="TOK_TextId_Module_POM_4" Value="POM Kanal 4"/>
+					<Text TextId="TOK_TextId_Module_POM_5" Value="POM Kanal 5"/>
+					<Text TextId="TOK_TextId_Module_POM_6" Value="POM Kanal 6"/>
+					<Text TextId="TOK_TextId_Module_POM_7" Value="POM Kanal 7"/>
+					<Text TextId="TOK_TextId_Module_POM_8" Value="POM Kanal 8"/>
+					<Text TextId="TOK_TextId_Module_POM_9" Value="POM Kanal 9"/>
+					<Text TextId="TOK_TextId_Module_POM_10" Value="POM Kanal 10"/>
+					<Text TextId="TOK_TextId_Module_POM_11" Value="POM Kanal 11"/>
+					<Text TextId="TOK_TextId_Module_POM_12" Value="POM Kanal 12"/>
+					<Text TextId="TOK_TextId_Module_POM_13" Value="POM Kanal 13"/>
+					<Text TextId="TOK_TextId_Module_POM_14" Value="POM Kanal 14"/>
+					<Text TextId="TOK_TextId_Module_POM_15" Value="POM Kanal 15"/>
+					<Text TextId="TOK_TextId_Module_POM_16" Value="POM Kanal 16"/>
+					<Text TextId="TOK_TextId_Module_POM_1_SUBST" Value="Kanal 1 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_TextId_Module_POM_2_SUBST" Value="Kanal 2 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_TextId_Module_POM_3_SUBST" Value="Kanal 3 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_TextId_Module_POM_4_SUBST" Value="Kanal 4 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_TextId_Module_POM_5_SUBST" Value="Kanal 5 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_TextId_Module_POM_6_SUBST" Value="Kanal 6 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_TextId_Module_POM_7_SUBST" Value="Kanal 7 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_TextId_Module_POM_8_SUBST" Value="Kanal 8 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_TextId_Module_POM_9_SUBST" Value="Kanal 9 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_TextId_Module_POM_10_SUBST" Value="Kanal 10 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_TextId_Module_POM_11_SUBST" Value="Kanal 11 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_TextId_Module_POM_12_SUBST" Value="Kanal 12 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_TextId_Module_POM_13_SUBST" Value="Kanal 13 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_TextId_Module_POM_14_SUBST" Value="Kanal 14 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_TextId_Module_POM_15_SUBST" Value="Kanal 15 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_TextId_Module_POM_16_SUBST" Value="Kanal 16 Verhalten im Fehlerfall"/>
+					<!--module info name-->
+					<Text TextId="TOK_InfoTextId_Module_CIM" Value="Central Interface Modul zum Anschluss an PROFINET mit Slot für ein Peripheriemodul" />
+					<Text TextId="TOK_InfoTextId_Module_POM16" Value="Power Output Modul mit 16 Kanälen" />
+					<Text TextId="TOK_InfoTextId_Module_POM12" Value="Power Output Modul mit 12 Kanälen" />
+					<Text TextId="TOK_InfoTextId_Module_POM8" Value="Power Output Modul mit 8 Kanälen" />
+					<Text TextId="TOK_InfoTextId_Module_POMFlex" Value="Power Output Modul mit 12 Kanälen für verschiedene Spannungsbereiche" />
+					<Text TextId="TOK_InfoTextId_Module_POM9" Value="Power Output Modul mit 9 Kanälen" />
+					<Text TextId="TOK_InfoTextId_Module_Virtual" Value="Virtuelles Sub-Modul"/>
+					<Text TextId="TOK_InfoTextId_Module_TEMP" Value="Peripheriemodul zur Erfassung von 4 Analog- und 4 Temperaturmesswerten" />
+					<Text TextId="TOK_InfoTextId_Module_DIDO" Value="Peripheriemodul mit 8 digitalen Ausgängen und 8 digitalen Ein-/Ausgängen" />
+					<Text TextId="TOK_InfoTextId_Module_UI" Value="Peripheriemodul zur Erfassung von Netzspannung und -strom" />
+					<Text TextId="TOK_InfoTextNo" Value="nein"/>
+					<Text TextId="TOK_InfoTextYes" Value="ja"/>
+					<!--DataItem name-->
+					<Text TextId="TOK_Reserve" Value="Reserve"/>
+					<Text TextId="TOK_CIM_State" Value="Statusbits"/>
+					<Text TextId="TOK_CIM_Control" Value="Steuerbits"/>
+					<Text TextId="TOK_CIM_Control_0" Value="Heizung"/>
+					<Text TextId="TOK_CIM_Control_1" Value="Betriebsart"/>
+					<Text TextId="TOK_CIM_Control_2" Value="Netzspannungskompensation"/>
+					<Text TextId="TOK_CIM_TEMP_Val_Comp" Value="Kompensationstemperatur" />
+					<Text TextId="TOK_CIM_TEMP_Val_Temp_Ch1" Value="Temperaturkanal 1" />
+					<Text TextId="TOK_CIM_TEMP_Val_Temp_Ch2" Value="Temperaturkanal 2" />
+					<Text TextId="TOK_CIM_TEMP_Val_Temp_Ch3" Value="Temperaturkanal 3" />
+					<Text TextId="TOK_CIM_TEMP_Val_Temp_Ch4" Value="Temperaturkanal 4" />
+					<Text TextId="TOK_CIM_TEMP_Val_Ai_Ch1" Value="Analogkanal 1" />
+					<Text TextId="TOK_CIM_TEMP_Val_Ai_Ch2" Value="Analogkanal 2" />
+					<Text TextId="TOK_CIM_TEMP_Val_Ai_Ch3" Value="Analogkanal 3" />
+					<Text TextId="TOK_CIM_TEMP_Val_Ai_Ch4" Value="Analogkanal 4" />
+					<Text TextId="TOK_CIM_DIDO_DI_para" Value="Digitale Eingänge 9-16" />
+					<Text TextId="TOK_CIM_DIDO_DO" Value="Digitale Ausgänge 1-8" />
+					<Text TextId="TOK_CIM_DIDO_DO_para" Value="Digitale Ausgänge 9-16" />
+					<Text TextId="TOK_CIM_UI_VoltageL1" Value="Spannung L1/L12" />
+					<Text TextId="TOK_CIM_UI_VoltageL2" Value="Spannung L2/L23" />
+					<Text TextId="TOK_CIM_UI_VoltageL3" Value="Spannung L3/L31" />
+					<!--Slot defines-->
+					<Text TextId="IDSLOT_CIM_PM" Value="Slot für CIM mit PM"/>
+					<Text TextId="IDSLOT_POM" Value="Slot für POM"/>
+					<!--Parameter-->
+					<Text TextId="TOK_PAR_General" Value="Allgemeine Parameter"/>
+					<Text TextId="TOK_PAR_ConfigCtrl" Value="Konfigurationssteuerung eingeschaltet"/>
+					<Text TextId="TOK_PAR_ConfigCtrl_Help" Value="Durch die Konfigurationssteuerung haben Sie die Möglichkeit, das Heizungssteuerungssystem HCS4200 mit seinem Vollausbau zu projektieren und trotzdem mit fehlenden Modulen zu betreiben."/>
+					<Text TextId="TOK_PAR_SubstitueValue" Value="Kanal-Ersatzwert im Fehlerfall"/>
+					<Text TextId="TOK_PAR_LineVoltage" Value="Nennspannung [V]"/>
+					<Text TextId="TOK_PAR_CimRes" Value="CIM Reserve" />
+					<Text TextId="TOK_POM_Parameter" Value="Parameter POM"/>
+					<Text TextId="TOK_POM_Parameter_Parallel" Value="Parameter Parallelschaltung von Lasten"/>
+					<Text TextId="TOK_POM_Common" Value="Allgemeine Parameter"/>
+					<Text TextId="TOK_PAR_PomRes" Value="POM Reserve" />
+					<Text TextId="TOK_POM_CtrlMode" Value="Steuerungsart"/>
+					<Text TextId="TOK_POM_CtrlMode2" Value="Steuerungsart"/>
+					<Text TextId="TOK_POM_ConnectType" Value="Anschlussart"/>
+					<Text TextId="TOK_POM_VoltRange" Value="Nennspannung"/>
+					<Text TextId="TOK_POM_AlwaysSoft" Value="Softstart bei jedem Kanal-Einschaltvorgang"/>
+					<Text TextId="TOK_POM_PowerReg" Value="Leistungsregelung aktivieren"/>
+					<Text TextId="TOK_POM_EnableIE" Value="Fehlerstromüberwachung aktivieren"/>
+					<Text TextId="TOK_POM_ParallelUsed_Help" Value="Verwendung parallelgeschalteter Lasten"/>
+					<Text TextId="TOK_POM_ParallelUsed_1" Value="Parallelschaltung von Lasten an Kanal 1"/>
+					<Text TextId="TOK_POM_ParallelUsed_2" Value="Parallelschaltung von Lasten an Kanal 2"/>
+					<Text TextId="TOK_POM_ParallelUsed_3" Value="Parallelschaltung von Lasten an Kanal 3"/>
+					<Text TextId="TOK_POM_ParallelUsed_4" Value="Parallelschaltung von Lasten an Kanal 4"/>
+					<Text TextId="TOK_POM_ParallelUsed_5" Value="Parallelschaltung von Lasten an Kanal 5"/>
+					<Text TextId="TOK_POM_ParallelUsed_6" Value="Parallelschaltung von Lasten an Kanal 6"/>
+					<Text TextId="TOK_POM_ParallelUsed_7" Value="Parallelschaltung von Lasten an Kanal 7"/>
+					<Text TextId="TOK_POM_ParallelUsed_8" Value="Parallelschaltung von Lasten an Kanal 8"/>
+					<Text TextId="TOK_POM_CtrlSubstitueValue" Value="Kanal-Ersatzwert"/>
+					<Text TextId="TOK_POM_InfoTextSwitchOff" Value="abschalten" />
+					<Text TextId="TOK_POM_InfoTextLastValue" Value="letzten Wert halten" />
+					<Text TextId="TOK_MenuHalfWave" Value="Halbwellensteuerung"/>
+					<Text TextId="TOK_MenuHalfWaveSoft" Value="Halbwellensteuerung mit Softstart Variante 1"/>
+					<Text TextId="TOK_MenuHalfWaveSoft2" Value="Halbwellensteuerung mit Softstart Variante 2"/>
+					<Text TextId="TOK_MenuHalfWaveSoft3" Value="Halbwellensteuerung mit Softstart Variante 3"/>
+					<Text TextId="TOK_MenuHalfWaveSoftPara" Value="Halbwellensteuerung mit Softstart parametrierbar"/>
+					<Text TextId="TOK_MenuHalfWaveSoftEasy" Value="Halbwellensteuerung mit Softstart adaptiv"/>
+					<Text TextId="TOK_PhasenAngle" Value="Phasenanschnitt"/>
+					<Text TextId="TOK_PhasenAngleSoft" Value="Phasenanschnitt mit Softstart Variante 1"/>
+					<Text TextId="TOK_PhasenAngleSoft2" Value="Phasenanschnitt mit Softstart Variante 2"/>
+					<Text TextId="TOK_PhasenAngleSoft3" Value="Phasenanschnitt mit Softstart Variante 3"/>
+					<Text TextId="TOK_PhasenAngleSoftPara" Value="Phasenanschnitt mit Softstart parametrierbar"/>
+					<Text TextId="TOK_PhasenAngleSoftEasy" Value="Phasenanschnitt mit Softstart adaptiv"/>
+					<Text TextId="TOK_MenuStern" Value="Anschluss zwischen Phase und Neutralleiter"/>
+					<Text TextId="TOK_MenuDreieck" Value="Anschluss zwischen Phase und Phase"/>
+					<Text TextId="TOK_MenuSpar" Value="Sparschaltung"/>
+					<Text TextId="TOK_MenuZweipoligStern" Value="2-poliger Anschluss zwischen Phase und Neutralleiter"/>
+					<Text TextId="TOK_MenuZweipoligDreieck" Value="2-poliger Anschluss zwischen Phase und Phase"/>
+					<Text TextId="TOK_Menu277V" Value="230V/277V"/>
+					<Text TextId="TOK_Menu110V" Value="110V"/>
+					<Text TextId="TOK_Menu70V" Value="70V"/>
+					<Text TextId="TOK_Menu45V" Value="45V"/>
+					<Text TextId="TOK_POM_LXn_Help" Value="Anschluss Phase LX1 / LX3"/>
+					<Text TextId="TOK_POM_LX1" Value="Phase LX1"/>
+					<Text TextId="TOK_POM_LX3" Value="Phase LX3"/>
+					<Text TextId="TOK_POM_LXn_connected" Value="angeschlossen"/>
+					<Text TextId="TOK_POM_LXn_not_connected" Value="nicht angeschlossen"/>
+					<Text TextId="TOK_POM_Value_IE" Value="Schwelle für Fehlerstromüberwachung [mA]"/>
+					<Text TextId="TOK_POM_Value_Power" Value=" Gesamtleistung [W]"/>
+					<Text TextId="TOK_POM_Value_Delta_Power" Value="max. zulässige Abweichung von der Gesamtleistung [W]"/>
+					<Text TextId="TOK_POM_Yes" Value="Ja"/>
+					<Text TextId="TOK_POM_No" Value="Nein"/>
+					<Text TextId="TOK_Module_TEMP_Parameter" Value="Parameter Submodul Temperatur"/>
+					<Text TextId="TOK_TEMP_Temp_Ch1_Type" Value="Temperaturkanal 1 Sensortyp"/>
+					<Text TextId="TOK_TEMP_Temp_Ch2_Type" Value="Temperaturkanal 2 Sensortyp"/>
+					<Text TextId="TOK_TEMP_Temp_Ch3_Type" Value="Temperaturkanal 3 Sensortyp"/>
+					<Text TextId="TOK_TEMP_Temp_Ch4_Type" Value="Temperaturkanal 4 Sensortyp"/>
+					<Text TextId="TOK_TEMP_SensorType" Value="An Temperaturkanal angeschlossener Sensortyp"/>
+					<Text TextId="TOK_TEMP_SensorType_NC" Value="nicht angeschlossen"/>
+					<Text TextId="TOK_TEMP_SensorType_PT100_4W" Value="Pt 100 (Vier-Draht)"/>
+					<Text TextId="TOK_TEMP_SensorType_PT1000_4W" Value="Pt 1000 (Vier-Draht)"/>
+					<Text TextId="TOK_TEMP_SensorType_PT100" Value="Pt 100"/>
+					<Text TextId="TOK_TEMP_SensorType_PT1000" Value="Pt 1000"/>
+					<Text TextId="TOK_TEMP_SensorType_TC_J" Value="Thermoelement Typ J"/>
+					<Text TextId="TOK_TEMP_SensorType_TC_K" Value="Thermoelement Typ K"/>
+					<Text TextId="TOK_TEMP_SensorType_TC_L" Value="Thermoelement Typ L"/>
+					<Text TextId="TOK_TEMP_Ai_Ch1_Type" Value="Analogkanal 1 Messbereich"/>
+					<Text TextId="TOK_TEMP_Ai_Ch2_Type" Value="Analogkanal 2 Messbereich"/>
+					<Text TextId="TOK_TEMP_Ai_Ch3_Type" Value="Analogkanal 3 Messbereich"/>
+					<Text TextId="TOK_TEMP_Ai_Ch4_Type" Value="Analogkanal 4 Messbereich"/>
+					<Text TextId="TOK_TEMP_AiRange" Value="Messbereichseinstellung der Analogkanäle"/>
+					<Text TextId="TOK_TEMP_AiRange_NC" Value="nicht angeschlossen"/>
+					<Text TextId="TOK_TEMP_AiRange_4_20" Value="4-20 mA (Drahtbrucherkennung)"/>
+					<Text TextId="TOK_TEMP_AiRange_0_20" Value="0-20 mA"/>
+					<Text TextId="TOK_TEMP_TC_Comp" Value="Kompensationsverfahren"/>
+					<Text TextId="TOK_TEMP_TcComp" Value="Quelle des Kompensationswertes für Thermoelemente"/>
+					<Text TextId="TOK_TEMP_TcComp_None" Value="keine Kompensation"/>
+					<Text TextId="TOK_TEMP_TcComp_Intern" Value="interner Sensor"/>
+					<Text TextId="TOK_TEMP_TcComp_Value" Value="externer Wert"/>
+					<Text TextId="TOK_Module_DIDO_Parameter" Value="Parameter Submodul Digital Eingang/Ausgang"/>
+					<Text TextId="TOK_DIDO_Type_Ch9" Value="digitaler Kanal 9"/>
+					<Text TextId="TOK_DIDO_Type_Ch10" Value="digitaler Kanal 10"/>
+					<Text TextId="TOK_DIDO_Type_Ch11" Value="digitaler Kanal 11"/>
+					<Text TextId="TOK_DIDO_Type_Ch12" Value="digitaler Kanal 12"/>
+					<Text TextId="TOK_DIDO_Type_Ch13" Value="digitaler Kanal 13"/>
+					<Text TextId="TOK_DIDO_Type_Ch14" Value="digitaler Kanal 14"/>
+					<Text TextId="TOK_DIDO_Type_Ch15" Value="digitaler Kanal 15"/>
+					<Text TextId="TOK_DIDO_Type_Ch16" Value="digitaler Kanal 16"/>
+					<Text TextId="TOK_DIDO_Alarm_Break" Value="Alarm bei Drahtbruch"/>
+					<Text TextId="TOK_DIDO_Alarm_24V" Value="Alarm bei fehlender 24V"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch1" Value="Ausgang 1 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch2" Value="Ausgang 2 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch3" Value="Ausgang 3 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch4" Value="Ausgang 4 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch5" Value="Ausgang 5 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch6" Value="Ausgang 6 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch7" Value="Ausgang 7 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch8" Value="Ausgang 8 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch9" Value="Ausgang 9 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch10" Value="Ausgang 10 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch11" Value="Ausgang 11 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch12" Value="Ausgang 12 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch13" Value="Ausgang 13 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch14" Value="Ausgang 14 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch15" Value="Ausgang 15 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_DIDO_SUBST_Ch16" Value="Ausgang 16 Verhalten im Fehlerfall"/>
+					<Text TextId="TOK_DIDO_TypeChannel" Value="Einstellung für die frei konfigurierbaren digitalen Ein-/Ausgänge"/>
+					<Text TextId="TOK_DIDO_Input" Value="Eingang"/>
+					<Text TextId="TOK_DIDO_Output" Value="Ausgang"/>
+					<Text TextId="TOK_DIDO_Alarm" Value="Alarmmeldung"/>
+					<Text TextId="TOK_DIDO_SubstitueValue" Value="Alarmmeldung bei fehlender 24V Versorgungsspannung"/>
+					<Text TextId="TOK_DIDO_InfoTextSubstValue" Value="einschalten"/>
+					<Text TextId="TOK_Module_UI_Parameter" Value="Parameter Submodul Netzspannung/Netzstrom"/>
+					<Text TextId="TOK_UI_TypeVoltConnect" Value="Art des Spannungsanschlusses"/>
+					<Text TextId="TOK_UI_VoltageStarConnect" Value="Stern"/>
+					<Text TextId="TOK_UI_VoltageDeltaConnect" Value="Dreieck"/>
+					<Text TextId="TOK_UI_VoltageNoConnect" Value="keiner"/>
+					<Text TextId="TOK_UI_TypeCurrTransf" Value="Typ des Stromwandlers"/>
+					<Text TextId="TOK_UI_CurrentNo" Value="keiner"/>
+					<Text TextId="TOK_UI_Current1A" Value="1A"/>
+					<Text TextId="TOK_UI_Current5A" Value="5A"/>
+					<!--Diagnoctics-->
+					<Text TextId="TOK_POM_ChannelError_0" Value="-"/>
+					<Text TextId="TOK_POM_ChannelError_1" Value="Kommunikationsfehler HCS-Bus"/>
+					<Text TextId="TOK_POM_ChannelError_1_HELP" Value="Unterbrechung der Kommunikation auf dem internen HCS-Bus."/>
+					<Text TextId="TOK_POM_ChannelError_2" Value="Netzspannung ist außerhalb des zulässigen Bereiches"/>
+					<Text TextId="TOK_POM_ChannelError_2_HELP" Value="Die Netzspannung ist außerhalb des zulässigen Bereiches."/>
+					<Text TextId="TOK_POM_ChannelError_3" Value="Frequenz ist außerhalb des zulässigen Bereiches"/>
+					<Text TextId="TOK_POM_ChannelError_3_HELP" Value="Die Netzfrequenz ist außerhalb des zulässigen Bereiches."/>
+					<Text TextId="TOK_POM_ChannelError_4" Value="Triac durchlegiert"/>
+					<Text TextId="TOK_POM_ChannelError_4_HELP" Value="Fehler am Ausgang: Triac ist durchlegiert (Kurzschluss Leistungsschaltelement)"/>
+					<Text TextId="TOK_POM_ChannelError_5" Value="Hinführende Sicherung defekt / Triac hochohmig"/>
+					<Text TextId="TOK_POM_ChannelError_5_HELP" Value="Fehler am Ausgang: die hinführende Sicherung ist defekt oder Triac ist hochohmig (Unterbrechung Leistungsschaltelement)."/>
+					<Text TextId="TOK_POM_ChannelError_6" Value="Rückführende Sicherung defekt"/>
+					<Text TextId="TOK_POM_ChannelError_6_HELP" Value="Fehler am Ausgang: die rückführende Sicherung ist defekt"/>
+					<Text TextId="TOK_POM_ChannelError_7" Value="Externer Fehler"/>
+					<Text TextId="TOK_POM_ChannelError_7_HELP" Value="Fehler am Ausgang: Heizelement ist defekt oder Leitung ist unterbrochen"/>
+					<Text TextId="TOK_POM_ChannelError_8" Value="Warnschwelle Geräteinnentemperatur"/>
+					<Text TextId="TOK_POM_ChannelError_8_HELP" Value="Warnung, Geräteinnentemperatur nähert sich der Abschaltschwelle"/>
+					<Text TextId="TOK_POM_ChannelError_9" Value="Abschaltschwelle Geräteinnentemperatur"/>
+					<Text TextId="TOK_POM_ChannelError_9_HELP" Value="Geräteabschaltung in Folge zu hoher Geräteinnentemperatur"/>
+					<Text TextId="TOK_POM_ChannelError_10" Value="Interner Lüfter fehlerhaft"/>
+					<Text TextId="TOK_POM_ChannelError_10_HELP" Value="Der interner Lüfter ist defekt"/>
+					<Text TextId="TOK_POM_ChannelError_11" Value="Min. eine Phase ist nicht angeschlossen"/>
+					<Text TextId="TOK_POM_ChannelError_11_HELP" Value="Wenigstens eine der Phasenspannungen fehlt."/>
+					<Text TextId="TOK_POM_ChannelError_12" Value="Gerätefehler intern"/>
+					<Text TextId="TOK_POM_ChannelError_12_HELP" Value="Gerätefehler intern"/>
+					<Text TextId="TOK_POM_ChannelError_13" Value="Kommunikationsfehler CIM"/>
+					<Text TextId="TOK_POM_ChannelError_13_HELP" Value="Interner Fehler auf der CIM-Baugruppe"/>
+					<Text TextId="TOK_POM_ChannelError_14" Value="Drehfeldfehler"/>
+					<Text TextId="TOK_POM_ChannelError_14_HELP" Value="Die Reihenfolge der Phasen ist nicht korrekt."/>
+					<Text TextId="TOK_POM_ChannelError_15" Value="Phase LX1 ist nicht angeschlossen"/>
+					<Text TextId="TOK_POM_ChannelError_15_HELP" Value="Phase LX1 ist nicht angeschlossen"/>
+					<Text TextId="TOK_POM_ChannelError_16" Value="Phase LX3 ist nicht angeschlossen"/>
+					<Text TextId="TOK_POM_ChannelError_16_HELP" Value="Phase LX3 ist nicht angeschlossen"/>
+					<Text TextId="TOK_POM_ChannelError_18" Value="Falsche Polarität"/>
+					<Text TextId="TOK_POM_ChannelError_18_HELP" Value="Der Sensor oder Eingang ist nicht korrekt angeschlossen"/>
+					<Text TextId="TOK_POM_ChannelError_19" Value="Teillastabbruch"/>
+					<Text TextId="TOK_POM_ChannelError_19_HELP" Value="Fehler am Ausgang - nur bei projektierter Parallelschaltung: die Ausgangsleistung liegt unterhalb der zulässigen Abweichung von der erwarteten Gesamtleistung"/>
+					<Text TextId="TOK_POM_ChannelError_20" Value="zulässiger Kanalstrom überschritten"/>
+					<Text TextId="TOK_POM_ChannelError_20_HELP" Value="Power output error: the allowed maximum of current is exceeded"/>
+					<Text TextId="TOK_POM_ChannelError_21" Value="zulässiger Phasenstrom LX1 überschritten"/>
+					<Text TextId="TOK_POM_ChannelError_21_HELP" Value="die zulässige Strombelastung für die Phase LX1 wird überschritten"/>
+					<Text TextId="TOK_POM_ChannelError_22" Value="zulässiger Phasenstrom LX3 überschritten"/>
+					<Text TextId="TOK_POM_ChannelError_22_HELP" Value="die zulässige Strombelastung für die Phase LX3 wird überschritten"/>
+					<Text TextId="TOK_POM_ChannelError_23" Value="der Leistungs-Sollwert wird nicht erreicht"/>
+					<Text TextId="TOK_POM_ChannelError_23_HELP" Value="Fehler am Ausgang - nur bei projektierter Leistungsregelung: der Kanal-Sollwert kann nicht erreicht werden"/>
+					<Text TextId="TOK_POM_ChannelError_24" Value="Fehlerstrom zu hoch"/>
+					<Text TextId="TOK_POM_ChannelError_24_HELP" Value="Fehler am Ausgang - nur bei projektierter Fehlerstromüberwachung: die eingestellte Schwelle für den Fehlerstrom wurde überschritten"/>
+					<Text TextId="TOK_POM_ChannelError_25" Value="adaptiver Softstart kann nicht beendet werden"/>
+					<Text TextId="TOK_POM_ChannelError_25_HELP" Value="Fehler am Ausgang - nur bei Projektierung adaptiver Softstart: die angeschlossene Last kann nicht eingeschaltet werden"/>
+				</Language>
+			</ExternalTextList>
+		</ApplicationProcess>
+	</ProfileBody>
+</ISO15745Profile>

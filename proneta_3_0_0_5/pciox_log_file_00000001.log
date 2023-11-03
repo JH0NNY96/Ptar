@@ -1,0 +1,28 @@
+00000:000 !  \pcpnio_sys.c(1252): pcpnio_sys: pcpnio_start: timeGetDevCaps, PeriodMin=1msec
+00000:001 - \IOXConfig.cpp(1205): CIniCache::LoadFrom: Loading Base INI-FILE 'D:\Tools\proneta_3_0_0_5\initIOCheck.ini'
+00000:007 - \IOXConfig.cpp(1216): CIniCache::LoadFrom: Loading Base INI-FILE done in 16 ms
+----------- revision of pcIOX EDDS components [VS2008 - Release] ----------
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	LSA_PNIO_P05.02.00.00_00.03.02.01
+	no POF
+	WPCAP driver: 4.1
+-----------------------------------------
+00000:007 ! \IOXConfig.cpp(1480): CIniCache::IsValidFile: File 'D:\Tools\proneta_3_0_0_5\rema_store.ini' not found in the 'current working directory'!
+00000:016 +  \pcpnio_sys.c(1517): pcpnio_sys: pcpnio_alloc_timer:tid(0) base(6) typ(1) threadId(2104) mm(0/1)
+pcpnio_fatal: no more posting, no more callbacks
+pcpnio_fatal: threadId(14752) file(\pcpnio_sys.c) line(2218): assert: 0 && "pcpnio_comp not found"
+pcpnio_fatal: CALLING DEBUGGER
+++++++

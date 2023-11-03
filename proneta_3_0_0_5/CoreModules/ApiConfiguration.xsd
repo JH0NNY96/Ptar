@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsdConfig="http://siemens.com/ApiConfigurationSchema"
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://siemens.com/ApiConfigurationSchema"
+elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+  <!-- OutputFormat Enumerator -->
+  <xs:simpleType name="OutputFormatEnum">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[Pp][Nn][Gg]"/>
+      <xs:pattern value="[Xx][Mm][Ll]"/>
+      <xs:pattern value="[Xx][Pp][Ss]"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- OutputFormats collection -->
+  <xs:complexType name="OutputFormatsType">
+    <xs:sequence>
+      <xs:element  type="xsdConfig:OutputFormatEnum" name="OutputFormat" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- NicMac mode Enumerator -->
+  <xs:simpleType name="ModeEnum">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[Aa][Ll][Ll][Oo][Ww][Ee][Dd]"/>
+      <xs:pattern value="[Bb][Ll][Oo][Cc][Kk][Ee][Dd]"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- NicMac collection -->
+  <xs:complexType name="NicMacsType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="NicMac" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="Mode" type="xsdConfig:ModeEnum" use="required">
+      <xs:annotation>
+        <xs:documentation>Mode of NIC MAC list.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <!-- Http prefixes collection -->
+  <xs:complexType name="PrefixesType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="Prefix" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Api specific configuration wrapper -->
+  <xs:complexType name="ApiSpecificConfigurationType">
+    <xs:sequence>
+      <xs:element type="xs:anyType" name="Value"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="Key" />
+    <xs:attribute type="xs:boolean" name="Disabled" use="optional" />
+  </xs:complexType>
+
+  <!-- Api specific configuration collection -->
+  <xs:complexType name="ApiSpecificConfigurationsType">
+    <xs:sequence>
+      <xs:element type="xsdConfig:ApiSpecificConfigurationType" name="ApiSpecificConfiguration"  minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Proxy configuration -->
+  <xs:complexType name="ProxyConfigurationType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="Address" />
+      <xs:element type="xs:string" name="Domain" />
+      <xs:element type="xs:boolean" name="BypassProxyOnLocal" />
+      <xs:element type="xs:boolean" name="UseDefaultCredentials" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Scan configuration -->
+  <xs:complexType name="ScanConfigurationType">
+    <xs:sequence>
+      <xs:element type="xsdConfig:NicMacsType" name="NicMacs"/>
+      <xs:element type="xs:boolean" name="AutomaticNameAssignment"/>
+      <xs:element type="xs:boolean" name="AutomaticIpAssignment"/>
+      <xs:element type="xs:string" name="AutomaticIpAddress"/>
+      <xs:element type="xs:string" name="AutomaticSubnetMask"/>
+      <xs:element type="xs:boolean" name="SendEpmToControllers"/>
+      <xs:element type="xs:boolean" name="ScanIpRange"/>
+      <xs:element type="xs:string" name="LowerIpLimit"/>
+      <xs:element type="xs:string" name="UpperIpLimit"/>
+      <xs:element name="OutputMaxTraffic">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="125000"/>
+            <xs:maxInclusive value="12500000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:integer" name="WaitForScan"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Results configuration -->
+  <xs:complexType name="ResultConfigurationType">
+    <xs:sequence>
+      <xs:element type="xs:integer" name="LimitPerMac"/>
+      <xs:element type="xs:string" name="OutputFolder" minOccurs="0"/>
+      <xs:element type="xsdConfig:OutputFormatsType" name="OutputFormats"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- IoT Hub configuration -->
+  <xs:complexType name="IotHubConfiguration">
+    <xs:sequence>
+      <xs:element type="xs:string" name="Protocol"/>
+      <xs:element type="xs:integer" name="Http1PoolingInterval" />
+      <xs:element type="xsdConfig:ProxyConfigurationType" name="ProxyConfiguration" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- MQTT configuration -->
+  <xs:complexType name="MqttConfiguration">
+    <xs:sequence>
+      <xs:element type="xs:string" name="BrokerAddress"/>
+      <xs:element type="xs:unsignedShort" name="BrokerPort"/>
+      <xs:element type="xs:string" name="CoreTopic"/>
+      <xs:element type="xs:string" name="Cell" minOccurs="0"/>
+      <xs:element type="xs:string" name="Group"/>
+      <xs:element type="xs:string" name="Hello"/>
+      <xs:element type="xs:string" name="CaCertificatePath" minOccurs="0"/>
+      <xs:element type="xsdConfig:ProxyConfigurationType" name="ProxyConfiguration" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- HTTP configuration -->
+  <xs:complexType name="HttpConfiguration">
+    <xs:sequence>
+      <xs:element type="xsdConfig:PrefixesType" name="Prefixes"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- API configuration -->
+  <xs:complexType name="ApiConfigurationType">
+    <xs:sequence>
+      <xs:element type="xsdConfig:ResultConfigurationType" name="ResultConfiguration"/>
+      <xs:element type="xsdConfig:ScanConfigurationType" name="ScanConfiguration"/>
+      <xs:element type="xsdConfig:ApiSpecificConfigurationsType" name="ApiSpecificConfigurations"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- API configuration base element -->
+  <xs:element name="ApiConfiguration" type="xsdConfig:ApiConfigurationType"/>
+</xs:schema>

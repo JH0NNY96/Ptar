@@ -1,0 +1,265 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="HelpStyle.css">
+</head>
+<body id="ScrollablePanel">
+    <h2 class="class44">
+        3
+        网络分析任务
+    </h2>
+
+    <p class="MsoBlockText">
+        PRONETA Basic 的网络分析可帮助用户快速了解 PROFINET 网络中安装的设备及其彼此互连的方式。“网络分析”(Network Analysis) 还允许用户查看和更改设备的各种网络参数，如 IP 地址、设备名称等。
+    </p>
+
+    <p class="MsoBlockText">
+        可以将不同的网络相互比较，并且可以自动或手动组态设备。
+    </p>
+    <h3 class="class31">
+        3.2
+        离线模式
+    </h3>
+
+    <p class="MsoBlockText">
+        在离线模式下，用户可检查之前存储到磁盘的参考网络，与在线模式下的检查方式相同。顾名思义，主要区别在于离线模式严格限制为读取操作，始终不会写入设备。
+    </p>
+
+    <p class="MsoBlockText"><img border="0" width="491" height="361" src="html_files/image045.png"></p>
+
+    <p class="MsoBlockText">主画面分为：</p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>之前存储的参考网络的<span lang="DE">
+            <a href="#olTopologyList">
+                <span lang="EN-US">
+                    拓扑列表
+                </span>
+            </a>
+        </span>&nbsp;(1)
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span><span lang="DE"><a href="ohOnlineMode.html#ohTopologyView"><span lang="EN-US">图形视图</span></a></span>&nbsp;(2)，以及</p>
+
+    <p class="BulletText1">
+        <span class="class31"></span><span lang="DE">
+            <a href="ohOnlineMode.html#olDevicesList">设备列表</a>和
+            <a href="ohOnlineMode.html#olDeviceDetails">设备详细信息</a>
+        </span>&nbsp;(4) 与<span lang="DE"><a href="ohOnlineMode.html"><span lang="EN-US">在线模式</span></a></span>中使用的设备列表和设备详细信息视图类似，这些视图提供有关所选拓扑中存储的设备的信息。
+    </p>
+
+    <p class="FormatvorlageBlocktitel">功能栏</p>
+
+    <p class="MsoBlockText">
+        功能栏中提供以下功能：
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="70" valign="top" class="class51">
+                    <p class="TabelleKopfzentriert"><span lang="DE">图标</span></p>
+                </td>
+                <td width="194" valign="top" class="class52">
+                    <p class="TabelleKopfzentriert"><span lang="DE">名称</span></p>
+                </td>
+                <td width="234" valign="top" class="class53">
+                    <p class="TabelleKopfzentriert"><span lang="DE">功能</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="70" class="class54">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 47" src="html_files/image046.png"></p>
+            </td>
+            <td width="194" class="class55">
+                <p class="TabelleTextlinks">
+                    添加拓扑文件
+                </p>
+            </td>
+            <td width="234" class="class56">
+                <p class="TabelleTextlinks">
+                    将<span lang="DE"><a href="#olTopologyImport"><span lang="EN-US">之前存储的拓扑</span></a></span>添加到拓扑列表中。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="70" class="class54">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 51" src="html_files/image016.png"></p>
+            </td>
+            <td width="194" class="class55">
+                <p class="TabelleTextlinks">导出拓扑</p>
+            </td>
+            <td width="234" class="class56">
+                <p class="TabelleTextlinks">对硬盘执行<a href="ohOnlineMode.html#olTopologyExport"><span lang="EN-US">拓扑导出</span></a>。</p>
+
+            </td>
+        </tr>
+    </table>
+
+    <p class="Blocktitel">
+        <a id="olTopologyList"></a><a id="olTopologyImport">
+    拓扑导入
+</a>
+    </p>
+
+    <p class="MsoBlockText">
+        可使用以下三种格式之一将拓扑从存储介质加载到 PRONETA Basic：
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>导入为之前从 PRONETA Basic 存储的 XML 文件</p>
+
+    <p class="BulletText1"><span class="class31"></span>导入为使用 TIA Portal 创建的 AML 文件</p>
+
+    <p class="BulletText1"><span class="class31"></span>导入为 STEP 7 项目（版本 V5.4、V5.5 或 V5.6）</p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="378" height="247" id="Grafik 201" src="html_files/image047.png"></p>
+
+    <p class="MsoBlockText">
+        在“添加拓扑文件”(Add Topology File) 对话框中，选择要加载的拓扑文件类型，然后单击“浏览”(Browse) 以在存储介质中搜索相应的拓扑。
+    </p>
+
+    <p class="MsoBlockText">
+        在使用 AML 文件时，请注意如下事项：
+    </p>
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class6">
+                <p class="CWDGraphic" align="center"><b>注意</b></p>
+            </td>
+            <td width="493" valign="top" class="class8">
+                在当前版本中 (TIA Portal V15.1)，TIA Portal 仅执行受限制的 AML 导出。
+                <ul>
+                    <li>
+                        导出的 AML 文件中缺少使用 Startdrive 组态的 HMI 设备、SINAMICS S 和 SINAMICS G 驱动程序，因此不会显示在 PRONETA Basic 拓扑中。
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        通过 GSDML 文件在 TIA Portal 中组态的设备将显示在 PRONETA Basic 拓扑中，但在比较模式下，这些设备无法与在线扫描的设备进行正确比较。
+                    </li>
+                </ul>
+                对于其它设备，拓扑将正确显示并能够正常运行比较功能。
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">拓扑列表</p>
+
+    <p class="MsoBlockText">
+        在此窗口中显示存储的网络拓扑的列表。通过功能栏中的命令添加更多拓扑。
+    </p>
+
+    <p class="MsoBlockText">
+        要删除条目，请右键单击列表并应用“删除文件”(Remove File) 命令。
+    </p>
+
+    <p class="MsoBlockText">
+        从列表中选择条目将在“图形视图”(Graphical View) 中显示此拓扑。
+    </p>
+
+    <p class="FormatvorlageBlocktitel">图形视图</p>
+
+    <p class="MsoBlockText">
+        “图形视图”(Graphical View) 是 PROFINET 网络的一种图形显示形式。有关其操作的详细信息，请参见在线模式下的 <span lang="DE"><a href="ohOnlineMode.html#ohTopologyView"><span lang="EN-US">图形视图</span></a></span>。
+    </p>
+
+    <p class="MsoBlockText">
+        右键单击“图形视图”(Graphical View) 或“设备表”(Device Table) 中的设备，将显示 <a href="ohOnlineMode.html#olDeviceContextMenu"><span lang="EN-US">设备快捷菜单</span></a>。
+    </p>
+
+    <p class="Blocktitel">工具栏</p>
+
+    <p class="MsoBlockText">
+        在“图形视图”(Graphical View) 顶部有一个带有各种功能图标的工具栏：
+    </p>
+
+    <table class="Tabellenraster5" border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <td width="137" valign="top" class="class58">
+                <p class="TabelleKopfzentriert"><span lang="DE">图标</span></p>
+            </td>
+            <td width="93" valign="top" class="class59">
+                <p class="TabelleKopfzentriert"><span lang="DE">名称</span></p>
+            </td>
+            <td width="269" valign="top" class="class60">
+                <p class="TabelleKopfzentriert"><span lang="DE">功能</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="137" class="class61">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 92" src="html_files/image048.png"></b></p>
+            </td>
+            <td width="93" class="class62">
+                <p class="TabelleTextlinks">显示拓扑的概览</p>
+            </td>
+            <td width="269" class="class63">
+                <p class="TabelleTextlinks">
+                    在“在线视图”(Online View) 中切换拓扑概况。（参见 <a href="ohOnlineMode.html#ohTopologyOverview"><span lang="EN-US">拓扑概况</span></a>)
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="137" class="class61">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="42" height="42" id="Grafik 92" src="html_files/image049.png"></b></p>
+            </td>
+            <td width="93" class="class62">
+                <p class="TabelleTextlinks">缩放选择</p>
+            </td>
+            <td width="269" class="class63">
+                <p class="TabelleTextlinks">
+                    可使用此工具在“图形视图”(Graphical View) 中绘制一个矩形。释放鼠标按钮后，视图便会缩放以显示矩形区域。
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="137" class="class61">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 132" src="html_files/image050.png"></b></p>
+            </td>
+            <td width="93" class="class62">
+                <p class="TabelleTextlinks">根据画面大小进行缩放</p>
+            </td>
+            <td width="269" class="class63">
+                <p class="TabelleTextlinks">
+                    将视图缩放到所有网络设备都适合显示在视图内的大小。
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="137" class="class61">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="120" height="23" id="Grafik 135" src="html_files/image051.png"></b></p>
+            </td>
+            <td width="93" class="class62">
+                <p class="TabelleTextlinks">缩放条</p>
+            </td>
+            <td width="269" class="class63">
+                <p class="TabelleTextlinks">
+                    可向左或向右拖动手柄或单击“-”或“+”放大或缩小网络。（还可以通过将鼠标置于视图上并使用鼠标滚轮来放大和缩小图形视图。）
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="137" class="class61">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 140" src="html_files/image028.png"></p>
+            </td>
+            <td width="93" class="class62">
+                <p class="TabelleTextlinks">显示物理连接类型</p>
+            </td>
+            <td width="269" class="class63">
+                <p class="TabelleTextlinks">
+                    不同的颜色表示不同的传输介质。（请参见 <span lang="DE">
+                        <a href="ohOnlineMode.html#ohDeviceConnetionType">
+                            <span lang="EN-US">
+                                设备连接类型
+                            </span>
+                        </a>
+                    </span>)
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+<br>
+</body>
+</html>

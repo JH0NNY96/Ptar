@@ -1,0 +1,803 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="HelpStyle.css">
+</head>
+<body id="ScrollablePanel">
+    <h2 class="class44">
+        3
+        Netzwerkanalyse
+    </h2>
+
+    <p class="MsoBlockText">
+        Durch die Netzwerkanalyse von PRONETA Basic erhalten Sie einen schnellen Überblick darüber, welche Geräte in Ihrem PROFINET-Netzwerk installiert sind und darüber, wie diese miteinander verbunden sind. Mit der Netzwerkanalyse können Sie sich ferner verschiedene Netzwerkparameter der Geräte, wie z. B. die IP-Adressen, Gerätenamen usw. ansehen und diese ändern.
+    </p>
+
+    <p class="MsoBlockText">
+        Es können verschiedene Netzwerke miteinander verglichen werden und Geräte automatisch oder manuell projektiert werden.
+    </p>
+    <h3>
+        3.1
+        Online-Modus
+    </h3>
+
+    <p class="MsoBlockText">
+        Im Online-Modus durchsucht PRONETA Basic das PROFINET-Netzwerk entweder einmalig oder kontinuierlich nach vorhandenen Geräten. Der Hauptbildschirm ist in drei Teile unterteilt:
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>Eine <span lang="DE">
+            <a href="#ohTopologyView">
+                <span lang="EN-US">
+                    grafische Ansicht
+                </span>
+            </a>
+        </span>&nbsp;(1)
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>Eine <span lang="DE">
+            <a href="#olDevicesList">
+                <span lang="EN-US">
+                    Gerätetabelle
+                </span>
+            </a>
+        </span> (2) mit erreichbaren Geräten
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>Die <span lang="DE">
+            <a href="#olDeviceDetails">
+                <span lang="EN-US">
+                    Gerätedetails
+                </span>
+            </a>
+        </span>&nbsp;(3) mit den Parametern eines bestimmten Geräts
+    </p>
+
+    <p class="MsoBlockText">Zwischen der Gerätetabelle und den Gerätedetails kann durch Klick auf die jeweiligen Dreieck-Symbole in den Trennleisten des PRONETA Basic-Fensters umgeschaltet werden.</p>
+
+    <p class="MsoBlockText"><img border="0" width="492" height="381" src="html_files/image013.png"></p>
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class6">
+                <p class="CWDGraphic" align="center"><b><span lang="DE">HINWEIS</span></b></p>
+            </td>
+            <td width="493" valign="top" class="class8">
+                <p class="Hinweis">
+                    Falls die Netzwerkgröße 500 Geräte übersteigt, werden eventuell nicht alle Geräte verlässlich durch den Scan erfasst. In diesem Fall kann PRONETA Basic abstürzen.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="FormatvorlageBlocktitel">Funktionsleiste</p>
+
+    <p class="MsoBlockText">
+        Über die Funktionsleiste stehen folgende Funktionen zur Verfügung:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td valign="top" class="class17">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Symbol</span></p>
+                </td>
+                <td width="102" valign="top" class="class23">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="338" valign="top" class="class24">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Funktion</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td class="class25">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 1" src="html_files/image014.png"></p>
+            </td>
+            <td width="102" class="class27">
+                <p class="TabelleTextlinks">Aktualisieren</p>
+            </td>
+            <td width="338" class="class28">
+                <p class="TabelleTextlinks">Führt eine sofortige Aktualisierung des Netzwerk-Scans durch.</p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class25">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 7" src="html_files/image015.png"></p>
+            </td>
+            <td width="102" class="class27">
+                <p class="BildBeschriftungSeitenbreite">
+                    Export
+                    Topology
+                </p>
+            </td>
+            <td width="338" class="class28">
+                <p class="TabelleTextlinks">Führt einen <a href="#olTopologyExport">Topology Export</a> auf eine Festplatte durch.</p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="Blocktitel"><a id="olTopologyExport">Topologie-Export</a></p>
+
+    <p class="MsoBlockText">
+        Ein Topologie-Export kann in verschiedenen Formaten durchgeführt werden:
+    </p>
+
+
+    <ul>
+        <li>
+            Als eine XML-Datei, zur späteren Referenz als <span lang="DE"><a href="#olTopologyFile"><span lang="EN-US">Topologiedatei</span></a></span> zur Arbeit im <a href="ohOfflineMode.html">Offline-Modus</a>, <a href="ohComparisonMode.html">Vergleichsmodus</a> oder <a href="ohConfigurationMode.html">Konfigurationsmodus</a>, beispielsweise um schnell und bequem eine Projektierung zu duplizieren.
+        </li>
+        <li>
+            Zu Dokumentationszwecken, um Referenzdateien zu erststellen, die den Zustand des Netzwerkes dokumentieren:
+        </li>
+
+        <ul>
+            <li>
+                Als Grafik der Netzwerkkonfiguration (PNG (bevorzugtes Format), BMP, oder XPS).
+            </li>
+            <li>
+                Als CSV-Datei mit Informationen aus der Gerätetabelle zur weiteren Verarbeitung mit einer Tabellenkalkulationsanwendung, wie z. B. Microsoft Excel
+            </li>
+            <li>
+                Als PDF mit einer Kombination aus einer topologischen Grafik und einer Gerätetabelle, zur Dokumentation und Archivierung der Projektierung.
+            </li>
+        </ul>
+    </ul>
+
+    <p class="MsoBlockText">Dies ist nützlich, um:</p>
+
+    <ul>
+        <li>
+            Schnell die erforderliche Hardware festzustellen, falls eine Netzwerkkonfiguration dupliziert werden soll, sowie um
+        </li>
+        <li>
+            Informationen über alle angeschlossenen Geräte und Module einschließlich detaillierter Informationen wie Bestellnummer, Firmware-Version und Seriennummer zu dokumentieren und einfach darauf zu verweisen.
+        </li>
+    </ul>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="284" height="342" id="Grafik 25" src="html_files/image016.png"></p>
+
+    <p class="MsoBlockText">
+        Die Option „Gerätedetails einschließen“ fügt der entstanden Datei Informationen über die Portkonfigurationen und Module hinzu.
+    </p>
+
+    <p class="MsoBlockText">
+        Die in einer exportierten Konfiguration enthaltenen Datenfelder sind die gleichen, wie die derzeit sichtbaren Felder in der entsprechenden <span lang="DE"><a href="#olDevicesList"><span lang="EN-US">Gerätetabelle</span></a></span>.
+    </p>
+    <p class="BildBeschriftungtextBreite"><img border="0" width="470" height="332" id="Grafik 158" src="html_files/image017.jpg"></p>
+
+    <p class="MsoBlockText">
+        Wird die grafische Ansicht mit einbezogen, wird die Darstellung der Netzwerktopologie bei entsprechender Größe des Netzwerks auf mehrere Seiten im PDF verteilt.
+    </p>
+
+    <p class="BildBeschriftungSeitenbreite"><img border="0" width="453" height="363" id="Grafik 172" src="html_files/image018.png"></p>
+
+    <p class="MsoBlockText">
+        Abhängig von der derzeitigen Betriebsart stehen nicht alle Exportoptionen zur Verfügung:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <td width="245" valign="top" class="class56">
+                    <p class="TabelleKopfzentriert"><span lang="DE">&nbsp;</span></p>
+                </td>
+                <td width="74" valign="top" class="class57">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Online</span></p>
+                </td>
+                <td width="75" valign="top" class="class58">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Offline</span></p>
+                </td>
+                <td width="74" valign="top" class="class57">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Vergleich</span></p>
+                </td>
+                <td width="75" valign="top" class="class58">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Konfiguration</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr>
+            <td width="245" class="class59">
+                <p class="TabelleTextlinks"><span lang="DE">XML</span></p>
+            </td>
+            <td width="74" class="class61">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="75" class="class63">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">x</span></p>
+            </td>
+            <td width="74" class="class61">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">x</span></p>
+            </td>
+            <td width="75" class="class63">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">x</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="245" class="class59">
+                <p class="TabelleTextlinks"><span lang="DE">Grafische Ansicht</span></p>
+            </td>
+            <td width="74" class="class61">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="75" class="class63">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="74" class="class61">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="75" class="class63">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">x</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="245" class="class59">
+                <p class="TabelleTextlinks"><span lang="DE">Gerätetabelle (CSV)</span></p>
+            </td>
+            <td width="74" class="class61">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="75" class="class63">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="74" class="class61">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="75" class="class63">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">x</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="245" class="class59">
+                <p class="TabelleTextlinks">Grafische Ansicht + Gerätetabelle (PDF)</p>
+            </td>
+            <td width="74" class="class61">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="75" class="class63">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">&#x2714;</span></p>
+            </td>
+            <td width="74" class="class61">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">x</span></p>
+            </td>
+            <td width="75" class="class63">
+                <p class="TabelleTextlinks" align="center"><span lang="DE" class="class62">x</span></p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="Blocktitel"><a id="olDeviceSearch">Gerätesuche</a></p>
+
+    <p class="MsoBlockText">
+        Auf der rechten Seite der Funktionsleiste ist ein Eingabefeld (1) zu sehen, das Ihnen die Suche nach bestimmten Geräten ermöglicht. Der Suchbegriff, den Sie eingeben, wird mit allen Informationsfeldern abgeglichen (z. B. Gerätenamen, Typen, Netzwerkparameter, …).
+    </p>
+
+    <p class="MsoBlockText">
+        Die Suche arbeitet ohne Unterscheidung nach Groß-/Kleinschreibung und gestattet keine Platzhalter oder reguläre Ausdrücke.
+    </p>
+
+    <p class="MsoBlockText"><img border="0" width="291" height="133" src="html_files/image019.png"></p>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">
+        Treffer Ihrer Suche werden in der <span lang="DE"><a href="#ohTopologyView"><span lang="EN-US">Grafischen Ansicht</span></a></span> und in der <a href="#olDevicesList"><span lang="EN-US">Gerätetabelle</span></a> in Orange hervorgehoben.
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="491" height="395" id="Grafik 52" src="html_files/image020.png"></p>
+
+    <p class="FormatvorlageBlocktitel">
+        <a id="olScannerStatusIndicator">
+            Scanner-Statusanzeige
+        </a>
+    </p>
+
+    <p class="MsoBlockText">
+        Ganz rechts in der Funktionsleiste befindet sich eine Scanner-Statusanzeige (1), die den Status des aktuellen Netzwerk-Scans anzeigt.
+    </p>
+
+    <p class="MsoBlockText">
+        Jeder Netzwerk-Scan ist in vier Phasen unterteilt, die durch die Segmente der Scanner-Statusanzeige dargestellt werden. Ein Netzwerk-Scan ist abgeschlossen, sobald die Anzeige alle vier Segmente durchlaufen hat.
+    </p>
+
+    <p class="MsoBlockText">
+        Durch Klicken mit der rechten Maustaste wird ein Kontextmenü mit einer Option angezeigt:
+    </p>
+
+
+    <p class="MsoBlockText"><img border="0" width="286" height="114" src="html_files/image021.png"></p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="56" valign="top" class="class32">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Symbol</span></p>
+                </td>
+                <td width="76" valign="top" class="class33">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="366" valign="top" class="class34">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Funktion</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="56" valign="top" class="class35">
+                <p class="TabelleTextlinks"><b><img border="0" width="43" height="43" id="Grafik 3" src="html_files/image022.png"></b></p>
+            </td>
+            <td width="76" class="class36">
+                <p class="TabelleTextlinks">
+                    <span lang="DE">
+                        Scanner starten
+                    </span>
+                </p>
+            </td>
+            <td width="366" rowspan="2" class="class37">
+                <p class="TabelleTextlinks">
+                    Schaltet die Netzwerk-Scans ein und wieder aus: Wenn der Scan augenblicklich läuft, wird er ausgeschaltet und umgekehrt.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="56" valign="top" class="class35">
+                <p class="TabelleTextlinks"><b><img border="0" width="43" height="43" id="Grafik 4" src="html_files/image023.png"></b></p>
+            </td>
+            <td width="76" class="class36">
+                <p class="TabelleTextlinks"><span lang="DE">Scanner stoppen</span></p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">
+        Wird der Scanner angehalten, so wird keine Netzwerklast erzeugt und es werden keine Änderungen der Topologie erfasst. Im Dialog <a href="ohGeneralSettings.html"><span lang="EN-US">Allgemeine Einstellungen</span></a> können Sie steuern, ob PRONETA Basic mit dem Start des Scanners das Netzwerk einmalig oder ständig durchsucht.
+    </p>
+
+    <p class="FormatvorlageBlocktitel"><a id="ohTopologyView">Grafische Ansicht</a></p>
+
+    <p class="MsoBlockText">
+        Die grafische Ansicht ist eine grafische Darstellung des PROFINET-Netzwerks, seiner Geräte sowie deren Verbindungen untereinander, entweder während eines aktuellen Netzwerk-Scans oder aus einem zuvor abgespeicherten Referenznetzwerk. Die grafische Ansicht befindet sich in der linken oberen Ecke des PRONETA Basic-Fensters.
+    </p>
+
+    <p class="MsoBlockText">
+        Bewegen Sie das sichtbare Netzwerksegment, indem Sie mit der Maus in einen freien Ansichtsbereich klicken und die Maus bei gedrückter Taste ziehen. Durch Bewegen des Mauszeigers über ein Gerät ändert sich die offene Hand zu einem Pfeil und ein so genannter <span lang="DE"><a href="#olDeviceToolTip"><span lang="EN-US">Geräte-Tooltip</span></a></span> mit grundlegenden Informationen zu diesem Gerät wird angezeigt.
+    </p>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText"><b>Geräte-Anzeige</b></p>
+
+    <p class="MsoBlockText">
+        Der Gerätestatus wird durch unterschiedliche Farben des Gerätesymbols sowie dessen Rahmen angezeigt:
+    </p>
+
+    <ul>
+        <li>
+            Feldfarben:
+        </li>
+        <ul>
+            <li>
+                Hellgrau mit einem grünem Balken oben: Reguläres Netzwerkgerät
+            </li>
+            <li>
+                Dunkelgrau: Netzwerkgerät ohne gültige IP-Adresse bzw. ohne gültigen Gerätenamen oder aber generischer PC
+            </li>
+            <li>
+                Hellblau: PC mit aktivem PRONETA Basic oder STEP 7
+            </li>
+            <li>
+                Gelb: Gerät, das zur <a href="#olDeviceSearch"><span lang="EN-US">Gerätesuche</span></a> passt
+            </li>
+        </ul>
+        <li>
+            Rahmen
+        </li>
+        <ul>
+            <li>
+                Orange: Konflikt hinsichtlich der Geräteparametrierung (IP-Adresse oder Gerätename doppelt vorhanden)
+            </li>
+            <li>
+                Dunkelblau: Ausgewähltes Gerät und entsprechende Verbindungen
+            </li>
+
+        </ul>
+    </ul>
+    <p class="MsoBlockText">&nbsp;</p>
+    <p class="FormatvorlageBlocktitel">Symbolleiste</p>
+
+    <p class="MsoBlockText">
+        Im oberen Bereich der Ansicht befindet sich eine Symbolleiste mit einer Reihe von Funktionssymbolen:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="134" valign="top" class="class39">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Symbol</span></p>
+                </td>
+                <td width="103" valign="top" class="class40">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="261" valign="top" class="class41">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Funktion</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 133" src="html_files/image024.png"></b></p>
+            </td>
+            <td width="103" class="class43">
+                <p class="TabelleTextlinks">Topologie-übersicht anzeigen</p>
+            </td>
+            <td width="261" class="class44">
+                <p class="TabelleTextlinks">
+                    Schaltet eine Topologieübersicht in der Online-Ansicht ein oder aus. (Siehe <a href="#ohTopologyOverview"><span lang="EN-US">Topologieübersicht</span></a>)
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="42" height="42" id="Grafik 133" src="html_files/image025.png"></b></p>
+            </td>
+            <td width="103" class="class43">
+                <p class="TabelleTextlinks">
+                    Zoomauswahl
+                </p>
+            </td>
+            <td width="261" class="class44">
+                <p class="TabelleTextlinks">
+                    Ermöglicht das Aufziehen eines Rechtecks innerhalb der grafischen Ansicht. Sobald Sie die Maustaste loslassen, wird so in die Ansicht gezoomt, dass nur der Bereich innerhalb des Rechtecks sichtbar ist.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 134" src="html_files/image026.png"></b></p>
+            </td>
+            <td width="103" class="class43">
+                <p class="TabelleTextlinks">Vergrößerung an Bildschirm anpassen</p>
+            </td>
+            <td width="261" class="class44">
+                <p class="TabelleTextlinks">
+                    Zoomt so zurück, dass wieder alle Netzwerkteilnehmer in der Ansicht sichtbar sind.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="120" height="23" id="Grafik 136" src="html_files/image027.png"></b></p>
+            </td>
+            <td width="103" class="class43">
+                <p class="TabelleTextlinks">Zoomleiste</p>
+            </td>
+            <td width="261" class="class44">
+                <p class="TabelleTextlinks">
+                    Zoomt in das Netzwerk oder zurück durch Ziehen des Reglers nach rechts bzw. links oder aber durch Klicken auf „-“ bzw. „+“. (Sie können auch in die und aus der grafischen Ansicht zoomen, indem Sie die Maus über die Ansicht bewegen und das Scrollrad verwenden.)
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="134" class="class42">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 11" src="html_files/image028.png"></p>
+            </td>
+            <td width="103" class="class43">
+                <p class="TabelleTextlinks">Physikalische Verbindungs­typen anzeigen</p>
+            </td>
+            <td width="261" class="class44">
+                <p class="TabelleTextlinks">
+                    Zeigt die verschiedenen Übertragungsmedien in unterschiedlichen Farben an. (Siehe <span lang="DE"><a href="#ohTopologyOverview"><span lang="EN-US">Geräteverbindungsarten</span></a></span>)
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">
+        <a id="ohTopologyOverview">
+            Topologieübersicht
+        </a>
+    <p class="MsoBlockText">
+        Die Topologieübersicht ist eine Ansicht oben links in der grafischen Ansicht, mit der große Netzwerke untersucht werden können. Sie zeigt eine schematische Übersicht aller Geräte, die beim aktuellen Netzwerk-Scan gefunden wurden, unabhängig von dem für die Online-Ansicht gewählten Zoomfaktor an.
+    </p><p class="MsoBlockText">
+        Der Bereich des Netzwerks, der in der Online-Ansicht aktuell zu sehen ist, wird mit einem hellblauen, teiltransparenten Rechteck angezeigt. Durch Ziehen des Rechtecks in der Topologieübersicht wird das sichtbare Netzwerkbereich in der Online-Ansicht verschoben.
+    </p> <p class="MsoBlockText">
+        Ziehen Sie die rechte oder untere Kante der Topologieübersicht, wenn Sie die Größe der Ansicht verändern wollen.
+    </p>
+    </p>
+
+    <p class="FormatvorlageBlocktitel">
+        <a id="ohDeviceConnetionType">
+            Geräteverbindungsarten
+        </a>
+    </p>
+
+    <p class="MsoBlockText">
+        Wenn die Option „Physikalische Verbindungstypen anzeigen“ in der Symbolleiste ausgewählt wurde, werden die Verbindungen zwischen den Geräten folgendermaßen farbig gekennzeichnet:
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>Schwarz: Ethernet-Verdrahtung aus Kupfer</p>
+
+    <p class="BulletText1"><span class="class31"></span>Orange: Lichtwellenleiterverbindung</p>
+
+    <p class="MsoBlockText">Zwei parallele Linien weisen auf eine Ringtopologie hin.</p>
+
+    <p class="MsoBlockText">
+        Für Geräte, die ohne jegliche Verbindung zu anderen Geräten angezeigt werden, konnten die erforderlichen Informationen nicht ermittelt werden.
+    </p>
+
+    <p class="FormatvorlageBlocktitel"><a id="olDeviceToolTip">Geräte-Tooltips</a></p>
+
+    <p class="MsoBlockText">
+        Durch Bewegen des Mauszeigers über ein Gerät wird ein Geräte-Tooltip mit folgenden Informationen angezeigt:
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>Gerätename</p>
+
+    <p class="BulletText1"><span class="class31"></span>Gerätetyp</p>
+
+    <p class="BulletText1"><span class="class31"></span>IP-Adresse</p>
+
+    <p class="BulletText1"><span class="class31"></span>Firmware-Version (wo zutreffend)</p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="268" height="144" id="Grafik 53" src="html_files/image029.png"></p>
+
+    <p class="MsoBlockText">
+        Durch Bewegen des Mauszeigers über einen Geräteport wird Folgendes angezeigt:
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>Schnittstellen-Name</p>
+
+    <p class="BulletText1"><span class="class31"></span>IP-Adresse</p>
+
+    <p class="BulletText1"><span class="class31"></span>Port-ID (nur für verdrahtete Anschlüsse)</p>
+
+    <p class="BulletText1"><span class="class31"></span>Name des Nachbargerätes</p>
+
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="196" height="144" id="Grafik 54" src="html_files/image030.png"></p>
+
+    <p class="FormatvorlageBlocktitel">
+        <a id="olDeviceContextMenu">
+            Geräte-Kontextmenü
+        </a>
+    </p>
+
+    <p class="MsoBlockText">
+        Durch Klicken mit der rechten Maustaste auf ein beliebiges Gerät in einer grafischen Ansicht oder in der entsprechenden Gerätetabelle öffnet sich ein Kontextmenü mit unterschiedlichen Funktionen.
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="369" height="228" id="Grafik 55" src="html_files/image031.png"></p>
+
+    <p class="MsoBlockText">
+        Nicht alle Menüeinträge sind auch für alle Geräte verfügbar, wobei die tatsächlichen Einträge vom Status des jeweiligen Gerätes abhängen.
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="58" class="class45">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Symbol</span></p>
+                </td>
+                <td width="136" valign="top" class="class46">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="304" valign="top" class="class47">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Funktion</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 8" src="html_files/image032.png"></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks">
+                    <span lang="DE">
+                        LED-Blinken starten
+                    </span>
+                </p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Lässt die LEDs am realen Gerät zur einfachen Identifizierung blinken.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 9" src="html_files/image033.png"></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks"><span lang="DE">IO-Test starten</span></p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Startet sofort einen <span lang="DE"><a href=" ohIOTestTask.html"><span lang="EN-US">I/O Test</span></a></span> für das ausgewählte Gerät.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 12" src="html_files/image034.png"></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks"><span lang="DE">Webbrowser starten</span></p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Öffnet den Web-Browser Ihres PCs und stellt eine Verbindung zum Webserver des entsprechenden Gerätes her.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 26" src="html_files/image035.png"></b></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks">
+                    LED-Blinken bei doppelten Namen/IP-Adressen starten (stoppen)
+                </p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Wie „LED-Blinken starten”, lässt aber die LEDs aller Geräte blinken, die den gleichen Namen bzw. die gleiche IP-Adresse wie das ausgewählte Gerät haben.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 14" src="html_files/image036.png"></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks"><span lang="DE">Netzwerkparameter setzen</span></p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Öffnet ein Popup-Fenster, in dem Sie verschiedene Netzwerkparameter des ausgewählten Gerätes einstellen können.
+                </p>
+                <p class="TabelleTextlinks">Nähere Informationen hierzu finden Sie unter <span lang="DE"><a href="#olSetNetworkParameters"><span lang="EN-US">Netzwerkparameter setzen</span></a></span><span class="MsoHyperlink">.</span></p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 38" src="html_files/image037.png"></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks"><span lang="DE">Netzwerkparameter zurücksetzen</span></p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Setzt die IP-Adresse und den Gerätenamen des ausgewählten Gerätes auf die Werkseinstellungen zurück.
+                </p>
+                <p class="TabelleTextlinks">
+                    Wenn der Befehl aus der <span lang="DE"><a href="#olDevicesList"><span lang="EN-US">Gerätetabelle</span></a></span> heraus gewählt wird, ist es möglich, mehrere ausgewählte Geräte gleichzeitig zurückzusetzen.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 44" src="html_files/image038.png"></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks">Zusätzliche I&M-Daten bearbeiten</p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Öffnet ein Popup-Fenster, in dem Sie Daten zur Identifizierung und Wartung („I&M“) des Gerätes, wie z. B. Ort und Datum der Installation, eintragen können.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 45" src="html_files/image039.png"></b></p>
+            </td>
+            <td width="136" class="class49">
+                <p class="TabelleTextlinks">Als Ausgangspunkt in der grafischen Ansicht benutzen</p>
+            </td>
+            <td width="304" class="class50">
+                <p class="TabelleTextlinks">
+                    Arrangiert die grafische Ansicht neu, so dass das ausgewählte Gerät in der oberen linken Ecke erscheint.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel"><a id="olDevicesList">Gerätetabelle</a></p>
+
+    <p class="MsoBlockText">
+        In dieser Tabelle werden die Geräte aufgelistet, die wahlweise während eines aktuellen Netzwerk-Scans (nur im Online-Modus) oder in einem bereits gespeicherten Referenznetzwerk gefunden werden. Sie wird unter der grafischen Ansicht des PRONETA Basic-Fensters angezeigt.
+    </p>
+
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="492" height="124" id="Grafik 60" src="html_files/image040.png"></p>
+
+    <p class="MsoBlockText">
+        In der Tabelle kann eine große Menge verschiedener Gerätedaten angezeigt werden. Durch Klicken mit der rechten Maustaste auf eine beliebige Stelle im Tabellenkopf wird ein Menü geöffnet, in dem Sie die gewünschten Informationsfelder auswählen können.
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="340" height="410" id="Grafik 27" src="html_files/image041.png"></p>
+
+    <p class="MsoBlockText">
+        Ein orangefarbener Rahmen um die Tabellenzellen weist auf einen doppelten Gerätenamen oder IP-Adresse hin.
+    </p>
+
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="491" height="171" id="Grafik 16" src="html_files/image042.png"></p>
+
+    <p class="MsoBlockText">
+        In weiße Zellen innerhalb der Tabelle können Informationen eingetragen werden. Die neuen Werte werden sofort in das entsprechende Gerät geschrieben, sobald die Zelle den Fokus verliert. (Dies ist eine Alternative zur Verwendung des Kontextmenüeintrags „<span lang="DE"><a href="#olSetNetworkParameters"><span lang="EN-US">Netzwerkparameter setzen</span></a></span>”)
+    </p>
+
+    <p class="MsoBlockText">
+        Durch Klicken mit der linken Maustaste auf eine Spaltenüberschrift werden die Daten in dieser Tabelle in aufsteigender Reihenfolge sortiert. Die kleinen Dreiecke „&#9650;” oder „&#9660;” in der Spaltenüberschrift zeigen das Sortierungskriterium.
+    </p>
+
+    <p class="MsoBlockText">
+        Durch Ziehen einer Spaltenüberschrift mit der Maus werden die Tabellenspalten entsprechend neu angeordnet.
+    </p>
+
+    <p class="MsoBlockText">
+        Durch Klicken mit der rechten Maustaste auf einen beliebigen Tabelleneintrag wird das Kontextmenü des aktuellen Gerätes angezeigt.
+    </p>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="Blocktitel"><a id="olDeviceDetails">Gerätedetails</a></p>
+
+    <p class="MsoBlockText">
+        Im rechten Teil des PRONETA Basic-Fensters wird eine Detailansicht angezeigt.
+    </p>
+
+    <p class="MsoBlockText">
+        Diese Ansicht enthält zusätzliche Informationen zu einem Gerät, das zuvor in der <span lang="DE"><a href="#olDevicesList"><span lang="EN-US">Gerätetabelle</span></a></span> ausgewählt wurde.
+    </p>
+
+    <p class="MsoBlockText">
+        Zweige der Baumstruktur mit den Geräteeigenschaften können durch Klicken auf das Dreiecks-Symbol im entsprechenden Abzweig geöffnet und wieder geschlossen werden.
+    </p>
+
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="340" height="403" id="Grafik 76" src="html_files/image043.png"></p>
+
+    <p class="MsoBlockText">
+        Für Nicht-PROFINET-Geräte, die mit PROFINET-Geräten verbunden sind und einen Asset Management Record (AMR) bereitstellen, werden auch die Daten aus dem AMR in den Gerätedetails angezeigt.
+    </p>
+
+    <p class="FormatvorlageBlocktitel"><a id="olSetNetworkParameters">Netzwerkparameter setzen</a></p>
+
+    <p class="MsoBlockText">
+        Dieses Popup-Fenster ermöglicht die direkte Eingabe folgender Parameter für ein einzelnes Gerät:
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>Gerätename</p>
+
+    <p class="BulletText1"><span class="class31"></span>IP-Konfiguration entweder statisch oder über DHCP</p>
+
+    <p class="MsoBlockText">Außerdem, wo zutreffend:</p>
+
+    <p class="BulletText1"><span class="class31"></span>IP-Adresse</p>
+
+    <p class="BulletText1"><span class="class31"></span>Netzwerkmaske</p>
+
+    <p class="BulletText1"><span class="class31"></span>Adresse des Gateway-Routers</p>
+
+    <p class="MsoBlockText">
+        Aktivieren Sie das Kontrollkästchen bei „Einstellungen dauerhaft anwenden“, um sicherzustellen, dass die neuen Parameter auch nach einem Neustart des Geräts beibehalten werden.
+    </p>
+
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="340" height="403" id="Grafik 77" src="html_files/image044.png"></p>
+<br>
+</body>
+</html>

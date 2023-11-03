@@ -1,0 +1,383 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="HelpStyle.css">
+</head>
+<body id="ScrollablePanel">
+    <h2 class="class44">
+        3
+        Network Analysis Task
+    </h2>
+
+    <p class="MsoBlockText">
+        PRONETA Basic’s Network Analysis gives you a quick overview about which devices are installed in your PROFINET network, and how they are connected with each other. The Network Analysis also lets you view and change various network parameters of the devices, like IP addresses, device names etc.
+    </p>
+
+    <p class="MsoBlockText">
+        Different networks can be compared with each other, and the devices can be configured automatically or manually.
+    </p>
+    <h3>
+        3.4
+        Configuration Mode
+    </h3>
+
+    <p class="MsoBlockText">
+        The Configuration mode provides a semi-automatic mechanism to assign device names from a reference network to all or single devices in a physical network.
+    </p>
+
+    <p class="MsoBlockText">
+        This provides a quick and reliable method to configure a large number of identical installations (like a series of switching cabinets). The results can then be checked in the <span lang="DE"><a href="ohComparisonMode.html"><span lang="EN-US">Comparison Mode</span></a></span>.
+    </p>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">The main screen is divided into:</p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>A <span lang="DE">
+            <a href="ohOfflineMode.html#olTopologyList">
+                <span lang="EN-US">
+                    Topologies
+                    List
+                </span>
+            </a>
+        </span> (1)
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>One major (top) and two smaller (bottom) <span lang="DE"><a href="ohOnlineMode.html#ohTopologyView"><span lang="EN-US">Graphical Views</span></a></span> (2)<a href="#_ftn1" title="" id="_ftnref1"><span class="MsoFootnoteReference"><span class="MsoFootnoteReference"></span></span></a></p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>A <span lang="DE">
+            <a href="ohOnlineMode.html#olDevicesList">
+                <span lang="EN-US">
+                    Device
+                    Table
+                </span>
+            </a>
+        </span> (3) with the devices stored in the selected topology
+    </p>
+
+    <p class="MsoBlockText"><img border="0" width="491" height="393" src="html_files/image063.png"></p>
+
+    <p class="FormatvorlageBlocktitel">Function Bar</p>
+
+    <p class="MsoBlockText">
+        The following functions are available in the function bar:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td valign="top" class="class76">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Icon</span></p>
+                </td>
+                <td valign="top" class="class77">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td valign="top" class="class78">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Function</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td class="class79">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 71" src="html_files/image046.png"></b></p>
+            </td>
+            <td class="class80">
+                <p class="TabelleTextlinks">Add Topology File</p>
+            </td>
+            <td class="class81">
+                <p class="TabelleTextlinks">
+                    Adds a <span lang="DE"><a href="ohOfflineMode.html#olTopologyImport"><span lang="EN-US">previously stored topology</span></a></span> to the topologies
+                    list.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class79">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="158" height="33" id="Grafik 73" src="html_files/image064.png"></b></p>
+            </td>
+            <td class="class80">
+                <p class="TabelleTextlinks">Match Devices</p>
+            </td>
+            <td class="class81">
+                <p class="TabelleTextlinks">
+                    Tries to find matches between devices in the
+                    reference network and in the physical network according to the <span lang="DE">
+                        <a href="#olMatchingCriteraConfig">
+                            <span lang="EN-US">
+                                Matching Criteria in
+                                Configuration Mode
+                            </span>
+                        </a>
+                    </span>; found matches are highlighted green.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class79">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="158" height="34" id="Grafik 74" src="html_files/image065.png"></b></p>
+            </td>
+            <td class="class80">
+                <p class="TabelleTextlinks">Remove All Matchings</p>
+            </td>
+            <td class="class81">
+                <p class="TabelleTextlinks">Discards results from the last matching operation.</p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class79">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="158" height="34" id="Grafik 75" src="html_files/image066.png"></b></p>
+            </td>
+            <td class="class80">
+                <p class="TabelleTextlinks">Assign Device Names</p>
+            </td>
+            <td class="class81">
+                <p class="TabelleTextlinks">
+                    Writes the device names from all devices in the
+                    reference network, for which a match was found, to the corresponding devices
+                    in the physical network.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">
+        The last two commands have counterparts in the devices’ context menus. There they do not operate on all devices of the network, but only on the selected device.
+    </p>
+
+    <p class="FormatvorlageBlocktitel">Graphical View</p>
+
+    <p class="MsoBlockText">
+        The Graphical View is a graphical display of the PROFINET network. For details on its operation, see the <span lang="DE"><a href="ohOnlineMode.html#ohTopologyView"><span lang="EN-US">Graphical View</span></a></span> in
+        Online mode.
+    </p>
+
+    <p class="MsoBlockText">
+        Device coloring indicates the device’s availability for configuration:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td valign="top" class="class17">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Icon</span></p>
+                </td>
+                <td valign="top" class="class18">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Color</span></p>
+                </td>
+                <td valign="top" class="class18">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Meaning</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td valign="top" class="class19">
+                <p class="TabelleTextlinks"><img border="0" width="134" height="78" id="Grafik 243" src="html_files/image067.png"></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks"><span lang="DE">Greyed out</span></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    No match for this device from the reference network
+                    has been found in the physical network.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td valign="top" class="class19">
+                <p class="TabelleTextlinks"><img border="0" width="134" height="78" id="Grafik 280" src="html_files/image068.jpg"></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks"><span lang="DE">Light grey</span></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    Matching has not yet been performed, or no unique
+                    match for this device has been found in the physical network.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td valign="top" class="class19">
+                <p class="TabelleTextlinks"><img border="0" width="134" height="78" id="Grafik 281" src="html_files/image069.jpg"></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks"><span lang="DE">Green</span></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    This device from the reference network has
+                    successfully been matched to a device in the physical network, or you have
+                    manually matched the devices.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">
+        Hovering the mouse pointer over a device will bring up <span lang="DE"><a href="ohOnlineMode.html#olDeviceToolTip"><span lang="EN-US">Device Tooltips</span></a></span>
+        with basic information about that device.
+    </p>
+
+    <p class="FormatvorlageBlocktitel">Tool Bar</p>
+
+    <p class="MsoBlockText">
+        In the top section of the view, there is a tool bar with a variety of function icons:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td valign="top" class="class17">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Icon</span></p>
+                </td>
+                <td valign="top" class="class18">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td valign="top" class="class18">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Function</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td class="class25">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 79" src="html_files/image070.png"></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">Zoom Selection</p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    Lets you draw a rectangle inside the Graphical View. Once you release the mouse button, the view will zoom to display the rectangle area.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class25">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 80" src="html_files/image071.png"></b></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">Zoom Fit to Screen</p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    Zooms the view back in a way that all network devices fit inside the view.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class25">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="123" height="31" id="Grafik 81" src="html_files/image072.png"></b></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">Zoom Bar</p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    Zoom into the network or back by dragging the handle to the right or the left, respectively, or clicking on “-“ or “+”. (You can also zoom into and out of the Graphical View by placing the mouse over the view and using the scroll wheel.)
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">Device Context Menu</p>
+
+    <p class="MsoBlockText">
+        By right-clicking on any device in a Graphical View or in the corresponding Device Table, you can bring up a context menu with various functions.
+    </p>
+
+    <p class="MsoBlockText">
+        Not all menu entries are available for all devices with the actual entries depending on the state of the device and the Device Type.
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td class="class45">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Icon</span></p>
+                </td>
+                <td valign="top" class="class82">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td valign="top" class="class83">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Function</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td class="class48">
+                <p class="TabelleTextlinks" align="center">&nbsp;</p>
+            </td>
+            <td class="class84">
+                <p class="TabelleTextlinks">Assign Device Name</p>
+            </td>
+            <td class="class85">
+                <p class="TabelleTextlinks">
+                    Copies the name of the device from the reference topology to its match in the physical network.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class48">
+                <p class="TabelleTextlinks" align="center">&nbsp;</p>
+            </td>
+            <td class="class84">
+                <p class="TabelleTextlinks">Remove Matching</p>
+            </td>
+            <td class="class85">
+                <p class="TabelleTextlinks">
+                    Discards the results of the matching from the
+                    Graphical View.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 83" src="html_files/image039.png"></b></p>
+            </td>
+            <td class="class84">
+                <p class="TabelleTextlinks">Use as Starting Point in Graphical View</p>
+            </td>
+            <td class="class85">
+                <p class="TabelleTextlinks">
+                    Redraws the Graphical View with the chosen device
+                    in the upper left corner.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">Device Table</p>
+
+    <p class="MsoBlockText">
+        This table lists the devices existing in the selected reference network. The handling is similar to the <span lang="DE"><a href="ohOnlineMode.html#olDevicesList"><span lang="EN-US">Device Table</span></a></span> Online mode, but all write operations are disabled.
+
+<p class="FormatvorlageBlocktitel">
+        <a id="olMatchingCriteraConfig">
+            Finding
+            Matching Devices in Configuration Mode
+        </a>
+    </p>
+
+    <p class="MsoBlockText">
+        In this mode, matching between devices is determined
+        based on:
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>Device ID</p>
+
+    <p class="BulletText1"><span class="class31"></span>Vendor ID</p>
+
+    <p class="BulletText1"><span class="class31"></span>Connections between devices</p>
+
+    <p class="MsoBlockText">
+        Note that this is fixed and differs from how differences are being determined in Comparison mode – see <a href="ohComparisonMode.html#olSetComparisonCriteria"><span lang="EN-US">Set Comparison Criteria</span></a>.
+    </p>
+    <br>
+</body>
+</html>

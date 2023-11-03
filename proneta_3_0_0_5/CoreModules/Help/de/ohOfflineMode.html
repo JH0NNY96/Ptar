@@ -1,0 +1,265 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="HelpStyle.css">
+</head>
+<body id="ScrollablePanel">
+    <h2 class="class44">
+        3
+        Netzwerkanalyse
+    </h2>
+
+    <p class="MsoBlockText">
+        Durch die Netzwerkanalyse von PRONETA Basic erhalten Sie einen schnellen Überblick darüber, welche Geräte in Ihrem PROFINET-Netzwerk installiert sind und darüber, wie diese miteinander verbunden sind. Mit der Netzwerkanalyse können Sie sich ferner verschiedene Netzwerkparameter der Geräte, wie z. B. die IP-Adressen, Gerätenamen usw. ansehen und diese ändern.
+    </p>
+
+    <p class="MsoBlockText">
+        Es können verschiedene Netzwerke miteinander verglichen werden und Geräte automatisch oder manuell projektiert werden.
+    </p>
+    <h3 class="class31">
+        3.2
+        Offline-Modus
+    </h3>
+
+    <p class="MsoBlockText">
+        Im Offline-Modus können Sie ein zuvor auf einen PC gespeichertes Referenznetzwerk fast auf die gleiche Weise wie im Online-Modus untersuchen. Wie der Name schon impliziert, liegt der wesentliche Unterschied darin, dass der Offline-Modus strikt auf Lesevorgänge beschränkt ist und niemals Daten auf die Geräte geschrieben werden.
+    </p>
+
+    <p class="MsoBlockText"><img border="0" width="492" height="363" src="html_files/image045.png"></p>
+
+    <p class="MsoBlockText">Der Hauptbildschirm ist unterteilt in:</p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>Eine <span lang="DE">
+            <a href="#olTopologyList">
+                <span lang="EN-US">
+                    Topologieliste
+                </span>
+            </a>
+        </span>&nbsp;(1) zuvor gespeicherter Referenznetzwerke
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>Eine <span lang="DE"><a href="ohOnlineMode.html#ohTopologyView"><span lang="EN-US">grafische Ansicht</span></a></span>&nbsp;(2) und</p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>Eine <span lang="DE">
+            <a href="ohOnlineMode.html#olDevicesList">Geräteliste</a>
+        </span>&nbsp;(3) und <span lang="DE">
+            <a href="ohOnlineMode.html#olDeviceDetails">Gerätedetails</a>
+        </span>&nbsp;(4) wie sie im <span lang="DE"><a href="ohOnlineMode.html"><span lang="EN-US">Online-Modus</span></a></span> verwendet werden und die Informationen über Geräte, die in der ausgewählten Topologie gespeichert sind, enthalten.
+    </p>
+
+    <p class="FormatvorlageBlocktitel">Funktionsleiste</p>
+
+    <p class="MsoBlockText">
+        Über die Funktionsleiste stehen folgende Funktionen zur Verfügung:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="70" valign="top" class="class51">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Symbol</span></p>
+                </td>
+                <td width="194" valign="top" class="class52">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="234" valign="top" class="class53">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Funktion</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="70" class="class54">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 47" src="html_files/image046.png"></p>
+            </td>
+            <td width="194" class="class55">
+                <p class="TabelleTextlinks">Topologiedatei hinzufügen</p>
+            </td>
+            <td width="234" class="class56">
+                <p class="TabelleTextlinks">
+                    Fügt der Topologieliste eine <span lang="DE"><a href="#olTopologyImport"><span lang="EN-US">zuvor gespeicherte Topologie</span></a></span> hinzu.
+                    list.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="70" class="class54">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 51" src="html_files/image015.png"></p>
+            </td>
+            <td width="194" class="class55">
+                <p class="TabelleTextlinks">Topologie exportieren</p>
+            </td>
+            <td width="234" class="class56">
+                <p class="TabelleTextlinks">Führt einen <a href="ohOnlineMode.html#olTopologyExport"><span lang="EN-US">Topologie-Export</span></a> auf eine Festplatte durch.</p>
+
+            </td>
+        </tr>
+    </table>
+
+    <p class="Blocktitel">
+        <a id="olTopologyList"></a><a id="olTopologyImport">
+    Topologie importieren
+</a>
+    </p>
+
+    <p class="MsoBlockText">
+        Topologien können in PRONETA Basic in einem von drei Formaten von einem Datenträger geladen werden:
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>Als eine XML-Datei, die vorher von PRONETA Basic gespeichert wurde</p>
+
+    <p class="BulletText1"><span class="class31"></span>Als eine AML-Datei die mit TIA Portal erstellt wurde</p>
+
+    <p class="BulletText1"><span class="class31"></span>Als STEP 7-Projekt (Versionen 5.4, 5.5 oder 5.6)</p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="308" height="202" id="Grafik 201" src="html_files/image047.png"></p>
+
+    <p class="MsoBlockText">
+        Wählen Sie den Topologiedateityp im Dialog „Topologiedatei hinzufügen“ und klicken Sie auf „Durchsuchen“, um auf einem Datenträger nach der entsprechenden Topologie zu suchen.
+    </p>
+
+    <p class="MsoBlockText">
+        Beachten Sie bei der Verwendung von AML-Dateien:
+    </p>
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class6">
+                <p class="CWDGraphic" align="center"><b>HINWEIS</b></p>
+            </td>
+            <td width="493" valign="top" class="class8">
+                Augenblicklich (TIA Portal V15.1) erfolgt nur ein eingeschränkter AML-Export aus dem TIA Portal heraus.
+                <ul>
+                    <li>
+                        HMI Geräte, SINAMICS S sowie SINAMICS G Antriebe, die im TIA Portal per Startdrive projektiert wurden, fehlen in der exportierten AML-Datei und werden demzufolge in PRONETA Basic-Topologien nicht dargestellt.
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        Geräte, die per GSDML-File im TIA-Portal projektiert wurden, werden in PRONETA Basic-Topologien dargestellt, können aber im Vergleichsmodus nicht direkt mit Geräten aus einem Online-Scan verglichen werden.
+                    </li>
+                </ul>
+                Für alle anderen Geräte wird die Topologie korrekt angezeigt, und die Vergleichsfunktionalität ist gegeben.
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">Topologieliste</p>
+
+    <p class="MsoBlockText">
+        In diesem Fenster wird eine Liste gespeicherter Netzwerktopologien angezeigt. Mit Hilfe der Befehle in der Funktionsleiste können Sie weitere Topologien hinzufügen.
+    </p>
+
+    <p class="MsoBlockText">
+        Um einen Eintrag zu entfernen, klicken Sie mit der rechten Maustaste in die Liste und verwenden Sie den Befehl „Datei entfernen“.
+    </p>
+
+    <p class="MsoBlockText">
+        Durch Auswählen eines Eintrags aus der Liste wird diese Topologie in der grafischen Ansicht angezeigt.
+    </p>
+
+    <p class="FormatvorlageBlocktitel">Grafische Ansicht</p>
+
+    <p class="MsoBlockText">
+        Die grafische Ansicht ist eine grafische Darstellung des PROFINET-Netzwerks. Nähere Informationen zu ihrer Bedienung finden sie unter <span lang="DE"><a href="ohOnlineMode.html#ohTopologyView"><span lang="EN-US">Grafische Ansicht</span></a></span> im Online-Modus.
+    </p>
+
+    <p class="MsoBlockText">
+        Durch Klicken mit der rechten Maustaste auf ein Gerät in der grafischen Ansicht oder in der Gerätetabelle öffnet sich das <a href="ohOnlineMode.html#olDeviceContextMenu"><span lang="EN-US">Geräte-Kontextmenü</span></a>.
+    </p>
+
+    <p class="Blocktitel">Symbolleiste</p>
+
+    <p class="MsoBlockText">
+        Im oberen Bereich der grafischen Ansicht befindet sich eine Symbolleiste mit einer Reihe von Funktionssymbolen:
+    </p>
+
+    <table class="Tabellenraster5" border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <td width="137" valign="top" class="class58">
+                <p class="TabelleKopfzentriert"><span lang="DE">Symbol</span></p>
+            </td>
+            <td width="93" valign="top" class="class59">
+                <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+            </td>
+            <td width="269" valign="top" class="class60">
+                <p class="TabelleKopfzentriert"><span lang="DE">Funktion</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="137" class="class61">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 92" src="html_files/image048.png"></b></p>
+            </td>
+            <td width="93" class="class62">
+                <p class="TabelleTextlinks">Topologie­übersicht zeigen</p>
+            </td>
+            <td width="269" class="class63">
+                <p class="TabelleTextlinks">
+                    Schaltet eine Topologieübersicht in der Online-Ansicht um. (Siehe <a href="ohOnlineMode.html#ohTopologyOverview"><span lang="EN-US">Topologieübersicht</span></a>)
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="137" class="class61">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 92" src="html_files/image049.png"></b></p>
+            </td>
+            <td width="93" class="class62">
+                <p class="TabelleTextlinks">Zoomauswahl</p>
+            </td>
+            <td width="269" class="class63">
+                <p class="TabelleTextlinks">
+                    Ermöglicht das Aufziehen eines Rechtecks innerhalb der grafischen Ansicht. Sobald Sie die Maustaste loslassen, wird so in die Ansicht gezoomt, dass nur der Bereich innerhalb des Rechtecks sichtbar ist.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="137" class="class61">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 132" src="html_files/image050.png"></b></p>
+            </td>
+            <td width="93" class="class62">
+                <p class="TabelleTextlinks">Vergrößerung an Bildschirm anpassen</p>
+            </td>
+            <td width="269" class="class63">
+                <p class="TabelleTextlinks">
+                    Zoomt so zurück, dass wieder alle Netzwerkteilnehmer in der Ansicht sichtbar sind.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="137" class="class61">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="120" height="23" id="Grafik 135" src="html_files/image051.png"></b></p>
+            </td>
+            <td width="93" class="class62">
+                <p class="TabelleTextlinks">Zoomleiste</p>
+            </td>
+            <td width="269" class="class63">
+                <p class="TabelleTextlinks">
+                    Zoomt in das Netzwerk oder zurück durch Ziehen des Reglers nach rechts bzw. links oder aber durch Klicken auf „-“ bzw. „+“. (Sie können auch in die und aus der grafischen Ansicht zoomen, indem Sie die Maus über die Ansicht bewegen und das Scrollrad verwenden.)
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="137" class="class61">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 140" src="html_files/image028.png"></p>
+            </td>
+            <td width="93" class="class62">
+                <p class="TabelleTextlinks">Physikalische Verbindungstypen anzeigen</p>
+            </td>
+            <td width="269" class="class63">
+                <p class="TabelleTextlinks">
+                    Zeigt die verwendeten Übertragungsmedien in unterschiedlichen Farben an. (Siehe <span lang="DE">
+                        <a href="ohOnlineMode.html#ohDeviceConnetionType">
+                            <span lang="EN-US">
+                                Geräteverbindungsarten
+                            </span>
+                        </a>
+                    </span>)
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+<br>
+</body>
+</html>

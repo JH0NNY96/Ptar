@@ -1,0 +1,634 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="HelpStyle.css">
+</head>
+
+<body id="ScrollablePanel">
+    <h2>
+        4
+        IO 测试任务
+    </h2>
+
+    <p class="MsoBlockText">
+        IO 测试任务用于在安装 CPU 之前检查分布式 I/O 设备的接线，并以快速、准确且简单的方式拟定测试结果。
+    </p>
+    <h3>
+        4.2
+        IO 测试模式
+    </h3>
+
+    <p class="MsoBlockText">在“IO 测试”模式下，画面包含两个主视图：</p>
+
+    <p class="BulletText1">
+        <span class="class31"></span> “设备视图”(Device View) (1)，被测设备的图形表示
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span> “详细信息”(Details) 表 (2)，显示关于被测设备和一般测试的附加信息。
+    </p>
+
+
+    <p class="MsoBlockText"><img border="0" width="491" height="264" src="html_files/image074.png"></p>
+
+    <p class="FormatvorlageBlocktitel">功能栏</p>
+
+    <p class="MsoBlockText">功能栏中提供以下功能：</p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td valign="top" class="class17">
+                    <p class="TabelleKopfzentriert"><span lang="DE">图标</span></p>
+                </td>
+                <td valign="top" class="class18">
+                    <p class="TabelleKopfzentriert"><span lang="DE">名称</span></p>
+                </td>
+                <td valign="top" class="class18">
+                    <p class="TabelleKopfzentriert"><span lang="DE">功能</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td class="class25">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 84" src="html_files/image033.png"></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">强制和监视值</p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    通过 PRONETA Basic 激活和禁用对设备的控制，以进行 IO 测试。
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class86">
+                <p class="CWDGraphic" align="center"><img border="0" width="45" height="39" id="Bild 6" src="html_files/image075.jpg" alt="Gefahr_ISO"></p>
+                <p class="CWDGraphic" align="center"><b><span lang="DE" class="class87">警告</span></b></p>
+            </td>
+            <td width="493" valign="top" class="class88">
+                <p class="CautionWarningDanger">
+                    <a id="IOTestWarning"></a><span class="class89">
+    操作控制组件上的接口会导致机器的突然移动和设备带电。
+</span>
+                </p>
+                <p class="CautionWarningDanger">
+                    <span class="class89">
+                        从而，可能会导致人身伤害和人员受到电击。
+                    </span>
+                </p>
+                <p class="Hinweis">
+                    在激活 IO 测试前，确保机器处于安全状态，且在操作范围内没有未授权人员。
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class86">
+                <p class="CWDGraphic" align="center"><b><span lang="DE" class="class87">注意</span></b></p>
+            </td>
+            <td width="493" valign="top" class="class88">
+                <p class="CautionWarningDanger">
+                    <a id="IOTestWarning"></a><span class="class89">
+    F 目标地址丢失
+</span>
+                </p>
+                <p class="CautionWarningDanger">
+                    <span class="class89">
+                        通过 PRONETA Basic 在设备上执行 I/O 测试之后，所连接 F-I/O 模块的 F 目标地址将会删除，从而导致模块进入安全状态。
+                    </span>
+                </p>
+                <p class="Hinweis">
+                    使用相应的工程组态工具重新将 F 目标地址分配给相关 F 模块。
+                </p>
+            </td>
+        </tr>
+    </table>
+
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class6">
+                <p class="CWDGraphic" align="center"><b><span lang="DE">注意</span></b></p>
+            </td>
+            <td width="493" valign="top" class="class8">
+                <p class="Hinweis">
+                    要执行 IO 测试，PRONETA Basic 需要与目标设备建立 PROFINET 应用关系 (AR)。确保没有其它 PROFINET 控制器占用此连接。
+                </p>
+            </td>
+        </tr>
+    </table>
+
+
+    <p class="MsoBlockText">
+        IO 测试的状态由“设备视图”(Device View) 和“详细信息”(Details) 表标题栏的颜色指示：
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>浅绿色表示 IO 测试处于活动状态。同时，“强制模式”(Force Mode) 一词会显示在标题栏的右侧。
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>深绿色表示 IO 测试处于不活动状态。</p>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="FormatvorlageBlocktitel"><a id="olDeviceView">设备视图</a></p>
+
+    <p class="MsoBlockText"><b>用途</b></p>
+
+    <p class="MsoBlockText">
+        设备视图显示用户为 IO 测试模式选择的设备的符号表示。状态和 I/O LED 会实时更新，以反映物理设备的状态。
+    </p>
+
+    <p class="MsoBlockText"><img border="0" width="491" height="316" src="html_files/image076.png"></p>
+
+    <p class="MsoBlockText">
+        要将任意模块的视图放大，请单击模块上方的“+”符号 (1)。随后会出现一个小的<span lang="DE"><a href="#olPopupWindow"><span lang="EN-US">弹出窗口</span></a></span>。
+    </p>
+
+    <p class="MsoBlockText">
+        单击此处的任意模块，会在“详细信息”(Details) 视图中显示该模块的参数表，或根据选择的选项卡将对应部分高亮显示。
+    </p>
+
+    <p class="MsoBlockText">
+        诊断缓冲区中包含信息的模块的标题会显示为红色。
+    </p>
+
+    <p class="MsoBlockText"><b>数字量 I/O</b></p>
+
+    <p class="MsoBlockText">
+        单击输出模块的任意 LED 符号可切换对应输出的状态。同样，向任意输入施加电压会使对应输入模块 LED 亮起。
+    </p>
+
+    <p class="MsoBlockText">
+        要强制使用数字量值，也可以使用“ <span lang="DE">
+            <a href="#olDetailsView">
+                <span lang="EN-US">
+                    详细信息视图”(Details View)
+                </span>
+            </a>
+        </span>中的“测试结果”(Test Results) 选项卡。
+    </p>
+
+    <p class="MsoBlockText"><b>模拟量 I/O</b></p>
+
+    <p class="MsoBlockText">
+        以相同方式从输入模块和输出模块读取模拟量值。
+    </p>
+
+    <p class="MsoBlockText">
+        要强制使用模拟量值，可使用 <span lang="DE"><a href="#olPopupWindow"><span lang="EN-US">弹出窗口</span></a></span> 或 <span lang="DE"><a href="#olDetailsView"><span lang="EN-US">详细信息视图”(Details View)</span></a></span>中的“测试结果”(Test Results) 选项卡。
+    </p>
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class6">
+                <p class="CWDGraphic" align="center"><b><span lang="DE">注意</span></b></p>
+            </td>
+            <td width="493" valign="top" class="class8">
+                <p class="Hinweis">
+                    仅当激活强制模式后才会显示电机起动器单元的可选插入式连接端子（3DI/LC 模块）。
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">
+        <a id="olPopupWindow">Popup Window</a> 弹出窗口（IO 测试）
+    </p>
+
+    <p class="MsoBlockText"><b>用途</b></p>
+
+    <p class="MsoBlockText">
+        在“<span lang="DE"><a href="#olDeviceView"><span lang="EN-US">设备视图”(Device View)</span></a></span>中，设备的每个模块上方有一个“+”符号，点击此符号可打开一个弹出窗口，其中包含模块输入和输入的较大符号视图。如果打开多个模块，这些模块的弹出窗口将在一个窗口中成行排列。
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="184" height="344" id="Grafik 393" src="html_files/image077.jpg"></p>
+
+    <p class="MsoBlockText">
+        单击弹出窗口部分右上角的关闭图标“´”或设备视图中模块上方的“-”符号，可再次关闭此模块的弹出窗口。要关闭整个窗口，请单击窗口右上角的关闭图标“´”。要在弹出窗口中重新排列模块，请单击相关模块的表标题并将其拖动到指定位置。
+
+    </p>
+
+    <p class="MsoBlockText"><b>数字量 I/O</b></p>
+
+    <p class="MsoBlockText">
+        通过查看或选中和取消选中与字段连接对应的字段，可分别监视和强制数字量输入和输出。绿色字段表示活动行。
+    </p>
+
+    <p class="MsoBlockText"><b>模拟量 I/O</b></p>
+
+    <p class="MsoBlockText">
+        对于模拟量模块，可在所指示通道编号旁的字段中输入符号通道名称。这些内容会自动复制到测试协议中。
+    </p>
+
+    <p class="MsoBlockText">
+        可通过在相应字段中输入数值或将滑块拖过下方的滑动条来强制模拟量输出值。单击字段旁的符号可将输出复位为默认值。
+    </p>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="FormatvorlageBlocktitel"><a id="olDetailsView">详细信息表</a></p>
+
+    <p class="MsoBlockText">
+        “详细信息”(Details) 表包含四个选项卡，各选项卡都包含各自的功能栏：
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span><span lang="DE"><a href="#olParameters"><span lang="EN-US">参数</span></a></span>
+        ，用于设置模块参数
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span><u><a href="#olTestProtocol"><span lang="EN-US">测试结果</span></a></u>，用于执行和拟定设备的接线测试
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>
+        <a href="#olIOEventLog">I/O 事件日志</a>，用于监视常规事件，如模块输入和输出值的变化
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span><span lang="DE"><a href="#olDiagnostics"><span lang="EN-US">诊断</span></a></span>
+        ，用于记录非常规系统事件，如模块拉动和插入。
+    </p>
+
+    <p class="FormatvorlageBlocktitel"><a id="olParameters">参数</a></p>
+
+    <p class="MsoBlockText">
+        此选项卡中提供了在设备视图中选择的模块参数集的概览。这些参数只能在未运行“强制和监视值”(Force and Monitor Values) 时进行编辑（请参见 <span lang="DE"><a href=" ohIOTestMode.html"><span lang="EN-US">IO 测试模式</span></a></span>，“功能栏”部分）。
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="491" height="302" id="Grafik 394" src="html_files/image078.png"></p>
+
+    <p class="MsoBlockText">
+        参数集可存储在磁盘的文件中，从文件中加载并从 windows 剪贴板复制粘贴，以此将参数传送到不同的模块。
+    </p>
+
+    <p class="FormatvorlageBlocktitel">功能栏</p>
+
+    <p class="MsoBlockText">
+        功能栏中提供以下功能：
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="58" valign="top" class="class90">
+                    <p class="TabelleKopfzentriert"><span lang="DE">图标</span></p>
+                </td>
+                <td width="84" valign="top" class="class91">
+                    <p class="TabelleKopfzentriert"><span lang="DE">名称</span></p>
+                </td>
+                <td width="355" valign="top" class="class92">
+                    <p class="TabelleKopfzentriert"><span lang="DE">功能</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 85" src="html_files/image079.png"></b></p>
+            </td>
+            <td width="84" class="class93">
+                <p class="TabelleTextlinks">保存参数</p>
+            </td>
+            <td width="355" class="class94">
+                <p class="TabelleTextlinks">
+                    将整个设备的当前参数集保存到磁盘。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 86" src="html_files/image046.png"></b></p>
+            </td>
+            <td width="84" class="class93">
+                <p class="TabelleTextlinks">加载参数</p>
+            </td>
+            <td width="355" class="class94">
+                <p class="TabelleTextlinks">
+                    从磁盘加载之前保存的参数集并将其分配到当前设备。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 87" src="html_files/image080.png"></b></p>
+            </td>
+            <td width="84" class="class93">
+                <p class="TabelleTextlinks">复制参数</p>
+            </td>
+            <td width="355" class="class94">
+                <p class="TabelleTextlinks">
+                    将当前所选模块的参数集复制到 Windows 剪贴板。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 88" src="html_files/image081.png"></b></p>
+            </td>
+            <td width="84" class="class93">
+                <p class="TabelleTextlinks">
+                    粘贴参数
+                </p>
+            </td>
+            <td width="355" class="class94">
+                <p class="TabelleTextlinks">
+                    从 Windows 剪贴板将之前复制的模块参数集粘贴到当前选定模块。如果剪贴板中的参数集不适合所选模块，则图标将显示为灰色。
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">
+        “保存参数”(Save Parameters) 和“加载参数”(Load Parameters) 命令用于在设备之间传送参数集，有助于组态多台相同设备。与之相反，“复制参数”(Copy Parameters) 和“粘贴参数”(Paste Parameters) 命令主要用于“克隆”一台设备内的模块组态。
+    </p>
+
+    <p class="FormatvorlageBlocktitel"><a id="olTestProtocol">测试结果</a></p>
+
+    <p class="MsoBlockText">
+        此选项卡提供当前所选设备的实际 IO 测试的功能。
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="491" height="366" id="Grafik 395" src="html_files/image082.png"></p>
+
+    <p class="MsoBlockText">
+        根据现有 I/O 模块，将测试表垂直分为几个部分。可通过单击节标题中的三角形符号“<span style="font-family: Arial" class="class95">&#x25BA;</span>”，再次将各部分折叠或展开。
+    </p>
+
+    <p class="MsoBlockText">测试表包含以下列：</p>
+
+    <ul>
+        <li>
+            “通道”(Channel)：由设备确定的 I/O 通道的名称。
+        </li>
+        <li>
+            “控制”(Control)：所选输出的强制状态。<br>
+            单击图标以切换数字量输出状态，或手动拖动或输入模拟量输出的值。输入的值将立即转发到硬件。（对于输入，此字段呈灰显且为只读。）
+            此外，还可以通过单击设备视图的 LED 表示或在弹出窗口中进行操作来更改值。<br>
+            此列仅当强制模式激活时可见。
+        </li>
+        <li>
+            “符号名称”(Symbolic Name)：测试人员分配给通道的任意名称。（请参见以下注意事项。）
+        </li>
+        <li>
+            “地址”(Address)：映射 I/O 的任意目标存储地址。（请参见以下注意事项。）
+        </li>
+        <li>
+            “状态接线”(Status Wiring)：在此处，由 IO 测试建立的实际结果由测试人员输入。选择以下之一：
+        </li>
+        <ul>
+            <li>
+                “不适用”(N.a.)：“不适用”，尚未测试（默认）
+            </li>
+        </ul>
+        <ul>
+            <li>
+                “正常”(OK)：测试结果正确，接线正确
+            </li>
+        </ul>
+        <ul>
+            <li>
+                “错误”(Error)：测试结果错误，接线错误
+            </li>
+        </ul>
+        <li>
+            “注释”(Comment)：要添加至测试的任何附加信息。
+        </li>
+    </ul>
+
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class6">
+                <p class="CWDGraphic" align="center"><b>注意</b></p>
+            </td>
+            <td width="493" valign="top" class="class8">
+                <p class="TabelleTextlinks">
+                    <span class="class11">
+                        “符号名称”(Symbolic Name) 和“地址”(Address) 的值仅作为测试人员的存储辅助值。
+                    </span>
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">
+        可通过保存和加载协议暂停 IO 测试并在稍后的时间点进行恢复。
+    </p>
+
+    <p class="MsoBlockText">
+        完成测试后，该协议可存储以记录正确的设备接线。（有关详细信息，请参见 <a href="#olFunctionBar"><span lang="EN-US">功能栏</span></a>。）
+    </p>
+
+    <p class="MsoBlockText"><a id="olFunctionBarTestMode"><b>功能栏</b></a></p>
+
+    <p class="MsoBlockText">
+        功能栏中提供以下功能：
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="58" valign="top" class="class90">
+                    <p class="TabelleKopfzentriert"><span lang="DE">图标</span></p>
+                </td>
+                <td width="83" valign="top" class="class97">
+                    <p class="TabelleKopfzentriert"><span lang="DE">名称</span></p>
+                </td>
+                <td width="356" valign="top" class="class98">
+                    <p class="TabelleKopfzentriert"><span lang="DE">功能</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 98" src="html_files/image079.png"></b></p>
+            </td>
+            <td width="83" class="class99">
+                <p class="TabelleTextlinks">
+                    保存协议
+                </p>
+            </td>
+            <td width="356" class="class100">
+                <p class="TabelleTextlinks">
+                    将当前 IO 测试的结果存储到磁盘（格式：CSV），无论是在测试完成时还是测试中断时均可进行该操作。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 99" src="html_files/image046.png"></b></p>
+            </td>
+            <td width="83" class="class99">
+                <p class="TabelleTextlinks">加载协议</p>
+            </td>
+            <td width="356" class="class100">
+                <p class="TabelleTextlinks">
+                    从磁盘加载早期 IO 测试的测试结果以继续测试。
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 100" src="html_files/image083.png"></p>
+            </td>
+            <td width="83" class="class99">
+                <p class="TabelleTextlinks">复位测试协议</p>
+            </td>
+            <td width="356" class="class100">
+                <p class="TabelleTextlinks">
+                    丢弃当前测试的结果，并允许用户重新开始。所有结果均将从 PRONETA Basic 中删除。
+                </p>
+            </td>
+        </tr>
+
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 100" src="html_files/image084.png"></p>
+            </td>
+            <td width="83" class="class99">
+                <p class="TabelleTextlinks">从 AML 文件导入符号名称</p>
+            </td>
+            <td width="356" class="class100">
+                <p class="TabelleTextlinks">
+                    从 AML 文件导入设备/IO 的符号名称（参见<span lang="DE"><a href="#olAMLReference"><span lang="EN-US">使用 AML 文件作为参考</span></a></span>）。
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel"><a id="olAMLReference">使用 AML 文件作为参考</a></p>
+
+    <p class="MsoBlockText">
+        要为 I/O 提供符号名称，可以使用 AML 文件。
+    </p>
+
+    <p class="MsoBlockText">
+        待测试设备的以下功能必须与 AML 文件中的设备名称相匹配：
+    </p>
+
+    <ul>
+        <li>
+            设备名称
+        </li>
+        <li>
+            模块型号
+        </li>
+        <li>
+            模块位置
+        </li>
+    </ul>
+    <p class="MsoBlockText">
+        如果匹配且 AML 文件包含 I/O 的符号名称，则 AML 文件中的名称将用于测试设备中的 I/O，并显示在“符号名称”(Symbolic Name) 列中。
+    </p>
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="FormatvorlageBlocktitel"><a id="olIOEventLog">I/O 事件日志</a></p>
+
+    <p class="MsoBlockText">
+        该选项卡记录了 IO 测试处于激活状态时模块发生的所有常规事件（如输入和输出值的更改）的日志。
+    </p>
+
+    <p class="MsoBlockText">
+        单击列标题将对表进行相应排序。
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="496" height="201" id="Grafik 396" src="html_files/image085.png"></p>
+
+    <p class="MsoBlockText"><b>功能栏</b></p>
+
+    <p class="MsoBlockText">
+        功能栏中提供以下功能：
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="58" valign="top" class="class90">
+                    <p class="TabelleKopfzentriert"><span lang="DE">图标</span></p>
+                </td>
+                <td width="117" valign="top" class="class101">
+                    <p class="TabelleKopfzentriert"><span lang="DE">名称</span></p>
+                </td>
+                <td width="247" valign="top" class="class102">
+                    <p class="TabelleKopfzentriert"><span lang="DE">功能</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 101" src="html_files/image079.png"></b></p>
+            </td>
+            <td width="117" class="class103">
+                <p class="TabelleTextlinks">
+                    保存 IO 事件日志
+                </p>
+            </td>
+            <td width="247" class="class104">
+                <p class="TabelleTextlinks">将事件日志保存到磁盘（格式：CSV）。</p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 102" src="html_files/image083.png"></b></p>
+            </td>
+            <td width="117" class="class103">
+                <p class="TabelleTextlinks">复位 IO 事件日志</p>
+            </td>
+            <td width="247" class="class104">
+                <p class="TabelleTextlinks">清除当前事件日志中的所有条目。</p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel"><a id="olDiagnostics">诊断</a></p>
+
+    <p class="MsoBlockText">
+        此选项卡中的表显示了 IO 测试处于激活状态时设备发生的所有非常规事件的记录，如模块牵拉或信号线断开。
+    </p>
+
+    <p class="MsoBlockText">
+        如果诊断缓冲区包含模块相关的事件，则“设备表”(Device Table) 中相应的模块标题将显示为红色。
+    </p>
+
+    <p class="MsoBlockText">
+        单击表的列标题将对表进行相应排序。
+    </p>
+
+    <p class="MsoBlockText">
+        选择一个表条目将在”设备视图”(Device View) 中突出显示相应的模块。相反，在“设备视图”(Device View) 中选择模块将突出显示该表中有关模块的第一个条目。
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="491" height="162" id="Grafik 397" src="html_files/image086.png"></p>
+
+    <p class="MsoBlockText">
+        表包含以下列：
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>“插槽”(Slot)</p>
+
+    <p class="BulletText1"><span class="class31"></span> “模块”(Module)</p>
+
+    <p class="BulletText1"><span class="class31"></span>“通道”(Channel)</p>
+
+    <p class="BulletText1"><span class="class31"></span>“符号名称”(Symbolic Name)（如在测试协议选项卡中输入的内容）</p>
+
+    <p class="BulletText1"><span class="class31"></span>“说明”(Description)</p>
+
+    <p class="BulletText1"><span class="class31"></span>“详细信息”(Details)</p>
+
+    <p class="BulletText1"><span class="class31"></span>“时间戳”(Time Stamp)</p>
+<br>
+</body>
+</html>

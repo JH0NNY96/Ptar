@@ -1,0 +1,370 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="HelpStyle.css">
+</head>
+<body id="ScrollablePanel">
+    <h2 class="class44">
+        3
+        Netzwerkanalyse
+    </h2>
+
+    <p class="MsoBlockText">
+        Durch die Netzwerkanalyse von PRONETA Basic erhalten Sie einen schnellen Überblick darüber, welche Geräte in Ihrem PROFINET-Netzwerk installiert sind und darüber, wie diese miteinander verbunden sind. Mit der Netzwerkanalyse können Sie sich ferner verschiedene Netzwerkparameter der Geräte, wie z. B. die IP-Adressen, Gerätenamen usw. ansehen und diese ändern.
+    </p>
+
+    <p class="MsoBlockText">
+        Es können verschiedene Netzwerke miteinander verglichen werden und Geräte automatisch oder manuell projektiert werden.
+    </p>
+    <h3>
+        3.4
+        Konfigurationsmodus
+    </h3>
+
+    <p class="MsoBlockText">
+        Der Konfigurationsmodus verfügt über einen halbautomatischen Mechanismus, mit dem Gerätenamen aus einem Referenznetzwerk allen oder einzelnen Geräten eines realen Netzwerks zugeordnet werden können.
+    </p>
+
+    <p class="MsoBlockText">
+        Dies bietet ein schnelles und zuverlässiges Verfahren zur Konfiguration einer großen Anzahl identischer Anlagen (wie z. B. einer Reihe von Schaltschränken). Die Ergebnisse können anschließend im <span lang="DE"><a href="ohComparisonMode.html"><span lang="EN-US">Konfigurationsmodus</span></a></span> überprüft werden.
+    </p>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">Der Hauptbildschirm ist unterteilt in:</p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>Eine <span lang="DE">
+            <a href="ohOfflineMode.html#olTopologyList">
+                <span lang="EN-US">
+                    Topologieliste
+                </span>
+            </a>
+        </span> (1)
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>Eine große (oben) und zwei kleinere (unten)  <span lang="DE"><a href="ohOnlineMode.html#ohTopologyView"><span lang="EN-US">grafische Ansichten</span></a></span> (2)<a href="#_ftn1" title="" id="_ftnref1"><span class="MsoFootnoteReference"><span class="MsoFootnoteReference"></span></span></a></p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>Eine <span lang="DE">
+            <a href="ohOnlineMode.html#olDevicesList">
+                <span lang="EN-US">
+                    Gerätetabelle
+                </span>
+            </a>
+        </span> (3) mit den in der ausgewählten Topologie gespeicherten Geräten
+    </p>
+
+    <p class="MsoBlockText"><img border="0" width="492" height="396" src="html_files/image064.png"></p>
+
+    <p class="FormatvorlageBlocktitel">Funktionsleiste</p>
+
+    <p class="MsoBlockText">
+        Über die Funktionsleiste stehen folgende Funktionen zur Verfügung:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td valign="top" class="class76">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Symbol</span></p>
+                </td>
+                <td valign="top" class="class77">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td valign="top" class="class78">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Funktion</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td class="class79">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 71" src="html_files/image046.png"></b></p>
+            </td>
+            <td class="class80">
+                <p class="TabelleTextlinks">Topologiedatei hinzufügen</p>
+            </td>
+            <td class="class81">
+                <p class="TabelleTextlinks">
+                    Fügt der Topologieliste eine <span lang="DE"><a href="ohOfflineMode.html#olTopologyImport"><span lang="EN-US">zuvor gespeicherte Topologie</span></a></span> hinzu.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class79">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="141" height="21" id="Grafik 73" src="html_files/image065.png"></b></p>
+            </td>
+            <td class="class80">
+                <p class="TabelleTextlinks">Geräte abgleichen</p>
+            </td>
+            <td class="class81">
+                <p class="TabelleTextlinks">
+                    Versucht, Übereinstimmungen zwischen Geräten eines Referenznetzwerks und denen eines realen Netzwerks gemäß den <span lang="DE">
+                        <a href="#olMatchingCriteraConfig">
+                            <span lang="EN-US">
+                                Übereinstimmungs-Kriterien im Konfigurationssmodus
+                            </span>
+                        </a>
+                    </span>zu finden; gefundene Übereinstimmungen werden grün hervorgehoben.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class79">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="214" height="21" id="Grafik 74" src="html_files/image066.png"></b></p>
+            </td>
+            <td class="class80">
+                <p class="TabelleTextlinks">Alle Überein­stimmungen entfernen</p>
+            </td>
+            <td class="class81">
+                <p class="TabelleTextlinks">Ergebnisse der letzten Übereinstimmung löschen.</p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class79">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="148" height="21" id="Grafik 75" src="html_files/image067.png"></b></p>
+            </td>
+            <td class="class80">
+                <p class="TabelleTextlinks">Gerätenamen zuweisen</p>
+            </td>
+            <td class="class81">
+                <p class="TabelleTextlinks">
+                    Schreibt die Gerätenamen aller Geräte des Referenznetzwerks, für die eine Übereinstimmung gefunden wurde, in die entsprechenden Geräte des realen Netzwerks.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">
+        Die letzten zwei Befehle haben Gegenstücke in den Kontextmenüs der Geräte. Sie wirken dann nicht auf alle Geräte des Netzwerks, sondern nur für das ausgewählte Gerät.
+    </p>
+
+    <p class="FormatvorlageBlocktitel">Grafische Ansicht</p>
+
+    <p class="MsoBlockText">
+        Die grafische Ansicht ist eine grafische Darstellung des PROFINET-Netzwerks. Nähere Informationen zu ihrer Bedienung finden Sie unter <span lang="DE"><a href="ohOnlineMode.html#ohTopologyView"><span lang="EN-US">Grafische Ansicht</span></a></span> im Online-Modus.
+    </p>
+
+    <p class="MsoBlockText">
+        Die Farbmarkierung des Gerätes zeigt dessen Verfügbarkeit zur Konfiguration an:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td valign="top" class="class17">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Symbol</span></p>
+                </td>
+                <td valign="top" class="class18">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Farbe</span></p>
+                </td>
+                <td valign="top" class="class18">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Bedeutung</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td valign="top" class="class19">
+                <p class="TabelleTextlinks"><img border="0" width="134" height="78" id="Grafik 243" src="html_files/image068.png"></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks"><span lang="DE">Ausgegraut</span></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    Für dieses Gerät des Referenznetzwerks wurde keine Übereinstimmung im realen Netzwerk gefunden.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td valign="top" class="class19">
+                <p class="TabelleTextlinks"><img border="0" width="134" height="78" id="Grafik 280" src="html_files/image069.jpg"></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks"><span lang="DE">Hellgrau</span></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    Für dieses Gerät des Referenznetzwerks wurde noch kein Abgleich durchgeführt, bzw. es wurde noch keine Übereinstimmung dieses Geräts im realen Netzwerk gefunden.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td valign="top" class="class19">
+                <p class="TabelleTextlinks"><img border="0" width="134" height="78" id="Grafik 281" src="html_files/image070.jpg"></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks"><span lang="DE">Grün</span></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    Dieses Gerät des Referenznetzwerks wurde erfolgreich auf ein Gerät im realen Netzwerk abgeglichen bzw. die Geräte wurden manuell aufeinander abgeglichen.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">
+        Durch Bewegen des Mauszeigers über ein Gerät werden <span lang="DE"><a href="ohOnlineMode.html#olDeviceToolTip"><span lang="EN-US">Geräte-Tooltips</span></a></span>
+        mit grundlegenden Informationen zu diesem Gerät angezeigt.
+    </p>
+
+    <p class="FormatvorlageBlocktitel">Symbolleiste</p>
+
+    <p class="MsoBlockText">
+        Im oberen Bereich der Ansicht befindet sich eine Symbolleiste mit einer Reihe von Funktionssymbolen:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td valign="top" class="class17">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Symbol</span></p>
+                </td>
+                <td valign="top" class="class18">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td valign="top" class="class18">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Funktion</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td class="class25">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 79" src="html_files/image071.png"></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">Zoomauswahl</p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    Ermöglicht das Aufziehen eines Rechtecks innerhalb der grafischen Ansicht. Sobald Sie die Maustaste loslassen, wird so in die Ansicht gezoomt, dass nur der Bereich innerhalb des Rechtecks sichtbar ist.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class25">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 80" src="html_files/image072.png"></b></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">Vergrößerung an Bildschirm anpassen</p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    Zoomt so zurück, dass wieder alle Netzwerkteilnehmer in der Ansicht sichtbar sind.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class25">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="123" height="31" id="Grafik 81" src="html_files/image073.png"></b></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    Zoomleiste
+                </p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    Zoomt in das Netzwerk oder zurück durch Ziehen des Reglers nach rechts bzw. links oder aber durch Klicken auf „-“ bzw. „+“. (Sie können auch in die und aus der grafischen Ansicht zoomen, indem Sie die Maus über die Ansicht bewegen und das Scrollrad verwenden.)
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">Geräte-Kontextmenü</p>
+
+    <p class="MsoBlockText">
+        Durch Klicken mit der rechten Maustaste auf ein beliebiges Gerät in einer grafischen Ansicht oder in der entsprechenden Gerätetabelle öffnet sich ein Kontextmenü mit unterschiedlichen Funktionen.
+    </p>
+
+    <p class="MsoBlockText">
+        Nicht alle Menüeinträge sind auch für alle Geräte verfügbar, wobei die tatsächlichen Einträge vom Status des jeweiligen Gerätes und des Gerätetyps abhängen.
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td class="class45">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Symbol</span></p>
+                </td>
+                <td valign="top" class="class82">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td valign="top" class="class83">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Funktion</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td class="class48">
+                <p class="TabelleTextlinks" align="center">&nbsp;</p>
+            </td>
+            <td class="class84">
+                <p class="TabelleTextlinks">Gerätenamen zuweisen</p>
+            </td>
+            <td class="class85">
+                <p class="TabelleTextlinks">
+                    Kopiert den Namen des Gerätes aus der Referenztopologie zu seiner Übereinstimmung im realen Netzwerk.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class48">
+                <p class="TabelleTextlinks" align="center">&nbsp;</p>
+            </td>
+            <td class="class84">
+                <p class="TabelleTextlinks">Übereinstimmung entfernen</p>
+            </td>
+            <td class="class85">
+                <p class="TabelleTextlinks">
+                    Löscht die Ergebnisse der Übereinstimmungen aus der grafischen Ansicht.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 83" src="html_files/image039.png"></b></p>
+            </td>
+            <td class="class84">
+                <p class="TabelleTextlinks">Als Ausgangspunkt in der grafischen Ansicht benutzen</p>
+            </td>
+            <td class="class85">
+                <p class="TabelleTextlinks">
+                    Arrangiert die grafische Ansicht neu, so dass das ausgewählte Gerät in der oberen linken Ecke erscheint.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">Gerätetabelle</p>
+
+    <p class="MsoBlockText">
+        In dieser Tabelle werden die im ausgewählten Referenznetzwerk vorhandenen Geräte aufgelistet. Die Bedienung ähnelt der <span lang="DE"><a href="ohOnlineMode.html#olDevicesList"><span lang="EN-US">Gerätetabelle</span></a></span>  im Online-Modus, jedoch sind alle Schreibvorgänge deaktiviert.
+
+<p class="FormatvorlageBlocktitel">
+    <a id="olMatchingCriteraConfig">
+        Erkennen übereinstimmender Geräte im Konfigurationsmodus
+    </a>
+    </p>
+
+<p class="MsoBlockText">
+    In diesem Modus wird die Übereinstimmung von Geräten anhand folgender Aspekte ermittelt:
+</p>
+
+<p class="BulletText1"><span class="class31"></span>Geräte-ID</p>
+
+<p class="BulletText1"><span class="class31"></span>Hersteller-ID</p>
+
+<p class="BulletText1"><span class="class31"></span>Verbindungen zwischen Geräten</p>
+
+<p class="MsoBlockText">
+    Bitte beachten Sie, dass dies fest vorgegeben ist und sich davon unterscheidet, wie Unterschiede im Vergleichsmodus ermittelt werden – siehe <a href="ohComparisonMode.html#olSetComparisonCriteria"><span lang="EN-US">Vergleichskriterien auswählen</span></a>.
+</p>
+
+<br>
+</body>
+</html>

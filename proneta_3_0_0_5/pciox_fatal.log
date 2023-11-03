@@ -1,0 +1,65 @@
+ERROR-Reason: Unhandled exception - Code(0xc0000005) - Address(0x163f4d9d)
++++++++++++++++++++ StackTrace pcIOX EDDS[VS2008 - Release] - 05.01.2023 14:26:03 ++++++++++++++
+163f4d9d -- no sym --
+1651df4b ! iocheck_read_led_status() +1186603 bytes
+163fc791 ! iocheck_read_led_status() +881 bytes
+1640e7e1 ! iocheck_read_led_status() +74689 bytes
+163fc2ce ! iocheck_replace_inifile() +62 bytes
+163fbc91 ! iocheck_init() +129 bytes
+0877267b -- no sym --
+08772570 -- no sym --
+6da3d4bb -- no sym --
+6da3b731 -- no sym --
+6da3b6fc -- no sym --
+6d9d8537 -- no sym --
+6da3b4b2 -- no sym --
+6da3b357 -- no sym --
+6da3b29d -- no sym --
+6d9ae9db -- no sym --
+6ead373a ! LogHelp_TerminateOnAssert() +2330 bytes
+6ead9adb ! LogHelp_TerminateOnAssert() +27835 bytes
+6eaf5c13 ! DllCanUnloadNowInternal() +30995 bytes
+6eaf3f76 ! DllCanUnloadNowInternal() +23670 bytes
+6eaf4001 ! DllCanUnloadNowInternal() +23809 bytes
+6eaf3ef2 ! DllCanUnloadNowInternal() +23538 bytes
+6eaf40e1 ! DllCanUnloadNowInternal() +24033 bytes
+6eaf5b89 ! DllCanUnloadNowInternal() +30857 bytes
+6eaf49b3 ! DllCanUnloadNowInternal() +26291 bytes
+6ebb11a7 ! InstallCustomModule() +306615 bytes
+762f00f9 ! BaseThreadInitThunk() +25 bytes
+77657bbe ! RtlGetAppContainerNamedObjectPath() +286 bytes
+77657b8e ! RtlGetAppContainerNamedObjectPath() +238 bytes
+
+++++++++++ PNIO component revision +++++++++++++++++
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	LSA_PNIO_P05.02.00.00_00.03.02.01
+	no POF
+	WPCAP driver: 4.1
+
+----------------------------------------------------------------
+pcpnio_fatal: BEGIN of FATAL-TRACE-BUFFER (NumberOfEntrys(2000))
+pcpnio_fatal: PLEASE NOTE: the timestamps are wrong
+----------------------------------------------------------------
+00000:000 !  \pcpnio_sys.c(1252): pcpnio_sys: pcpnio_start: timeGetDevCaps, PeriodMin=1msec
+00000:000 .  \pcpnio_sys.c(1290): pcpnio_sys: pcpnio_mmtimer_init: MultiMediaTimer is running
+00000:016 +  \pcpnio_sys.c(1517): pcpnio_sys: pcpnio_alloc_timer:tid(0) base(6) typ(1) threadId(2104) mm(0/1)
+---------------------------------------
+pcpnio_fatal: END of FATAL-TRACE-BUFFER
+---------------------------------------
+pcpnio_fatal: PLEASE NOTE: error reason and fatal traces may not match together
+pcpnio_fatal: threadId(14752) file(\IOXMain.cpp) line(501): Calling FATAL on unhandled exception
+---------------------------------------
+++++++

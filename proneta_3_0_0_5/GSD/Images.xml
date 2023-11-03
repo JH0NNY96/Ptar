@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GsdmlImages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageList>
+    <GsdmlImage VendorId="0x002A" DeviceId="0x0101" FileName="simatic300.bmp" />
+    <GsdmlImage VendorId="0x002A" DeviceId="0x0A01" FileName="GSDML_002A_SCALANCEX208.bmp" />
+    <GsdmlImage VendorId="0x002A" DeviceId="0x0302" FileName="GSDML-002A-0302-ET200M-01.bmp" />
+    <GsdmlImage VendorId="0x002A" DeviceId="0x0313" FileName="GSDML-002A-0313-ET200SP-02.bmp" />
+    <GsdmlImage VendorId="0x002A" DeviceId="0x0312" FileName="GSDML-002A-0312-ET200MP-04.bmp" />
+    <GsdmlImage VendorId="0x002A" DeviceId="0x0604" FileName="GSDML-002A-0604-PNPNC-01.bmp" />
+    <GsdmlImage VendorId="0x002A" DeviceId="0x0301" FileName="GSDML-002A-0301-ET200S-01.bmp" />
+    <GsdmlImage VendorId="0x002A" DeviceId="0x0306" FileName="ET200eco.bmp" />
+  </ImageList>
+</GsdmlImages>

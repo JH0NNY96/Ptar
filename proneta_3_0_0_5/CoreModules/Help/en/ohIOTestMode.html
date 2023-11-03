@@ -1,0 +1,672 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="HelpStyle.css">
+</head>
+
+<body id="ScrollablePanel">
+    <h2>
+        4
+        IO Test Task
+    </h2>
+
+    <p class="MsoBlockText">
+        The IO Test task serves to check the wiring of a distributed IO device even before installing a CPU, and to protocol the test results in a quick, error-free and simple manner.
+    </p>
+    <h3>
+        4.2
+        IO Test Mode
+    </h3>
+
+    <p class="MsoBlockText">In IO Test mode, the screen consists of two main views:</p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>“Device View” (1), a graphical representation of the tested device
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>The “Details” table (2) which shows you additional information about the tested device and the test in general.
+    </p>
+
+
+    <p class="MsoBlockText"><img border="0" width="491" height="264" src="html_files/image074.png"></p>
+
+    <p class="FormatvorlageBlocktitel">Function Bar</p>
+
+    <p class="MsoBlockText">The following function is available in the function bar:</p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td valign="top" class="class17">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Icon</span></p>
+                </td>
+                <td valign="top" class="class18">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td valign="top" class="class18">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Function</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td class="class25">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 84" src="html_files/image033.png"></p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">Force and Monitor Values</p>
+            </td>
+            <td class="class21">
+                <p class="TabelleTextlinks">
+                    Activates and deactivates control of the device through PRONETA Basic for the IO Test.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class86">
+                <p class="CWDGraphic" align="center"><img border="0" width="45" height="39" id="Bild 6" src="html_files/image075.jpg" alt="Gefahr_ISO"></p>
+                <p class="CWDGraphic" align="center"><b><span lang="DE" class="class87">WARNING</span></b></p>
+            </td>
+            <td width="493" valign="top" class="class88">
+                <p class="CautionWarningDanger">
+                    <a id="IOTestWarning"></a><span class="class89">
+                        Manipulating the interfaces on control components can result in sudden movement of the machinery and the electrification of equipment.
+                    </span>
+                </p>
+                <p class="CautionWarningDanger">
+                    <span class="class89">
+                        Physical injury and electrical shock to personnel are consequently possible.
+                    </span>
+                </p>
+                <p class="Hinweis">
+                    Make sure the machinery is in a safe state with no unauthorized personnel within range, before activating the IO Test.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class86">
+                <p class="CWDGraphic" align="center"><b><span lang="DE" class="class87">NOTICE</span></b></p>
+            </td>
+            <td width="493" valign="top" class="class88">
+                <p class="CautionWarningDanger">
+                    <a id="IOTestWarning"></a><span class="class89">
+                        Loss of F-destination addresses
+                    </span>
+                </p>
+                <p class="CautionWarningDanger">
+                    <span class="class89">
+                        After performing an I/O test with PRONETA Basic on a device, the attached F-I/O modules will have their F-destination addresses deleted, leading to the module entering a safe state.
+                    </span>
+                </p>
+                <p class="Hinweis">
+                    Assign the F-destination addresses anew to the F-modules concerned using the respective engineering tool.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class6">
+                <p class="CWDGraphic" align="center"><b><span lang="DE">NOTE</span></b></p>
+            </td>
+            <td width="493" valign="top" class="class8">
+                <p class="Hinweis">
+                    To perform the IO Test, PRONETA Basic establishes a PROFINET application relation (AR) with the target device. Make sure that no other PROFINET controller occupies this connection.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+
+    <p class="MsoBlockText">
+        The state of the IO Test is indicated by the color of the “Device View” and “Details” table header bars:
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>Light green indicates the IO Test is active. In addition, the words “Force Mode” appear at the right of the head bar.
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>Dark petrol indicates the IO Test is inactive.</p>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="FormatvorlageBlocktitel"><a id="olDeviceView">Device View</a></p>
+
+    <p class="MsoBlockText"><b>Usage</b></p>
+
+    <p class="MsoBlockText">
+        The device view shows a symbolic representation of the device you selected for the IO Test mode. The status and IO LEDs are updated in real time to reflect the state of the physical device.
+    </p>
+
+    <p class="MsoBlockText"><img border="0" width="491" height="316" src="html_files/image076.png"></p>
+
+    <p class="MsoBlockText">
+        To get a larger view of any module click the “<span class="class3">+</span>” symbol&nbsp;(1) above the module. A small <span lang="DE"><a href="#olPopupWindow"><span lang="EN-US">Popup Window</span></a></span>
+        will appear.
+    </p>
+
+    <p class="MsoBlockText">
+        Clicking on any of the modules here will show the
+        module’s parameter table in the “Details” view, or highlight the corresponding
+        section, depending on the tab chosen.
+    </p>
+
+    <p class="MsoBlockText">
+        Modules with information in their diagnostics buffer are
+        displayed with a red header.
+    </p>
+
+    <p class="MsoBlockText"><b>Digital IO</b></p>
+
+    <p class="MsoBlockText">
+        Click on any LED symbol of an output module to toggle the status of the corresponding output. Likewise, voltage applied to any input will light up the corresponding input module LED.
+    </p>
+
+    <p class="MsoBlockText">
+        To force digital values, you can also use the “Test
+        Results” tab in the <span lang="DE">
+            <a href="#olDetailsView">
+                <span lang="EN-US">
+                    Details
+                    View
+                </span>
+            </a>
+        </span>.
+    </p>
+
+    <p class="MsoBlockText"><b>Analog IO</b></p>
+
+    <p class="MsoBlockText">
+        Read analog values from input and output modules in the
+        same fashion.
+    </p>
+
+    <p class="MsoBlockText">
+        To force analog values, use either the <span lang="DE"><a href="#olPopupWindow"><span lang="EN-US">Popup Window</span></a></span> or the
+        “Test Results” tab in the <span lang="DE"><a href="#olDetailsView"><span lang="EN-US">Details View</span></a></span>.
+    </p>
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class6">
+                <p class="CWDGraphic" align="center"><b><span lang="DE">NOTE</span></b></p>
+            </td>
+            <td width="493" valign="top" class="class8">
+                <p class="Hinweis">
+                    Optional plugged connection terminals (3DI/LC modules) of Motor Starter units will only be shown after Force mode has been activated.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel">
+        <a id="olPopupWindow">Popup Window</a> (IO
+        Test)
+    </p>
+
+    <p class="MsoBlockText"><b>Usage</b></p>
+
+    <p class="MsoBlockText">
+        Above each module of the device in the <span lang="DE"><a href="#olDeviceView"><span lang="EN-US">Device View</span></a></span>, a “<span class="class3">+</span>” symbol allows you to open a popup window with a larger symbolic view of the module’s inputs and outputs. If you open several modules, their popups will be arranged in a row within a single window.
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="184" height="344" id="Grafik 393" src="html_files/image077.jpg"></p>
+
+    <p class="MsoBlockText">
+        Click the close icon “<span lang="EN-US" style="font-family:Symbol">´</span>” in the top
+        right of the popup window segment, or the “<span lang="EN-US" style="font-family:Symbol">-</span>” symbol above the module
+        in the device view, to close the popup for this module again. To close the
+        whole window click the close icon “<span lang="EN-US" style="font-family:
+Symbol">´</span>” in the top right of the window. To rearrange
+        the modules within the popup window, click the table header of the module in
+        question and drag it to the desired position.
+
+    </p>
+
+    <p class="MsoBlockText"><b>Digital IO</b></p>
+
+    <p class="MsoBlockText">
+        Digital inputs and outputs can be monitored and forced, respectively, by viewing or checking and unchecking the fields corresponding to their connections. Green fields indicate active lines.
+    </p>
+
+    <p class="MsoBlockText"><b>Analog IO</b></p>
+
+    <p class="MsoBlockText">
+        For analog modules, symbolic channel names can be entered
+        in the fields next to the indicated channel numbers. These will automatically
+        be copied into the test protocol.
+    </p>
+
+    <p class="MsoBlockText">
+        Analog output values can be forced by either entering the
+        numeric value in the corresponding field, or by dragging the slider across the
+        slider bar below. Clicking the symbol next to the field will reset the output
+        to the default value.
+    </p>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="FormatvorlageBlocktitel"><a id="olDetailsView">Details Table</a></p>
+
+    <p class="MsoBlockText">
+        The Details Table consists of four tabs, each with its
+        own function bar:
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span><span lang="DE"><a href="#olParameters"><span lang="EN-US">Parameters</span></a></span>
+        to set the module parameters
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span><u><a href="#olTestProtocol"><span lang="EN-US">Test Results</span></a></u> to perform and protocol the wiring
+        test for the device
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span>
+        <a href="#olIOEventLog">IO Event Log</a> to monitor regular events like the changes of input and
+        output values of a module
+    </p>
+
+    <p class="BulletText1">
+        <span class="class31"></span><span lang="DE"><a href="#olDiagnostics"><span lang="EN-US">Diagnostics</span></a></span>
+        to record irregular system events like the pulling and plugging of modules.
+    </p>
+
+    <p class="FormatvorlageBlocktitel"><a id="olParameters">Parameters</a></p>
+
+    <p class="MsoBlockText">
+        This tab gives an overview over the parameter set of the module selected in the device view. Parameters can be only edited while “Force and Monitor Values” is not in operation (see <span lang="DE"><a href=" ohIOTestMode.html"><span lang="EN-US">IO Test Mode</span></a></span>, section
+        “Function Bar”).
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="491" height="302" id="Grafik 394" src="html_files/image078.png"></p>
+
+    <p class="MsoBlockText">
+        The parameter set can be stored to a file on disk, loaded from a file, and copied and pasted from the windows clipboard to transfer the parameters to a different module.
+    </p>
+
+    <p class="FormatvorlageBlocktitel">Function Bar</p>
+
+    <p class="MsoBlockText">
+        The following functions are available in the function bar:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="58" valign="top" class="class90">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Icon</span></p>
+                </td>
+                <td width="84" valign="top" class="class91">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="355" valign="top" class="class92">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Function</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 85" src="html_files/image079.png"></b></p>
+            </td>
+            <td width="84" class="class93">
+                <p class="TabelleTextlinks">Save Parameters</p>
+            </td>
+            <td width="355" class="class94">
+                <p class="TabelleTextlinks">
+                    Saves the current parameter set of the whole device
+                    to disk.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 86" src="html_files/image046.png"></b></p>
+            </td>
+            <td width="84" class="class93">
+                <p class="TabelleTextlinks">Load Parameters</p>
+            </td>
+            <td width="355" class="class94">
+                <p class="TabelleTextlinks">
+                    Loads a previously saved parameter set from disk
+                    and assigns it to the current device.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 87" src="html_files/image080.png"></b></p>
+            </td>
+            <td width="84" class="class93">
+                <p class="TabelleTextlinks">Copy Parameters</p>
+            </td>
+            <td width="355" class="class94">
+                <p class="TabelleTextlinks">
+                    Copies the parameter set of the currently selected
+                    module to the Windows clipboard.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 88" src="html_files/image081.png"></b></p>
+            </td>
+            <td width="84" class="class93">
+                <p class="TabelleTextlinks">Paste Parameters</p>
+            </td>
+            <td width="355" class="class94">
+                <p class="TabelleTextlinks">
+                    A previously copied module parameter set will be
+                    pasted from the Windows clipboard to the currently selected module. The icon
+                    is greyed if the parameter set in the clipboard does not fit the selected
+                    module.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="MsoBlockText">
+        The commands “Save Parameters” and “Load Parameters” transfer parameter sets between devices and are useful to configure a number of identical devices. Opposed to that, “Copy Parameters” and “Paste Parameters” are used predominantly to “clone” module configurations within one device.
+    </p>
+
+    <p class="FormatvorlageBlocktitel"><a id="olTestProtocol">Test Results</a></p>
+
+    <p class="MsoBlockText">
+        This tab offers the functionality for the actual IO Test of the currently selected device.
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="491" height="366" id="Grafik 395" src="html_files/image082.png"></p>
+
+    <p class="MsoBlockText">
+        The test table is vertically divided into sections according to the IO modules present. Each section can be collapsed and expanded again by clicking on the triangle symbol “<span style="font-family: Arial" class="class95">&#x25BA;</span>”
+        in the section header.
+    </p>
+
+    <p class="MsoBlockText">The test table consists of the following columns:</p>
+
+    <ul>
+        <li>
+            “Channel”: The name of the IO channel as determined by the
+            device.
+        </li>
+        <li>
+            “Control”: Forcing status of the selected output.<br>
+            Click on the icons to toggle the status of digital outputs, or drag or enter
+            manually the value for analog outputs. Values entered will be immediately
+            forwarded to the hardware. (For inputs, this field is greyed out and
+            read-only.)<br>
+            Alternatively, you can also change values by clicking on the LED
+            representations of the device view, or by manipulating them in the popup
+            window.<br>
+            This column is only visible while the force mode is active.
+        </li>
+        <li>
+            “Symbolic Name”: Arbitrary name, assigned by the tester to the
+            channel. (See note below.)
+        </li>
+        <li>
+            “Address”: Arbitrary memory address to which the IO is mapped.
+            (See note below.)
+        </li>
+        <li>
+            Status Wiring”: Here the actual results as established by the
+            IO Test are entered by the tester. Select one of:
+        </li>
+        <ul>
+            <li>
+                “N.a.”: “Not applicable”, not tested yet (default)
+            </li>
+        </ul>
+        <ul>
+            <li>
+                “OK”: Test result correct, wiring in order
+            </li>
+        </ul>
+        <ul>
+            <li>
+                “Error”: Test result wrong, faulty wiring
+            </li>
+        </ul>
+        <li>
+            “Comment”: Any additional information you want to add to the
+            test.
+        </li>
+    </ul>
+
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0">
+        <tr class="class5">
+            <td width="79" valign="top" class="class6">
+                <p class="CWDGraphic" align="center"><b>NOTE</b></p>
+            </td>
+            <td width="493" valign="top" class="class8">
+                <p class="TabelleTextlinks">
+                    <span class="class11">
+                        The values for “Symbolic Name” and “Address” serve only as memory aids for the tester. 
+                    </span>
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="MsoBlockText">
+        The IO Test can be suspended and resumed at a later point in time by saving and loading the protocol.
+    </p>
+
+    <p class="MsoBlockText">
+        After completion of the test, the protocol can be stored to document the proper wiring of the device. (See the <a href="#olFunctionBar"><span lang="EN-US">Function Bar</span></a> for details.)
+    </p>
+
+    <p class="MsoBlockText"><a id="olFunctionBarTestMode"><b>Function Bar</b></a></p>
+
+    <p class="MsoBlockText">
+        The following functions are available in the function
+        bar:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="58" valign="top" class="class90">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Icon</span></p>
+                </td>
+                <td width="83" valign="top" class="class97">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="356" valign="top" class="class98">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Function</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 98" src="html_files/image079.png"></b></p>
+            </td>
+            <td width="83" class="class99">
+                <p class="TabelleTextlinks">Save Protocol</p>
+            </td>
+            <td width="356" class="class100">
+                <p class="TabelleTextlinks">
+                    Stores the results of the current IO Test to disk (format: CSV), either when the test is completed, or when the test is interrupted.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 99" src="html_files/image046.png"></b></p>
+            </td>
+            <td width="83" class="class99">
+                <p class="TabelleTextlinks">Load Protocol</p>
+            </td>
+            <td width="356" class="class100">
+                <p class="TabelleTextlinks">
+                    Loads test results of an earlier IO Test from disk
+                    to proceed with testing.
+                </p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 100" src="html_files/image083.png"></p>
+            </td>
+            <td width="83" class="class99">
+                <p class="TabelleTextlinks">Reset Test Protocol</p>
+            </td>
+            <td width="356" class="class100">
+                <p class="TabelleTextlinks">
+                    Discards the results of the current test and allows you to start over again. All results will be deleted from PRONETA Basic.
+                </p>
+            </td>
+        </tr>
+
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><img border="0" width="43" height="43" id="Grafik 100" src="html_files/image084.png"></p>
+            </td>
+            <td width="83" class="class99">
+                <p class="TabelleTextlinks">Import Symbolic Names from an AML file</p>
+            </td>
+            <td width="356" class="class100">
+                <p class="TabelleTextlinks">
+                    Imports symbolic names for device /IOs from an AML file (see <span lang="DE"><a href="#olAMLReference"><span lang="EN-US">Using an AML File as Reference</span></a></span>.)
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel"><a id="olAMLReference">Using an AML File as Reference</a></p>
+
+    <p class="MsoBlockText">
+        To provide symbolic names for IOs, an AML file can be used.
+    </p>
+
+    <p class="MsoBlockText">
+        The following features of the device to be tested must match the name of the device in the AML file:
+    </p>
+
+    <ul>
+        <li>
+            Device name
+        </li>
+        <li>
+            Module types
+        </li>
+        <li>
+            Module positions
+        </li>
+    </ul>
+    <p class="MsoBlockText">
+        If this is the case and the AML file contains symbolic names for the IOs, then the names from the AML file will be used for the IOs in the tested device, and shown in the column “Symbolic Name”.
+    </p>
+    <p class="MsoBlockText">&nbsp;</p>
+
+    <p class="FormatvorlageBlocktitel"><a id="olIOEventLog">IO Event Log</a></p>
+
+    <p class="MsoBlockText">
+        This tab records a log of all regular events (like changes of the values of inputs and outputs) which occurred to the modules while the IO Test was active.
+    </p>
+
+    <p class="MsoBlockText">
+        Clicking on a column header will sort the table
+        accordingly.
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="496" height="201" id="Grafik 396" src="html_files/image085.png"></p>
+
+    <p class="MsoBlockText"><b>Function Bar</b></p>
+
+    <p class="MsoBlockText">
+        The following functions are available in the function bar:
+    </p>
+
+    <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="class5">
+                <td width="58" valign="top" class="class90">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Icon</span></p>
+                </td>
+                <td width="117" valign="top" class="class101">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Name</span></p>
+                </td>
+                <td width="247" valign="top" class="class102">
+                    <p class="TabelleKopfzentriert"><span lang="DE">Function</span></p>
+                </td>
+            </tr>
+        </thead>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 101" src="html_files/image079.png"></b></p>
+            </td>
+            <td width="117" class="class103">
+                <p class="TabelleTextlinks">Save IO Event Log</p>
+            </td>
+            <td width="247" class="class104">
+                <p class="TabelleTextlinks">Stores the event log to disc (format: CSV).</p>
+            </td>
+        </tr>
+        <tr class="class5">
+            <td width="58" class="class48">
+                <p class="TabelleTextlinks" align="center"><b><img border="0" width="43" height="43" id="Grafik 102" src="html_files/image083.png"></b></p>
+            </td>
+            <td width="117" class="class103">
+                <p class="TabelleTextlinks">Reset IO Event Log</p>
+            </td>
+            <td width="247" class="class104">
+                <p class="TabelleTextlinks">Clears all entries from the current event log.</p>
+            </td>
+        </tr>
+    </table>
+
+    <p class="FormatvorlageBlocktitel"><a id="olDiagnostics">Diagnostics</a></p>
+
+    <p class="MsoBlockText">
+        The table in this tab shows a record of all irregular events which occurred to the device while the IO Test was active, like the pulling of modules or a signal wire break.
+    </p>
+
+    <p class="MsoBlockText">
+        If the diagnostics buffer contains events pertaining to a module, the corresponding module header in the Device Table will be displayed red.
+    </p>
+
+    <p class="MsoBlockText">
+        Clicking on a column header of the table will sort the table accordingly.
+    </p>
+
+    <p class="MsoBlockText">
+        Selecting a table entry will highlight the corresponding module in the Device View. In return, selecting a module in the Device View will highlight the first entry concerning the module in this table.
+    </p>
+
+    <p class="BildBeschriftungtextBreite"><img border="0" width="491" height="162" id="Grafik 397" src="html_files/image086.png"></p>
+
+    <p class="MsoBlockText">
+        The table consists of the following columns:
+    </p>
+
+    <p class="BulletText1"><span class="class31"></span>“Slot”</p>
+
+    <p class="BulletText1"><span class="class31"></span>“Module”</p>
+
+    <p class="BulletText1"><span class="class31"></span>“Channel”</p>
+
+    <p class="BulletText1"><span class="class31"></span>“Symbolic Name” (as entered in the test protocol tab)</p>
+
+    <p class="BulletText1"><span class="class31"></span>“Description”</p>
+
+    <p class="BulletText1"><span class="class31"></span>“Details”</p>
+
+    <p class="BulletText1"><span class="class31"></span>“Time Stamp”</p>
+<br>
+</body>
+</html>
